@@ -5,9 +5,10 @@ session_start();
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/index.css">
-    <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/index.css">
+    <link rel="stylesheet" href="../../../css/food.css">
+    <link rel="shortcut icon" href="../../../images/eatout logo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EAT OUT Restaurant</title>
@@ -25,14 +26,14 @@ session_start();
 
                         <?php
                         if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
-                            echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                            echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                         } else {
-                            echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                            echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                            echo '<li><a href="../../../frontend/user/signup.php">Sign up</a></li>';
+                            echo '<li><a href="../../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
                         }
                         ?>
-                        <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
-                        <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
+                        <li><a href="../../../frontend/user/foodMenu.php">Order Now</a></li>
+                        <li><a href="../../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
                             </a></li>
 
 
@@ -47,11 +48,11 @@ session_start();
                 </div>
                 <div class="nav">
                     <ul>
-                        <a href="../../frontend/user/serviceTypes.php">
+                        <a href="../../../frontend/user/serviceTypes.php">
                             <li>Contact</li>
                         </a>
                         
-                        <a href="../../frontend/user/about.php">
+                        <a href="../../../frontend/user/about.php">
                             <li>About</li>
                         </a>
                        
@@ -61,14 +62,14 @@ session_start();
             </div>
 
             <div class="logo">
-                <a href="../../frontend/user/index.php"><img src="../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
+                <a href="../../../frontend/user/index.php"><img src="../../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
             </div>
             <div class="nav">
                 <ul>
-                    <a href="../../frontend/user/contact.php">
+                    <a href="../../../frontend/user/contact.php">
                         <li>Contact</li>
                     </a>
-                    <a href="../../frontend/user/about.php">
+                    <a href="../../../frontend/user/about.php">
                         <li>About Us</li>
                     </a>
 
@@ -98,10 +99,10 @@ session_start();
 
                     <?php
                     if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
-                        echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                        echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
-                        echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                        echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                        echo '<li><a href="../../../frontend/user/signup.php">Sign up</a></li>';
+                        echo '<li><a href="../../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
                     }
                     ?>
 
@@ -116,44 +117,79 @@ session_start();
               
             </div>
             <div>
-                <img src="../../images/hom1.png" alt="house1s">
+                <img src="../../../images/hom1.png" alt="house1s">
             </div>
         </div>
-        
+        <div class="menu">
 
-    <div class="menu">
-        <div class="section">
-            <h2>Buy Lands</h2>
-            <a href="buy/buyLands.php">
-                <img src="../../img/buger.jpeg" alt="Burger">
-            </a>
+        <div class="list">
+            <a href="../../../frontend/user/menu.php">Back to Menu</a>
 
-        </div><!--Section-->
+            <div class="section">
+                <img src="../../../../img/buger.jpeg" alt="option1">
+                <a href="buyLands.php">Buy Lands</a>
+            </div>
+            <div class="section">
+                <img src="../../../img/nuggets.jpeg" alt="option2">
+                <a href="buyHouses.php">Buy Houses</a>
+            </div>
+            <div class="section">
+                <img src="../../../img/salads.jpeg" alt="option3">
+                <a href="buyAccessories.php">Buy Accessories</a>
+            </div>
+            <div class="section">
+                <img src="../../../img/fries.jpeg" alt="option4">
+                <a href="buyFurnitures.php">Buy Furnitures</a>
+            </div>
+           
+        </div>
 
-        <div class="section">
-            <h2>Buy Houses</h2>
-            <a href="sell.php">
-                <img src="../../img/nugget.jpeg" alt="Nuggets">
-            </a>
 
-        </div><!--Section-->
 
-        <div class="section">
-            <h2>Buy Accessories</h2>
-            <a href="rent.php">
-                <img src="../../img/salads.jpeg" alt="Salads">
-            </a>
-        </div><!--Section-->
+        <div class="choice">
+            <p>Buy Lands</p>
+            <div class="foods">
 
-        <div class="section">
-            <h2>Buy Furnitures</h2>
-            <a href="rent.php">
-                <img src="../../img/salads.jpeg" alt="Salads">
-            </a>
-        </div><!--Section-->
 
-        
+
+                <?php
+                include_once '../../../backend/user/dbs.php';  // Include your database connection file
+                $sql = "SELECT * FROM foods WHERE foodType='Burgers';";
+                $result = mysqli_query($connect, $sql);
+
+
+
+                while ($row = $result->fetch_assoc()) {
+                    // Access the data by column name
+
+                    $foodId = $row["foodId"];
+                    $item = $row["item"];
+                    $img = $row["img"];
+                    $price = $row["price"];
+
+                    echo '<div class="food-item">';
+                    echo "<img src='$img' alt='Food 1'>";
+                    echo "<h3> $item</h3>";
+                    echo "<h4>Rs $price</h4>";
+                    echo "<form method='POST' action='../../backend/user/cartP.php'>";
+                    echo "<input type='hidden' name='foodId' value='$foodId'>";
+                    echo "<input type='hidden' name='item' value='$item'>";
+                    echo "<input type='hidden' name='price' value='$price'>";
+                    echo "<button type='submit' name='addToCart'>Add to Cart</button>";
+                    echo "</form>";
+                    echo '</div>';
+                }
+
+
+                $connect->close();
+
+                ?>
+            </div><!--foods-->
+        </div><!--choice-->
     </div>
+        
+
+    
 
 
 
