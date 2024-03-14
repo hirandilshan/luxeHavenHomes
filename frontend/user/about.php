@@ -224,7 +224,7 @@ session_start();
         </div>
     </div>
     <script src="app.js"></script>
-    <script src="../../frontend/user/search.js"></script>
+    
 </body>
 
 </html>

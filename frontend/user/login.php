@@ -17,147 +17,90 @@ session_start();
 </head>
 
 <body>
-    <header>
+<header>
 
-        <div class="header">
-            <div class="headerbar">
-                <div class="account">
-                    <ul>
+<div class="header">
+    <div class="headerbar">
+        <div class="account">
+            <ul>
 
-                        <?php
-                        if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
-                            echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
-                        } else {
-                            echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                            echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
-                        }
-                        ?>
-                        <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
-                        <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
-                            </a></li>
-
-
-                        <a href="#">
-                            <li>
-                                <i class="material-icons" id="search-icon1">&#xe8b6;</i>
-                            </li>
-                        </a>
-                        <div class="search" id="searchinput1">
-                            <form method="POST" action="../../frontend/user/searchP.php">
-                                <input type="search" id="search-box" name="Search-box">
-
-                                <button class="search_btn" type="submit" id="searchBtn">Search</button>
+                <?php
+                if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                    echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                } else {
+                    echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
+                    echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                }
+                ?>
+                <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
+                <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
+                    </a></li>
 
 
+                <a href="#">
+                    <li>
+                        <i class="material-icons" id="search-icon1">&#xe8b6;</i>
+                    </li>
+                </a>
+                
+            </ul>
 
-
-                            </form>
-                        </div>
-                    </ul>
-
-                </div>
-                <div class="nav">
-                    <ul>
-                        <a href="../../frontend/user/foodMenu.php">
-                            <li>Food Menu</li>
-                        </a>
-                        <a href="../../frontend/user/serviceTypes.php">
-                            <li>Service Types</li>
-                        </a>
-                        <a href="../../frontend/user/galary.php">
-                            <li>Galary</li>
-                        </a>
-                        <a href="../../frontend/user/facilities.php">
-                            <li>Facilities</li>
-                        </a>
-                        <a href="../../frontend/user/offers.php">
-                            <li>Offers</li>
-                        </a>
-                        <a href="../../frontend/user/about.php">
-                            <li>About</li>
-                        </a>
-                        <a href="../../frontend/user/reservation.php">
-                            <li>Reservation</li>
-                        </a>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="logo">
-                <a href="../../frontend/user/index.php"><img src="../../images/eatout logo.jpg" alt="" ,height="100" , width="50"></a>
-            </div>
-            <div class="nav">
-                <ul>
-                    <a href="../../frontend/user/foodMenu.php">
-                        <li>Food Menu</li>
-                    </a>
-                    <a href="../../frontend/user/serviceTypes.php">
-                        <li>Service Types</li>
-                    </a>
-                    <a href="../../frontend/user/galary.php">
-                        <li>Galary</li>
-                    </a>
-                    <a href="../../frontend/user/facilities.php">
-                        <li>Facilities</li>
-                    </a>
-                    <a href="../../frontend/user/offers.php">
-                        <li>Offers</li>
-                    </a>
-                    <a href="../../frontend/user/about.php">
-                        <li>About</li>
-                    </a>
-                    <a href="../../frontend/user/reservation.php">
-                        <li>Reservation</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="bar">
-                <ul>
-                    <a href="#">
-                        <li>
-                            <i class="material-icons" id="navbar-icon">&#xe5d2;</i>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <i class="material-icons" id="cancel">&#xe5c9;</i>
-                        </li>
-                    </a>
-                </ul>
-            </div>
-            <form method="POST" action="../../frontend/user/searchP.php">
-                <div class="search-input">
-                    <div>
-                        <input type="search" id="search-box" name="Search-box">
-
-                        </a>
-                    </div>
-                    <button class="search_btn" type="submit" id="searchBtn">Search</button>
-                </div>
-            </form>
-            <div class="icon">
-                <ul>
-
-                    <?php
-                    if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
-                        echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
-                    } else {
-                        echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                        echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
-                    }
-                    ?>
-                    <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
-                    <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
-                        </a></li>
-
-                </ul>
-            </div>
         </div>
-    </header>
+        <div class="nav">
+            <ul>
+                <a href="../../frontend/user/contact.php">
+                    <li>Contact</li>
+                </a>
+                
+                <a href="../../frontend/user/about.php">
+                    <li>About</li>
+                </a>
+               
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="logo">
+        <a href="../../frontend/user/index.php"><img src="../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
+    </div>
+    <div class="nav">
+        <ul>
+            <a href="../../frontend/user/contact.php">
+                <li>Contact</li>
+            </a>
+            <a href="../../frontend/user/about.php">
+                <li>About Us</li>
+            </a>
+
+        </ul>
+    </div>
+  
+    <div class="bar">
+        <ul>
+            <a href="#">
+                <li>
+                    <i class="material-icons" id="navbar-icon"style="color:white">&#xe5d2;</i>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <i class="material-icons" id="cancel"style="color:white">&#xe5c9;</i>
+                </li>
+            </a>
+
+
+        </ul>
+    </div>
+    
+
+
+</div>
+</header>
     <div class="content">
         <div class="forms">
             <div class="form-details">
-                <h2>Welcome to EAT OUT</h2>
+                <h2>Welcome to Luxe Haven Homes</h2>
                 <p>Please log in using your personal information to stay connected with us.</p>
             </div>
             <div class="form-content">
@@ -190,23 +133,60 @@ session_start();
     <div class="footer">
         <div class="footer-1">
             <div class="logo">
-                <img src="../../images/eatout logo.jpg" alt="">
+                <img src="../../images/luxeLogo.jpg" alt="logo">
             </div>
-            <div>
-                <address>
-                    <p>Email:hirannishshanka@gmail.com</p>
-                    <p>GitHub: <a href="https://github.com/hirandilshan">hirandilshan</a></p>
-                    <p>Mr.Hiran Nishshanka,<br>Kegalle,<br>SriLanka.</p>
-                </address>
+            <div clss="social">
+                <ul>
+                    <li>
+                        
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="footer-2">
-            <img src="../../images/download.jpeg" alt="">
-            <h2>Powered by <em>HD Creations</em></h2>
+        <div class="footer-11">
+            <address>
+                <h1>Support</h1>
+                <p>Lands</p>
+                <p>Houses</p>
+                <p>Construction equipments</p>
+                <p>Workers</p>
+                <p>Buyer's Guide</p>
+                <p>Help Center</p>
+                <p>post Ads</p>
+                    
+            </address>
         </div>
+        <div class="footer-111">
+            <address>
+                <h1>Company</h1>
+                <p>About Us</p>
+                <p>Contact Us</p>
+                <p>Construction equipments</p>
+                <p>Privacy policy</p>
+                <p>Disclaimer</p>
+                    
+            </address>
+        </div>
+        <div class="footer-1111">
+            <address>
+                <h1>Contact Info</h1>
+                <p>Luxe Haven Homes(PVT)LTD</p>
+                <p>+94 712456894</p>
+                <p>+94 759825015</p>
+                <p>info@LuxeHavenHomes.LK</p>
+                
+                    
+            </address>
+        </div>
+        
     </div>
+    <div class="footer-2">
+           <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
+            ALL RIGHTS RESERVED.<br>
+           WEBSITE MAINTAINTENANCE BY R & Y  </P>
+        </div>
     <script src="../../frontend/user/app.js"></script>
-    <script src="../../frontend/user/search.js"></script>
+    
 </body>
 
 </html>

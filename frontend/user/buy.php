@@ -123,7 +123,7 @@ session_start();
 
     <div class="menu">
         <div class="section">
-            <h2>Buy</h2>
+            <h2>Buy Lands</h2>
             <a href="buy.php">
                 <img src="../../img/buger.jpeg" alt="Burger">
             </a>
@@ -131,7 +131,7 @@ session_start();
         </div><!--Section-->
 
         <div class="section">
-            <h2>Sell</h2>
+            <h2>Buy Houses</h2>
             <a href="sell.php">
                 <img src="../../img/nugget.jpeg" alt="Nuggets">
             </a>
@@ -139,7 +139,14 @@ session_start();
         </div><!--Section-->
 
         <div class="section">
-            <h2>Rent</h2>
+            <h2>Buy Accessories</h2>
+            <a href="rent.php">
+                <img src="../../img/salads.jpeg" alt="Salads">
+            </a>
+        </div><!--Section-->
+
+        <div class="section">
+            <h2>Buy Furnitures</h2>
             <a href="rent.php">
                 <img src="../../img/salads.jpeg" alt="Salads">
             </a>
