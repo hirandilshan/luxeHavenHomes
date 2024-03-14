@@ -1,0 +1,59 @@
+.content {
+    background-color: rgb(219, 227, 253);
+    padding: 0 7vw;
+    flex: 1;
+}
+
+.intro .intro-topic h1 {
+
+    color: rgb(90, 9, 20);
+    font-size: 45px;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 50px;
+
+
+}
+
+
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    margin-left: 70px;
+}
+
+table th,
+table td {
+    border: 1px solid rgb(123, 195, 243);
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: rgb(123, 195, 243);
+}
+
+
+
+button {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+
+}
+
+.add:hover {
+    background-color: white;
+    box-shadow: 0 2px 15px rgb(240, 120, 69);
+    border: 1px solid rgb(245, 101, 34);
+    color: rgb(245, 101, 34);
+}
+
+div.addFood {
+    text-align: center;
+    margin: 50px 50px;
+}
