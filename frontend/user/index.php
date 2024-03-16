@@ -13,6 +13,7 @@ session_start();
     <title>EAT OUT Restaurant</title>
     <meta name="viewport" content="width=device-width,initial-scal=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -40,10 +41,8 @@ session_start();
                             <li>
                                 <i class="material-icons" id="search-icon1">&#xe8b6;</i>
                             </li>
-                        </a>
-                        
+                        </a>                       
                     </ul>
-
                 </div>
                 <div class="nav">
                     <ul>
@@ -53,13 +52,10 @@ session_start();
                         
                         <a href="../../frontend/user/about.php">
                             <li>About</li>
-                        </a>
-                       
+                        </a>                       
                     </ul>
                 </div>
-
             </div>
-
             <div class="logo">
                 <a href="../../frontend/user/index.php"><img src="../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
             </div>
@@ -116,24 +112,23 @@ session_start();
               
             </div>
             <div>
-                <img src="../../images/hom1.png" alt="house1s">
+                <img src="../../images/h2.png" alt="house1s">
             </div>
         </div>
-        
-
+    </div>
     <div class="menu">
+        <h1>What are you looking for?</h1>
         <div class="section">
             <h2>Buy Land</h2>
             <a href="buy/buyLands.php">
-                <img src="../../img/buger.jpeg" alt="Burger">
+                <img src="../../images/landd.jpg" alt="Land">
             </a>
-
         </div><!--Section-->
 
         <div class="section">
             <h2>Buy House</h2>
             <a href="buy/buyHouses.php">
-                <img src="../../img/nugget.jpeg" alt="Nuggets">
+                <img src="../../images/h8.jpg" alt="House">
             </a>
 
         </div><!--Section-->
@@ -141,21 +136,19 @@ session_start();
         <div class="section">
             <h2>Build</h2>
             <a href="Build.php">
-                <img src="../../img/salads.jpeg" alt="Salads">
+                <img src="../../images/buildd.jpg" alt="Build">
             </a>
         </div><!--Section-->
 
         <div class="section">
             <h2>Post Ad</h2>
             <a href="rent.php">
-                <img src="../../img/salads.jpeg" alt="Salads">
+                <img src="../../images/ad.png" alt="Ads">
             </a>
         </div><!--Section-->
 
         
     </div>
-
-
 
     </div>
     <div class="footer">
@@ -165,9 +158,9 @@ session_start();
             </div>
             <div clss="social">
                 <ul>
-                    <li>
-                        
-                    </li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                 </ul>
             </div>
         </div>
