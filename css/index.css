@@ -39,10 +39,13 @@ body {
     padding-top: 5px;
     flex: 1;
     font-size: 20px;
-    color: white;
     width: 300px;
     height: 400px;
 }
+.main_slide div:nth-child(1) h1{
+    color: white;
+}
+
 .main_slide div:nth-child(1) span {
     color: rgb(68, 65, 64);
     text-decoration-color: rgba(44, 44, 42, 0.767);

@@ -5,7 +5,7 @@
 $dbServerName = "localhost:3307";
 $dbUserName = "root";
 $dbPassword = "";
-$dbName = "resturent";
+$dbName = "luxehaven";
 
 $connect = mysqli_connect($dbServerName,$dbUserName,$dbPassword,$dbName);
 if (!$connect) {
