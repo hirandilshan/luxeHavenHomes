@@ -123,23 +123,30 @@ session_start();
 
     <div class="menu">
         <div class="section">
-            <h2>Buy</h2>
-            <a href="buy.php">
+            <h2>Buy Land</h2>
+            <a href="buy/buyLands.php">
                 <img src="../../img/buger.jpeg" alt="Burger">
             </a>
 
         </div><!--Section-->
 
         <div class="section">
-            <h2>Sell</h2>
-            <a href="sell.php">
+            <h2>Buy House</h2>
+            <a href="buy/buyHouses.php">
                 <img src="../../img/nugget.jpeg" alt="Nuggets">
             </a>
 
         </div><!--Section-->
 
         <div class="section">
-            <h2>Rent</h2>
+            <h2>Build</h2>
+            <a href="Build.php">
+                <img src="../../img/salads.jpeg" alt="Salads">
+            </a>
+        </div><!--Section-->
+
+        <div class="section">
+            <h2>Post Ad</h2>
             <a href="rent.php">
                 <img src="../../img/salads.jpeg" alt="Salads">
             </a>
