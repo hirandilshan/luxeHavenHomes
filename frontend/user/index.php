@@ -112,7 +112,7 @@ session_start();
     <div class="home">
         <div class="main_slide">
             <div>
-                <h1>Enjoy <span>Delicious Food</span> is Your Healthy Life.</h1>
+                <h1>Set New Stndards<br>in <span>Modern Home</span><br>Constructions</h1>
               
             </div>
             <div>
