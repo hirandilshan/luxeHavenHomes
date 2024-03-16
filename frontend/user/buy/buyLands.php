@@ -162,7 +162,7 @@ session_start();
                 while ($row = $result->fetch_assoc()) {
                     // Access the data by column name
 
-                    $foodId = $row["foodId"];
+                    $itemId = $row["foodId"];
                     $item = $row["item"];
                     $img = $row["img"];
                     $price = $row["price"];
@@ -172,10 +172,10 @@ session_start();
                     echo "<h3> $item</h3>";
                     echo "<h4>Rs $price</h4>";
                     echo "<form method='POST' action='../../backend/user/cartP.php'>";
-                    echo "<input type='hidden' name='foodId' value='$foodId'>";
+                    echo "<input type='hidden' name='foodId' value='$itemId'>";
                     echo "<input type='hidden' name='item' value='$item'>";
                     echo "<input type='hidden' name='price' value='$price'>";
-                    echo "<button type='submit' name='addToCart'>Add to Cart</button>";
+                    echo "<button type='submit' name='addToCart'>See More</button>";
                     echo "</form>";
                     echo '</div>';
                 }
