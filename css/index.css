@@ -9,46 +9,79 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-
 .home {
     flex: 1;  
     padding-top: 30px;
 }
-
 .main_slide {
     padding: 20px;
     display: flex;
     align-items: center;
     flex-wrap: wrap-reverse;
     background-color: black;
-    height: 450px;
+    height: 360px;
     border-radius: 20px;
 }
 
 .main_slide div:nth-child(2) {
-    width: 330px;
-    height: 400px;
+    width: 400px;
+    height: 450px;
     flex: 1;
     display: flex;
-    padding: 5px;
-    padding-right: 30px;
+    padding-right: 50px;
+    padding-top: 10px;
+    background-position: 0;
 }
 
 .main_slide div:nth-child(1) {
-    padding-top: 5px;
+    padding-top: 60px;
+    padding-left: 30px;
     flex: 1;
-    font-size: 20px;
-    width: 300px;
-    height: 400px;
+    align-content: center;
 }
 .main_slide div:nth-child(1) h1{
     color: white;
+    font-size: 50px;
 }
-
 .main_slide div:nth-child(1) span {
     color: rgb(68, 65, 64);
+    font-size: 55px;
     text-decoration-color: rgba(44, 44, 42, 0.767);
+}
+.menu{
+    height: auto;
+    text-align: center;
+}
+.menu h1{
+    padding: 20px 0 40px;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+}
+.section{
+    display: inline-block;
+    text-align: left; 
+    box-sizing: border-box;
+    width: calc(25% - 20px); 
+    margin: 0 10px;
+    vertical-align: top;
+}
+.section h2{
+    margin-bottom: 10px;
+}
+.section img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.section a {
+    text-decoration: none;
+    color: inherit;
+}
+.section:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
 }
 .red_btn {
     cursor: pointer;
@@ -71,304 +104,10 @@ body {
     border: 1px solid rgb(245, 101, 34);
     color: rgb(245, 101, 34);
 }
-
-.food-items {
-    margin: 70px 0;
-    padding: 20px 0;
-    background-color: white;
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-}
-
-.item {
-    width: 250px;
-    padding: 30px;
-    text-align: center;
-}
-
-.item div {
-    height: 160px;
-}
-
-.item img {
-    width: 160px;
-    margin-bottom: 15px;
-}
-
-.item p {
-    font-size: 12px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
-.item .white_btn {
-    width: 120px;
-    line-height: 35px;
-}
-
 .main_slide2 {
     margin: 80px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-}
-
-.foodimg {
-    flex: 0.5;
-}
-
-.foodimg img {
-    max-width: 500px;
-    width: 45vw;
-}
-
-.question {
-    flex: 0.5;
-    flex-direction: column;
-    margin-left: 40px;
-}
-
-.question h2 {
-    font-size: 35px;
-    margin-bottom: 15px;
-}
-
-.q-ans {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 15px 0px;
-    cursor: pointer;
-}
-
-.q-ans img {
-    width: 45px;
-    border-radius: 50%;
-    margin-right: 15px;
-    border: 4px solid white;
-}
-
-.q-ans div:first-child {
-    /*padding: 10px;
-    border-radius: 50%;
-    height: 65px;
-    text-align: center;
-    background-color: white;
-    margin-right: 20px;*/
-
-
-}
-
-.q-ans div:nth-child(2) {
-    display: flex;
-    flex-direction: column;
-}
-
-.q-ans div:nth-child(2) p {
-    margin-top: 10px;
-    font-size: 13px;
-}
-
-.main_slide3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-}
-
-.main_slide3 .fav-head {
-    text-align: center;
-    width: 450px;
-    margin-bottom: 30px;
-}
-
-.main_slide3 .fav-head h3 {
-    font-size: 30px;
-    padding: 20px 0;
-
-}
-
-.main_slide3 .fav-head p {
-    font-size: 13px;
-    text-align: center;
-}
-
-.main_slide3 .fav-food {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 90%;
-}
-
-.main_slide3 .fav-food .item {
-    background-color: white;
-    border-radius: 5px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 10px rgba(119, 199, 119, 0.438);
-    width: 220px;
-    padding: 15px;
-    padding-top: 20px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.main_slide3 .fav-food .item div {
-    height: 160px;
-    margin-bottom: 15px;
-}
-
-.main_slide3 .fav-food .item img {
-    width: 160px;
-    margin-bottom: 15px;
-}
-
-.main_slide3 .fav-price {
-    color: red;
-    font-weight: bold;
-    font-size: 15px;
-}
-
-.main_slide3 .dsgn {
-    background-color: rgb(123, 195, 243);
-    height: 50%;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    border-radius: 10px;
-}
-
-
-.main_slide4 {
-    margin-top: 270px;
-    display: flex;
-    flex-wrap: wrap-reverse;
-}
-
-.main_slide4 .chef-feed {
-    flex: 0.5;
-    margin-top: 30px;
-}
-
-.main_slide4 .chef {
-    flex: 0.5;
-    text-align: right;
-}
-
-
-
-.main_slide4 .chef img {
-    margin-top: -130px;
-    width: 50vw;
-    max-width: 490px;
-}
-
-.main_slide4 .chef-feed h2 {
-    font-size: 32px;
-    margin-bottom: 25px;
-}
-
-.main_slide4 .chef-feed p {
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 10px;
-}
-
-.main_slide4 .chef-detail {
-    margin-top: 20px;
-    display: flex;
-    margin: 125px 0px;
-    align-items: center;
-}
-
-.main_slide4 .chef-detail img {
-    width: 50px;
-    border-radius: 50%;
-    margin-right: 15px;
-    border: 4px solid white;
-
-}
-
-.main_slide4 .chef-detail h6 {
-    font-size: 14px;
-}
-
-.main_slide4 .chef-detail p {
-    font-size: 11px;
-    color: red;
-}
-
-.letter {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 100px 100px;
-}
-
-.letter-head {
-    flex: 0.5;
-}
-
-.letter-head h2 {
-    font-size: 30px;
-}
-
-.letter-head span {
-    color: red;
-}
-
-.letter-input {
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    flex: 0.5;
-}
-
-.letter-input div {
-    width: 70%;
-    display: flex;
-    align-items: center;
-    background-color: rgb(123, 195, 243);
-}
-
-.letter-input input {
-    font-size: 15px;
-    padding: 10px;
-    outline: none;
-    width: 100%;
-    border: none;
-    background-color: rgb(123, 195, 243);
-}
-
-.letter-input .red_btn {
-    margin: 0;
-    font-size: 18px;
-    box-shadow: none;
-    border-radius: 0 10px 10px 0;
-}
-
-.reviews {
-    margin: 20px 0;
-    text-align: center;
-}
-
-.reviews p {
-
-    background-color: rgb(123, 195, 243);
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-top: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #f0f0f0;
-
 }
