@@ -135,7 +135,7 @@ session_start();
 
         <div class="section">
             <h2>Build</h2>
-            <a href="Build.php">
+            <a href="build/build.php">
                 <img src="../../images/buildd.jpg" alt="Build">
             </a>
         </div><!--Section-->
