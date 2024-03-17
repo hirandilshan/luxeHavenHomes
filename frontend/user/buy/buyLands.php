@@ -1,6 +1,29 @@
 <?php
 session_start();
+include_once '../../../backend/user/dbs.php';
+
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['search'])) {
+    // Sanitize and validate inputs (you should add proper validation)
+    $location = mysqli_real_escape_string($connect, $_POST['location']);
+    $minPrice = mysqli_real_escape_string($connect, $_POST['minPrice']);
+    $maxPrice = mysqli_real_escape_string($connect, $_POST['maxPrice']);
+    
+    if($maxPrice=="unlimited"){
+        $sql = "SELECT * FROM land WHERE Ad_location='$location'AND Ad_price> $minPrice;";
+    }else{
+        $sql = "SELECT * FROM land WHERE Ad_location='$location'AND Ad_price> $minPrice AND Ad_price <$maxPrice;";
+    }
+    
+    $result = mysqli_query($connect, $sql);
+}else{
+    $sql = "SELECT * FROM land;";
+    $result = mysqli_query($connect, $sql);
+}
+
+mysqli_close($connect);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,8 +41,7 @@ session_start();
 
 <body>
     <header>
-
-        <div class="header">
+    <div class="header">
             <div class="headerbar">
                 <div class="account">
                     <ul>
@@ -110,90 +132,69 @@ session_start();
             </div>
         </div>
     </header>
+
     <div class="home">
-        <div class="main_slide">
-            <div>
-                <h1>Enjoy <span>Delicious Food</span> is Your Healthy Life.</h1>
-              
-            </div>
-            <div>
-                <img src="../../../images/hom1.png" alt="house1s">
-            </div>
-        </div>
-        <div class="menu">
-
-        <div class="list">
-            <a href="../../../frontend/user/menu.php">Back to Menu</a>
-
-            <div class="section">
-                <img src="../../../../img/buger.jpeg" alt="option1">
-                <a href="buyLands.php">Buy Lands</a>
-            </div>
-            <div class="section">
-                <img src="../../../img/nuggets.jpeg" alt="option2">
-                <a href="buyHouses.php">Buy Houses</a>
-            </div>
-            <div class="section">
-                <img src="../../../img/salads.jpeg" alt="option3">
-                <a href="buyAccessories.php">Buy Accessories</a>
-            </div>
-            <div class="section">
-                <img src="../../../img/fries.jpeg" alt="option4">
-                <a href="buyFurnitures.php">Buy Furnitures</a>
-            </div>
-           
-        </div>
-
-
-
         <div class="choice">
             <p>Buy Lands</p>
             <div class="foods">
-
-
+                <div class="search">
+                    <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                        <label for="location">Location</label>
+                        <select id="location" name="location">
+                            <option value="colombo">Colombo</option>
+                            <option value="gampaha">Gampaha</option>
+                            <option value="kandy">Kandy</option>
+                            <option value="kegalle">Kegalle</option>
+                        </select>
+                        <label for="minPrice">Minimum Price</label>
+                        <select id="minPrice" name="minPrice">
+                            <option value="0">0</option>
+                            <option value="1000000">1000000</option>
+                            <option value="5000000">5000000</option>
+                            <option value="10000000">10000000</option>
+                        </select>
+                        <label for="maxPrice">Maximum Price</label>
+                        <select id="maxPrice" name="maxPrice">
+                            <option value="1000000">1000000</option>
+                            <option value="5000000">5000000</option>
+                            <option value="10000000">10000000</option>
+                            <option value="unlimited">unlimited</option>
+                        </select>
+                        <button type="submit" name="search">Search</button>
+                    </form>
+                </div>
 
                 <?php
-                include_once '../../../backend/user/dbs.php';  // Include your database connection file
-                $sql = "SELECT * FROM foods WHERE foodType='Burgers';";
-                $result = mysqli_query($connect, $sql);
+                if (isset($result)) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $Ad_id = $row["Ad_id"];
+                        $Ad_name = $row["Ad_name"];
+                        $Ad_price = $row["Ad_price"];
+                        $Ad_type = $row["Ad_type"];
+                        $Ad_location = $row["Ad_location"];
+                        $Ad_discription = $row["Ad_discription"];
+                        $Ad_img = $row["Ad_img"];
+                        $Ad_phone = $row["Ad_phone"];
+                        $Land_area = $row["Land_area"];
 
-
-
-                while ($row = $result->fetch_assoc()) {
-                    // Access the data by column name
-
-                    $itemId = $row["foodId"];
-                    $item = $row["item"];
-                    $img = $row["img"];
-                    $price = $row["price"];
-
-                    echo '<div class="food-item">';
-                    echo "<img src='$img' alt='Food 1'>";
-                    echo "<h3> $item</h3>";
-                    echo "<h4>Rs $price</h4>";
-                    echo "<form method='POST' action='../../backend/user/cartP.php'>";
-                    echo "<input type='hidden' name='foodId' value='$itemId'>";
-                    echo "<input type='hidden' name='item' value='$item'>";
-                    echo "<input type='hidden' name='price' value='$price'>";
-                    echo "<button type='submit' name='addToCart'>See More</button>";
-                    echo "</form>";
-                    echo '</div>';
+                        echo '<div class="food-item">';
+                        echo "<img src='$Ad_img' alt='Land Image'>";
+                        echo "<h3>$Ad_type</h3>";
+                        echo "<h4>Rs $Ad_price</h4>";
+                        echo "<form method='POST' action='../../backend/user/cartP.php'>";
+                        echo "<input type='hidden' name='Ad_id' value='$Ad_id'>";
+                        echo "<button type='submit' name='addToCart'>See More</button>";
+                        echo "</form>";
+                        echo '</div>';
+                    }
+                    // Free result set
+                    mysqli_free_result($result);
                 }
-
-
-                $connect->close();
-
                 ?>
-            </div><!--foods-->
-        </div><!--choice-->
+            </div>
+        </div>
     </div>
-        
 
-    
-
-
-
-    </div>
     <div class="footer">
         <div class="footer-1">
             <div class="logo">
