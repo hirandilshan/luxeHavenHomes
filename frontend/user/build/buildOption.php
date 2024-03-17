@@ -1,13 +1,23 @@
 <?php
+
 session_start();
+include_once '../../../backend/user/dbs.php'; 
+
+$buildOption = $_POST['buildOption'];
+
+
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/index.css">
-    <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/index.css">
+    <link rel="stylesheet" href="../../../css/food.css">
+    <link rel="shortcut icon" href="../../../images/eatout logo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EAT OUT Restaurant</title>
@@ -17,22 +27,21 @@ session_start();
 
 <body>
     <header>
-
-        <div class="header">
+    <div class="header">
             <div class="headerbar">
                 <div class="account">
                     <ul>
 
                         <?php
                         if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
-                            echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                            echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                         } else {
-                            echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                            echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                            echo '<li><a href="../../../frontend/user/signup.php">Sign up</a></li>';
+                            echo '<li><a href="../../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
                         }
                         ?>
-                        <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
-                        <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
+                        <li><a href="../../../frontend/user/foodMenu.php">Order Now</a></li>
+                        <li><a href="../../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
                             </a></li>
 
 
@@ -47,11 +56,11 @@ session_start();
                 </div>
                 <div class="nav">
                     <ul>
-                        <a href="../../frontend/user/serviceTypes.php">
+                        <a href="../../../frontend/user/serviceTypes.php">
                             <li>Contact</li>
                         </a>
                         
-                        <a href="../../frontend/user/about.php">
+                        <a href="../../../frontend/user/about.php">
                             <li>About</li>
                         </a>
                        
@@ -61,14 +70,14 @@ session_start();
             </div>
 
             <div class="logo">
-                <a href="../../frontend/user/index.php"><img src="../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
+                <a href="../../../frontend/user/index.php"><img src="../../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
             </div>
             <div class="nav">
                 <ul>
-                    <a href="../../frontend/user/contact.php">
+                    <a href="../../../frontend/user/contact.php">
                         <li>Contact</li>
                     </a>
-                    <a href="../../frontend/user/about.php">
+                    <a href="../../../frontend/user/about.php">
                         <li>About Us</li>
                     </a>
 
@@ -98,10 +107,10 @@ session_start();
 
                     <?php
                     if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
-                        echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                        echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
-                        echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                        echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                        echo '<li><a href="../../../frontend/user/signup.php">Sign up</a></li>';
+                        echo '<li><a href="../../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
                     }
                     ?>
 
@@ -109,56 +118,46 @@ session_start();
             </div>
         </div>
     </header>
+
     <div class="home">
-        <div class="main_slide">
-            <div>
-                <h1>Enjoy <span>Delicious Food</span> is Your Healthy Life.</h1>
-              
-            </div>
-            <div>
-                <img src="../../images/hom1.png" alt="house1s">
+        <div class="choice">
+            <p><?php echo $buildOption ?></p>
+            <div class="foods">
+
+                <?php
+                include_once '../../../backend/user/dbs.php';
+                $sql = "SELECT * FROM $buildOption;";
+                $result = mysqli_query($connect, $sql);
+                if (isset($result)) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        
+                        $Ad_id = $row["Ad_id"];
+                        $Ad_name = $row["Ad_name"];
+                        $Ad_price = $row["Ad_price"];
+                        $Ad_type = $row["Ad_type"];
+                        $Ad_location = $row["Ad_location"];
+                        $Ad_discription = $row["Ad_discription"];
+                        $Ad_img = $row["Ad_img"];
+                        
+
+                        echo '<div class="food-item">';
+                        echo "<img src='$Ad_img' alt='Image'>";
+                        echo "<h3>$Ad_name</h3>";
+                        echo "<h4>Rs $Ad_price</h4>";
+                        echo "<form method='POST' action='../../../backend/user/cartP.php'>";
+                        echo "<input type='hidden' name='Ad_id' value='$Ad_id'>";
+                        echo "<button type='submit' name='addToCart'>See More</button>";
+                        echo "</form>";
+                        echo '</div>';
+                    }
+                    // Free result set
+                    mysqli_free_result($result);
+                }
+                ?>
             </div>
         </div>
-        
-
-        <div class="menu">
-        <div class="section">
-            <h2>Sell Lands</h2>
-            <a href="buy.php">
-                <img src="../../img/buger.jpeg" alt="Burger">
-            </a>
-
-        </div><!--Section-->
-
-        <div class="section">
-            <h2>Sell Houses</h2>
-            <a href="sell.php">
-                <img src="../../img/nugget.jpeg" alt="Nuggets">
-            </a>
-
-        </div><!--Section-->
-
-        <div class="section">
-            <h2>Sell Accessories</h2>
-            <a href="rent.php">
-                <img src="../../img/salads.jpeg" alt="Salads">
-            </a>
-        </div><!--Section-->
-
-        <div class="section">
-            <h2>Sell Furnitures</h2>
-            <a href="rent.php">
-                <img src="../../img/salads.jpeg" alt="Salads">
-            </a>
-        </div><!--Section-->
-
-        
     </div>
 
-
-
-
-    </div>
     <div class="footer">
         <div class="footer-1">
             <div class="logo">

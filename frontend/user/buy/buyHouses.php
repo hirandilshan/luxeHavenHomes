@@ -6,18 +6,19 @@ include_once '../../../backend/user/dbs.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['search'])) {
     // Sanitize and validate inputs (you should add proper validation)
     $location = mysqli_real_escape_string($connect, $_POST['location']);
+    $propertyType = mysqli_real_escape_string($connect, $_POST['propertyType']);
     $minPrice = mysqli_real_escape_string($connect, $_POST['minPrice']);
     $maxPrice = mysqli_real_escape_string($connect, $_POST['maxPrice']);
-    
-    if($maxPrice=="unlimited"){
-        $sql = "SELECT * FROM land WHERE Ad_location='$location'AND Ad_price> $minPrice;";
-    }else{
-        $sql = "SELECT * FROM land WHERE Ad_location='$location'AND Ad_price> $minPrice AND Ad_price <$maxPrice;";
+
+    if ($maxPrice == "unlimited") {
+        $sql = "SELECT * FROM houses WHERE Ad_location='$location'AND Ad_price> $minPrice AND Ad_Type= '$propertyType';";
+    } else {
+        $sql = "SELECT * FROM houses WHERE Ad_location='$location'AND Ad_price> $minPrice AND Ad_price <$maxPrice AND Ad_Type='$propertyType';";
     }
-    
+
     $result = mysqli_query($connect, $sql);
-}else{
-    $sql = "SELECT * FROM land;";
+} else {
+    $sql = "SELECT * FROM houses;";
     $result = mysqli_query($connect, $sql);
 }
 
@@ -41,7 +42,7 @@ mysqli_close($connect);
 
 <body>
     <header>
-    <div class="header">
+        <div class="header">
             <div class="headerbar">
                 <div class="account">
                     <ul>
@@ -64,7 +65,7 @@ mysqli_close($connect);
                                 <i class="material-icons" id="search-icon1">&#xe8b6;</i>
                             </li>
                         </a>
-                        
+
                     </ul>
 
                 </div>
@@ -73,11 +74,11 @@ mysqli_close($connect);
                         <a href="../../../frontend/user/serviceTypes.php">
                             <li>Contact</li>
                         </a>
-                        
+
                         <a href="../../../frontend/user/about.php">
                             <li>About</li>
                         </a>
-                       
+
                     </ul>
                 </div>
 
@@ -97,24 +98,24 @@ mysqli_close($connect);
 
                 </ul>
             </div>
-          
+
             <div class="bar">
                 <ul>
                     <a href="#">
                         <li>
-                            <i class="material-icons" id="navbar-icon"style="color:white">&#xe5d2;</i>
+                            <i class="material-icons" id="navbar-icon" style="color:white">&#xe5d2;</i>
                         </li>
                     </a>
                     <a href="">
                         <li>
-                            <i class="material-icons" id="cancel"style="color:white">&#xe5c9;</i>
+                            <i class="material-icons" id="cancel" style="color:white">&#xe5c9;</i>
                         </li>
                     </a>
 
 
                 </ul>
             </div>
-            
+
 
             <div class="icon">
                 <ul>
@@ -135,7 +136,7 @@ mysqli_close($connect);
 
     <div class="home">
         <div class="choice">
-            <p>Buy Lands</p>
+            <p>Buy Houses</p>
             <div class="foods">
                 <div class="search">
                     <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
@@ -145,6 +146,13 @@ mysqli_close($connect);
                             <option value="gampaha">Gampaha</option>
                             <option value="kandy">Kandy</option>
                             <option value="kegalle">Kegalle</option>
+                        </select>
+                        <label for="propertyType">Property Type</label>
+                        <select id="propertyType" name="propertyType">
+                            <option value="house">Houses</option>
+                            <option value="apartment">Apartments</option>
+                            <option value="cProperty">commeritial property</option>
+
                         </select>
                         <label for="minPrice">Minimum Price</label>
                         <select id="minPrice" name="minPrice">
@@ -175,11 +183,12 @@ mysqli_close($connect);
                         $Ad_discription = $row["Ad_discription"];
                         $Ad_img = $row["Ad_img"];
                         $Ad_phone = $row["Ad_phone"];
-                        $Land_area = $row["Land_area"];
+                        $H_type = $row["H_type"];
+                        $H_area = $row["H_area"];
 
                         echo '<div class="food-item">';
                         echo "<img src='$Ad_img' alt='Land Image'>";
-                        echo "<h3>$Ad_type</h3>";
+                        echo "<h3>$Ad_name</h3>";
                         echo "<h4>Rs $Ad_price</h4>";
                         echo "<form method='POST' action='../../backend/user/cartP.php'>";
                         echo "<input type='hidden' name='Ad_id' value='$Ad_id'>";
@@ -203,7 +212,7 @@ mysqli_close($connect);
             <div clss="social">
                 <ul>
                     <li>
-                        
+
                     </li>
                 </ul>
             </div>
@@ -218,7 +227,7 @@ mysqli_close($connect);
                 <p>Buyer's Guide</p>
                 <p>Help Center</p>
                 <p>post Ads</p>
-                    
+
             </address>
         </div>
         <div class="footer-111">
@@ -229,7 +238,7 @@ mysqli_close($connect);
                 <p>Construction equipments</p>
                 <p>Privacy policy</p>
                 <p>Disclaimer</p>
-                    
+
             </address>
         </div>
         <div class="footer-1111">
@@ -239,19 +248,19 @@ mysqli_close($connect);
                 <p>+94 712456894</p>
                 <p>+94 759825015</p>
                 <p>info@LuxeHavenHomes.LK</p>
-                
-                    
+
+
             </address>
         </div>
-        
+
     </div>
     <div class="footer-2">
-           <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
+        <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
             ALL RIGHTS RESERVED.<br>
-           WEBSITE MAINTAINTENANCE BY R & Y  </P>
-        </div>
+            WEBSITE MAINTAINTENANCE BY R & Y </P>
+    </div>
     <script src="../../frontend/user/app.js"></script>
-    
+
 </body>
 
 </html>

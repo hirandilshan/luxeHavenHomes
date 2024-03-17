@@ -5,14 +5,15 @@ session_start();
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/index.css">
-    <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/index.css">
+    <link rel="shortcut icon" href="../../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EAT OUT Restaurant</title>
+    <title>Luxe Haven Homes</title>
     <meta name="viewport" content="width=device-width,initial-scal=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -25,14 +26,14 @@ session_start();
 
                         <?php
                         if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
-                            echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                            echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                         } else {
-                            echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                            echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                            echo '<li><a href="../../../frontend/user/signup.php">Sign up</a></li>';
+                            echo '<li><a href="../../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
                         }
                         ?>
-                        <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
-                        <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
+                        <li><a href="../../../frontend/user/foodMenu.php">Order Now</a></li>
+                        <li><a href="../../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
                             </a></li>
 
 
@@ -40,35 +41,30 @@ session_start();
                             <li>
                                 <i class="material-icons" id="search-icon1">&#xe8b6;</i>
                             </li>
-                        </a>
-                        
+                        </a>                       
                     </ul>
-
                 </div>
                 <div class="nav">
                     <ul>
-                        <a href="../../frontend/user/serviceTypes.php">
+                        <a href="../../../frontend/user/serviceTypes.php">
                             <li>Contact</li>
                         </a>
                         
-                        <a href="../../frontend/user/about.php">
+                        <a href="../../../frontend/user/about.php">
                             <li>About</li>
-                        </a>
-                       
+                        </a>                       
                     </ul>
                 </div>
-
             </div>
-
             <div class="logo">
-                <a href="../../frontend/user/index.php"><img src="../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
+                <a href="../../../frontend/user/index.php"><img src="../../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
             </div>
             <div class="nav">
                 <ul>
-                    <a href="../../frontend/user/contact.php">
+                    <a href="../../../frontend/user/contact.php">
                         <li>Contact</li>
                     </a>
-                    <a href="../../frontend/user/about.php">
+                    <a href="../../../frontend/user/about.php">
                         <li>About Us</li>
                     </a>
 
@@ -98,10 +94,10 @@ session_start();
 
                     <?php
                     if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
-                        echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                        echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
-                        echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                        echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                        echo '<li><a href="../../../frontend/user/signup.php">Sign up</a></li>';
+                        echo '<li><a href="../../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
                     }
                     ?>
 
@@ -112,62 +108,80 @@ session_start();
     <div class="home">
         <div class="main_slide">
             <div>
-                <h1>Enjoy <span>Delicious Food</span> is Your Healthy Life.</h1>
+                <h1>Set New Stndards<br>in <span>Modern Home</span><br>Constructions</h1>
               
             </div>
             <div>
-                <img src="../../images/hom1.png" alt="house1s">
+                <img src="../../../images/h2.png" alt="house1s">
             </div>
         </div>
-        
-
-    <div class="menu">
-        <div class="section">
-            <h2>Buy Lands</h2>
-            <a href="buy/buyLands.php">
-                <img src="../../img/buger.jpeg" alt="Burger">
-            </a>
-
-        </div><!--Section-->
-
-        <div class="section">
-            <h2>Buy Houses</h2>
-            <a href="sell.php">
-                <img src="../../img/nugget.jpeg" alt="Nuggets">
-            </a>
-
-        </div><!--Section-->
-
-        <div class="section">
-            <h2>Buy Accessories</h2>
-            <a href="rent.php">
-                <img src="../../img/salads.jpeg" alt="Salads">
-            </a>
-        </div><!--Section-->
-
-        <div class="section">
-            <h2>Buy Furnitures</h2>
-            <a href="rent.php">
-                <img src="../../img/salads.jpeg" alt="Salads">
-            </a>
-        </div><!--Section-->
-
-        
     </div>
+    <div class="menu">
+        <h1>What are you looking for?</h1>
+        
+        <div class="section">
+            <form action="../../../frontend/user/build/buildOption.php" method="post">
+            <h2>Workers</h2>
+            <input type='hidden' name='buildOption' value='workers'>
+            <button type='submit' name='buildOptionButton'><img src="../../../images/h8.jpg" alt="House"></button>
+            </form>
+        </div><!--Section-->
 
+        
+        <div class="section">
+            <form action="../../../frontend/user/build/buildOption.php" method="post">
+            <h2>Profesionals</h2>
+            <input type='hidden' name='buildOption' value='profesionals'>
+            <button type='submit' name='buildOptionButton'><img src="../../../images/h8.jpg" alt="House"></button>
+            </form>
+        </div><!--Section-->
 
+        <div class="section">
+            <form action="../../../frontend/user/build/buildOption.php" method="post">
+            <h2>Tools</h2>
+            <input type='hidden' name='buildOption' value='Tools'>
+            <button type='submit' name='buildOptionButton'><img src="../../../images/h8.jpg" alt="House"></button>
+            </form>
+        </div><!--Section-->
+
+        <div class="section">
+            <form action="../../../frontend/user/build/buildOption.php" method="post">
+            <h2>Supplements</h2>
+            <input type='hidden' name='buildOption' value='supplements'>
+            <button type='submit' name='buildOptionButton'><img src="../../../images/h8.jpg" alt="House"></button>
+            </form>
+        </div><!--Section-->
+
+        <div class="section">
+            <form action="../../../frontend/user/build/buildOption.php" method="post">
+            <h2>Accessories</h2>
+            <input type='hidden' name='buildOption' value='accessories'>
+            <button type='submit' name='buildOptionButton'><img src="../../../images/h8.jpg" alt="House"></button>
+            </form>
+        </div><!--Section-->
+
+        <div class="section">
+            <form action="../../../frontend/user/build/buildOption.php" method="post">
+            <h2>Furnitures</h2>
+            <input type='hidden' name='buildOption' value='furnitures'>
+            <button type='submit' name='buildOptionButton'><img src="../../../images/h8.jpg" alt="House"></button>
+            </form>
+        </div><!--Section-->
+        
+
+    </div>
 
     </div>
     <div class="footer">
         <div class="footer-1">
             <div class="logo">
-                <img src="../../images/luxeLogo.jpg" alt="logo">
+                <img src="../../../images/luxeLogo.jpg" alt="logo">
             </div>
             <div clss="social">
                 <ul>
-                    <li>
-                        
-                    </li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -213,7 +227,7 @@ session_start();
             ALL RIGHTS RESERVED.<br>
            WEBSITE MAINTAINTENANCE BY R & Y  </P>
         </div>
-    <script src="../../frontend/user/app.js"></script>
+    <script src="../../../frontend/user/app.js"></script>
     
 </body>
 
