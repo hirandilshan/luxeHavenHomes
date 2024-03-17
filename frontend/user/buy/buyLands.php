@@ -6,14 +6,21 @@ include_once '../../../backend/user/dbs.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['search'])) {
     // Sanitize and validate inputs (you should add proper validation)
     $location = mysqli_real_escape_string($connect, $_POST['location']);
-    $price = mysqli_real_escape_string($connect, $_POST['price']);
+    $minPrice = mysqli_real_escape_string($connect, $_POST['minPrice']);
+    $maxPrice = mysqli_real_escape_string($connect, $_POST['maxPrice']);
     
-    // Query lands based on location
-    $sql = "SELECT * FROM land WHERE Ad_location='$location';";
+    if($maxPrice=="unlimited"){
+        $sql = "SELECT * FROM land WHERE Ad_location='$location'AND Ad_price> $minPrice;";
+    }else{
+        $sql = "SELECT * FROM land WHERE Ad_location='$location'AND Ad_price> $minPrice AND Ad_price <$maxPrice;";
+    }
+    
+    $result = mysqli_query($connect, $sql);
+}else{
+    $sql = "SELECT * FROM land;";
     $result = mysqli_query($connect, $sql);
 }
 
-// Close connection
 mysqli_close($connect);
 ?>
 
@@ -139,12 +146,19 @@ mysqli_close($connect);
                             <option value="kandy">Kandy</option>
                             <option value="kegalle">Kegalle</option>
                         </select>
-                        <label for="price">Price Range</label>
-                        <select id="price" name="price">
-                            <option value="1000000">0-1000000</option>
-                            <option value="5000000">1000000-5000000</option>
-                            <option value="10000000">5000000-10000000</option>
-                            <option value="non">10000000-upwords</option>
+                        <label for="minPrice">Minimum Price</label>
+                        <select id="minPrice" name="minPrice">
+                            <option value="0">0</option>
+                            <option value="1000000">1000000</option>
+                            <option value="5000000">5000000</option>
+                            <option value="10000000">10000000</option>
+                        </select>
+                        <label for="maxPrice">Maximum Price</label>
+                        <select id="maxPrice" name="maxPrice">
+                            <option value="1000000">1000000</option>
+                            <option value="5000000">5000000</option>
+                            <option value="10000000">10000000</option>
+                            <option value="unlimited">unlimited</option>
                         </select>
                         <button type="submit" name="search">Search</button>
                     </form>
@@ -177,22 +191,67 @@ mysqli_close($connect);
                     mysqli_free_result($result);
                 }
                 ?>
-            </div><!-- .foods -->
-        </div><!-- .choice -->
-    </div><!-- .home -->
+            </div>
+        </div>
+    </div>
 
-    <!-- Your footer content -->
     <div class="footer">
-        <!-- Your footer content -->
-    </div><!-- .footer -->
-    
+        <div class="footer-1">
+            <div class="logo">
+                <img src="../../images/luxeLogo.jpg" alt="logo">
+            </div>
+            <div clss="social">
+                <ul>
+                    <li>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-11">
+            <address>
+                <h1>Support</h1>
+                <p>Lands</p>
+                <p>Houses</p>
+                <p>Construction equipments</p>
+                <p>Workers</p>
+                <p>Buyer's Guide</p>
+                <p>Help Center</p>
+                <p>post Ads</p>
+                    
+            </address>
+        </div>
+        <div class="footer-111">
+            <address>
+                <h1>Company</h1>
+                <p>About Us</p>
+                <p>Contact Us</p>
+                <p>Construction equipments</p>
+                <p>Privacy policy</p>
+                <p>Disclaimer</p>
+                    
+            </address>
+        </div>
+        <div class="footer-1111">
+            <address>
+                <h1>Contact Info</h1>
+                <p>Luxe Haven Homes(PVT)LTD</p>
+                <p>+94 712456894</p>
+                <p>+94 759825015</p>
+                <p>info@LuxeHavenHomes.LK</p>
+                
+                    
+            </address>
+        </div>
+        
+    </div>
     <div class="footer-2">
            <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
             ALL RIGHTS RESERVED.<br>
            WEBSITE MAINTAINTENANCE BY R & Y  </P>
-    </div>
-    
+        </div>
     <script src="../../frontend/user/app.js"></script>
+    
 </body>
 
 </html>
