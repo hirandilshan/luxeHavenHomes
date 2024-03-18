@@ -139,7 +139,7 @@ session_start();
         <div class="section">
             <form action="../../../frontend/user/build/buildOption.php" method="post">
             <h2>Tools</h2>
-            <input type='hidden' name='buildOption' value='Tools'>
+            <input type='hidden' name='buildOption' value='tools'>
             <button type='submit' name='buildOptionButton'><img src="../../../images/h8.jpg" alt="House"></button>
             </form>
         </div><!--Section-->

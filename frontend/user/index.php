@@ -142,7 +142,7 @@ session_start();
 
         <div class="section">
             <h2>Post Ad</h2>
-            <a href="rent.php">
+            <a href="postAd/postAd.php">
                 <img src="../../images/ad.png" alt="Ads">
             </a>
         </div><!--Section-->
