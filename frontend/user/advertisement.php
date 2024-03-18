@@ -1,28 +1,15 @@
 <?php
+
 session_start();
-include_once '../../../backend/user/dbs.php';
+include_once '../../../backend/user/dbs.php'; 
 
-// Check if form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['search'])) {
-    // Sanitize and validate inputs (you should add proper validation)
-    $location = mysqli_real_escape_string($connect, $_POST['location']);
-    $minPrice = mysqli_real_escape_string($connect, $_POST['minPrice']);
-    $maxPrice = mysqli_real_escape_string($connect, $_POST['maxPrice']);
-    
-    if($maxPrice=="unlimited"){
-        $sql = "SELECT * FROM lands WHERE location='$location'AND price> $minPrice;";
-    }else{
-        $sql = "SELECT * FROM lands WHERE location='$location'AND price> $minPrice AND price <$maxPrice;";
-    }
-    
-    $result = mysqli_query($connect, $sql);
-}else{
-    $sql = "SELECT * FROM lands;";
-    $result = mysqli_query($connect, $sql);
-}
+$type = $_POST['type'];
+$id = $_POST['id'];
 
-mysqli_close($connect);
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -135,38 +122,16 @@ mysqli_close($connect);
 
     <div class="home">
         <div class="choice">
-            <p>Buy Lands</p>
+            <p><?php echo $buildOption ?></p>
             <div class="foods">
-                <div class="search">
-                    <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                        <label for="location">Location</label>
-                        <select id="location" name="location">
-                            <option value="colombo">Colombo</option>
-                            <option value="gampaha">Gampaha</option>
-                            <option value="kandy">Kandy</option>
-                            <option value="kegalle">Kegalle</option>
-                        </select>
-                        <label for="minPrice">Minimum Price</label>
-                        <select id="minPrice" name="minPrice">
-                            <option value="0">0</option>
-                            <option value="1000000">1000000</option>
-                            <option value="5000000">5000000</option>
-                            <option value="10000000">10000000</option>
-                        </select>
-                        <label for="maxPrice">Maximum Price</label>
-                        <select id="maxPrice" name="maxPrice">
-                            <option value="1000000">1000000</option>
-                            <option value="5000000">5000000</option>
-                            <option value="10000000">10000000</option>
-                            <option value="unlimited">unlimited</option>
-                        </select>
-                        <button type="submit" name="search">Search</button>
-                    </form>
-                </div>
 
                 <?php
+                include_once '../../../backend/user/dbs.php';
+                $sql = "SELECT * FROM $type WHERE id=$id;";
+                $result = mysqli_query($connect, $sql);
                 if (isset($result)) {
                     while ($row = mysqli_fetch_assoc($result)) {
+                        
                         $id = $row["id"];
                         $name = $row["name"];
                         $price = $row["price"];
@@ -174,19 +139,19 @@ mysqli_close($connect);
                         $location = $row["location"];
                         $discription = $row["discription"];
                         $img = $row["img"];
-                        $phone = $row["phone"];
+                        $phone =$row["phone"];
                         
 
-                        echo '<div class="food-item">';
-                        echo "<img src='$img' alt='Land Image'>";
-                        echo "<h3>$type</h3>";
+                        echo "<h3>$name</h3>";
+                        echo "<img src='$img' alt='Image'>";
                         echo "<h4>Rs $price</h4>";
-                        echo "<form method='POST' action='../../frontend/user/advertisement.php'>";
-                        echo "<input type='hidden' name='type' value='$type'>";
-                        echo "<input type='hidden' name='id' value='$id'>";
-                        echo "<button type='submit' name='addToCart'>See More</button>";
+                        echo "<h3>$location</h3>";
+                        echo "<h4>$discription</h4>";
+                        echo "<form method='POST' action='../../../backend/user/call.php'>";
+                        echo "<input type='hidden' name='phone' value='$phone'>";
+                        echo "<button type='submit' name='call'>Call</button>";
                         echo "</form>";
-                        echo '</div>';
+                        
                     }
                     // Free result set
                     mysqli_free_result($result);

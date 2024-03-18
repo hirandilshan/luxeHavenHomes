@@ -131,21 +131,22 @@ $buildOption = $_POST['buildOption'];
                 if (isset($result)) {
                     while ($row = mysqli_fetch_assoc($result)) {
                         
-                        $Ad_id = $row["Ad_id"];
-                        $Ad_name = $row["Ad_name"];
-                        $Ad_price = $row["Ad_price"];
-                        $Ad_type = $row["Ad_type"];
-                        $Ad_location = $row["Ad_location"];
-                        $Ad_discription = $row["Ad_discription"];
-                        $Ad_img = $row["Ad_img"];
+                        $id = $row["id"];
+                        $name = $row["name"];
+                        $price = $row["price"];
+                        $type = $row["type"];
+                        $location = $row["location"];
+                        $discription = $row["discription"];
+                        $img = $row["img"];
                         
 
                         echo '<div class="food-item">';
-                        echo "<img src='$Ad_img' alt='Image'>";
-                        echo "<h3>$Ad_name</h3>";
-                        echo "<h4>Rs $Ad_price</h4>";
-                        echo "<form method='POST' action='../../../backend/user/cartP.php'>";
-                        echo "<input type='hidden' name='Ad_id' value='$Ad_id'>";
+                        echo "<img src='$img' alt='Image'>";
+                        echo "<h3>$name</h3>";
+                        echo "<h4>Rs $price</h4>";
+                        echo "<form method='POST' action='../../frontend/user/advertisement.php'>";
+                        echo "<input type='hidden' name='type' value='$type'>";
+                        echo "<input type='hidden' name='id' value='$id'>";
                         echo "<button type='submit' name='addToCart'>See More</button>";
                         echo "</form>";
                         echo '</div>';
