@@ -57,56 +57,32 @@ session_start();
                 </div>
                 <div class="nav">
                     <ul>
-                        <a href="../../frontend/user/foodMenu.php">
-                            <li>Food Menu</li>
-                        </a>
-                        <a href="../../frontend/user/serviceTypes.php">
-                            <li>Service Types</li>
-                        </a>
-                        <a href="../../frontend/user/galary.php">
-                            <li>Galary</li>
-                        </a>
-                        <a href="../../frontend/user/facilities.php">
-                            <li>Facilities</li>
-                        </a>
-                        <a href="../../frontend/user/offers.php">
-                            <li>Offers</li>
-                        </a>
-                        <a href="../../frontend/user/about.php">
-                            <li>About</li>
-                        </a>
-                        <a href="../../frontend/user/reservation.php">
-                            <li>Reservation</li>
-                        </a>
+                    <a href="../../frontend/user/contact.php">
+                        <li>Contact</li>
+                    </a>
+                    <a href="../../frontend/user/about.php">
+                        <li>About Us</li>
+                    </a>
+                    <a href="../../frontend/user/about.php">
+                        <li>Logout</li>
+                    </a>
                     </ul>
                 </div>
             </div>
 
             <div class="logo">
-                <a href="../../frontend/user/index.php"><img src="../../images/eatout logo.jpg" alt="" ,height="100" , width="50"></a>
+                <a href="../../frontend/user/index.php"><img src="../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
             </div>
             <div class="nav">
                 <ul>
-                    <a href="../../frontend/user/foodMenu.php">
-                        <li>Food Menu</li>
-                    </a>
-                    <a href="../../frontend/user/serviceTypes.php">
-                        <li>Service Types</li>
-                    </a>
-                    <a href="../../frontend/user/galary.php">
-                        <li>Galary</li>
-                    </a>
-                    <a href="../../frontend/user/facilities.php">
-                        <li>Facilities</li>
-                    </a>
-                    <a href="../../frontend/user/offers.php">
-                        <li>Offers</li>
+                <a href="../../frontend/user/contact.php">
+                        <li>Contact</li>
                     </a>
                     <a href="../../frontend/user/about.php">
-                        <li>About</li>
+                        <li>About Us</li>
                     </a>
-                    <a href="../../frontend/user/reservation.php">
-                        <li>Reservation</li>
+                    <a href="../../frontend/user/about.php">
+                        <li>Logout</li>
                     </a>
                 </ul>
             </div>
