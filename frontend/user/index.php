@@ -144,8 +144,10 @@ session_start();
         </div><!--Section-->
 
         <div class="section">
+
             <h2>Post<br>Advertisement</h2>
-            <a href="rent.php">
+            <a href="postAd/postAd.php">
+
                 <img src="../../images/ad.png" alt="Ads">
             </a>
         </div><!--Section-->   

@@ -11,9 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['search'])) {
     $maxPrice = mysqli_real_escape_string($connect, $_POST['maxPrice']);
 
     if ($maxPrice == "unlimited") {
-        $sql = "SELECT * FROM houses WHERE Ad_location='$location'AND Ad_price> $minPrice AND Ad_Type= '$propertyType';";
+        $sql = "SELECT * FROM houses WHERE location='$location'AND price> $minPrice AND Type= '$propertyType';";
     } else {
-        $sql = "SELECT * FROM houses WHERE Ad_location='$location'AND Ad_price> $minPrice AND Ad_price <$maxPrice AND Ad_Type='$propertyType';";
+        $sql = "SELECT * FROM houses WHERE location='$location'AND price> $minPrice AND price <$maxPrice AND Type='$propertyType';";
     }
 
     $result = mysqli_query($connect, $sql);
@@ -149,9 +149,9 @@ mysqli_close($connect);
                         </select>
                         <label for="propertyType">Property Type</label>
                         <select id="propertyType" name="propertyType">
-                            <option value="house">Houses</option>
-                            <option value="apartment">Apartments</option>
-                            <option value="cProperty">commeritial property</option>
+                            <option value="houses">Houses</option>
+                            <option value="apartments">Apartments</option>
+                            <option value="cProperties">commeritial property</option>
 
                         </select>
                         <label for="minPrice">Minimum Price</label>
@@ -175,23 +175,26 @@ mysqli_close($connect);
                 <?php
                 if (isset($result)) {
                     while ($row = mysqli_fetch_assoc($result)) {
-                        $Ad_id = $row["Ad_id"];
-                        $Ad_name = $row["Ad_name"];
-                        $Ad_price = $row["Ad_price"];
-                        $Ad_type = $row["Ad_type"];
-                        $Ad_location = $row["Ad_location"];
-                        $Ad_discription = $row["Ad_discription"];
-                        $Ad_img = $row["Ad_img"];
-                        $Ad_phone = $row["Ad_phone"];
-                        $H_type = $row["H_type"];
-                        $H_area = $row["H_area"];
+                        $id = $row["id"];
+                        $name = $row["name"];
+                        $price = $row["price"];
+                        $type = $row["type"];
+                        $location = $row["location"];
+                        $discription = $row["discription"];
+                        $imagePathsStr = $row["img"];
+                        $phone = $row["phone"];
+
+                        $imagePaths = array();
+                        $imagePaths = explode(",", $imagePathsStr);
+                        
 
                         echo '<div class="food-item">';
-                        echo "<img src='$Ad_img' alt='Land Image'>";
-                        echo "<h3>$Ad_name</h3>";
-                        echo "<h4>Rs $Ad_price</h4>";
-                        echo "<form method='POST' action='../../backend/user/cartP.php'>";
-                        echo "<input type='hidden' name='Ad_id' value='$Ad_id'>";
+                        echo "<img src='$imagePaths[0]' alt='Land Image'>";
+                        echo "<h3>$name</h3>";
+                        echo "<h4>Rs $price</h4>";
+                        echo "<form method='POST' action='../displayAd/advertisement.php'>";
+                        echo "<input type='hidden' name='type' value='houses'>";
+                        echo "<input type='hidden' name='id' value='$id'>";
                         echo "<button type='submit' name='addToCart'>See More</button>";
                         echo "</form>";
                         echo '</div>';
