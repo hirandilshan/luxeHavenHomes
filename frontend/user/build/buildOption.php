@@ -130,21 +130,24 @@ $buildOption = $_POST['buildOption'];
                 $result = mysqli_query($connect, $sql);
                 if (isset($result)) {
                     while ($row = mysqli_fetch_assoc($result)) {
-                        
                         $id = $row["id"];
                         $name = $row["name"];
                         $price = $row["price"];
                         $type = $row["type"];
                         $location = $row["location"];
                         $discription = $row["discription"];
-                        $img = $row["img"];
+                        $imagePathsStr = $row["img"];
+                        $phone = $row["phone"];
+
+                        $imagePaths = array();
+                        $imagePaths = explode(",", $imagePathsStr);
                         
 
                         echo '<div class="food-item">';
-                        echo "<img src='$img' alt='Image'>";
+                        echo "<img src='$imagePaths[0]' alt='Land Image'>";
                         echo "<h3>$name</h3>";
                         echo "<h4>Rs $price</h4>";
-                        echo "<form method='POST' action='../../frontend/user/advertisement.php'>";
+                        echo "<form method='POST' action='../displayAd/advertisement.php'>";
                         echo "<input type='hidden' name='type' value='$type'>";
                         echo "<input type='hidden' name='id' value='$id'>";
                         echo "<button type='submit' name='addToCart'>See More</button>";
