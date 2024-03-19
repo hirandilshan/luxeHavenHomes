@@ -1,6 +1,6 @@
 html,
 body {
-    height: 100%;
+
     margin: 0;
     padding: 0;
 }
@@ -51,37 +51,55 @@ body {
 .menu{
     height: auto;
     text-align: center;
+    align-items:center ;
+    padding-top: 50px;
 }
 .menu h1{
     padding: 20px 0 40px;
     font-size: 40px;
     color: black;
     font-weight: bold;
+    text-align: center;
 }
 .section{
     display: inline-block;
-    text-align: left; 
-    box-sizing: border-box;
-    width: calc(25% - 20px); 
-    margin: 0 10px;
-    vertical-align: top;
+    text-align: center; 
+    align-items: center;
+    box-sizing:content-box;
+    width: calc(23% - 3px); 
+
 }
 .section h2{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    position: absolute;
+    align-items:center ;
+    transform: translate(-50%, 50%);
+    padding-top: 30px;
+    padding-left: 300px;
 }
 .section img{
-    width: 100%;
-    height: auto;
+    width: 50%;
+    height: 300px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
 }
-.section a {
-    text-decoration: none;
-    color: inherit;
-}
+
 .section:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     transition: transform 0.3s ease;
+}
+.about{
+    padding-top: 50px;
+    height: auto;
+
+}
+.about h3{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+    background-origin: padding-box;
+    background-color: black;
 }
 .red_btn {
     cursor: pointer;

@@ -67,6 +67,9 @@ session_start();
                     <a href="../../frontend/user/about.php">
                         <li>About Us</li>
                     </a>
+                    <a href="../../frontend/user/about.php">
+                        <li>Logout</li>
+                    </a>
 
                 </ul>
             </div>
@@ -119,14 +122,14 @@ session_start();
     <div class="menu">
         <h1>What are you looking for?</h1>
         <div class="section">
-            <h2>Buy Land</h2>
+            <h2>Buy<br>Land</h2>
             <a href="buy/buyLands.php">
                 <img src="../../images/landd.jpg" alt="Land">
             </a>
         </div><!--Section-->
 
         <div class="section">
-            <h2>Buy House</h2>
+            <h2>Buy<br>House</h2>
             <a href="buy/buyHouses.php">
                 <img src="../../images/h8.jpg" alt="House">
             </a>
@@ -141,16 +144,21 @@ session_start();
         </div><!--Section-->
 
         <div class="section">
-            <h2>Post Ad</h2>
+
+            <h2>Post<br>Advertisement</h2>
             <a href="postAd/postAd.php">
+
                 <img src="../../images/ad.png" alt="Ads">
             </a>
-        </div><!--Section-->
+        </div><!--Section-->   
+    </div>
+    <div class="About">
+        <h3>About Us</h3>
+        <img src="" alt="">
 
-        
+        <img src="" alt="">
     </div>
 
-    </div>
     <div class="footer">
         <div class="footer-1">
             <div class="logo">
