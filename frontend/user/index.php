@@ -67,10 +67,6 @@ session_start();
                     <a href="../../frontend/user/about.php">
                         <li>About Us</li>
                     </a>
-                    <a href="../../frontend/user/about.php">
-                        <li>Logout</li>
-                    </a>
-
                 </ul>
             </div>
           
