@@ -122,41 +122,46 @@ $id = $_POST['id'];
 
     <div class="home">
         <div class="choice">
-            <p><?php echo $buildOption ?></p>
+            <p></p>
             <div class="foods">
 
-                <?php
-                include_once '../../../backend/user/dbs.php';
-                $sql = "SELECT * FROM $type WHERE id=$id;";
-                $result = mysqli_query($connect, $sql);
-                if (isset($result)) {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        
-                        $id = $row["id"];
-                        $name = $row["name"];
-                        $price = $row["price"];
-                        $type = $row["type"];
-                        $location = $row["location"];
-                        $discription = $row["discription"];
-                        $img = $row["img"];
-                        $phone =$row["phone"];
-                        
+            <?php
+include_once '../../../backend/user/dbs.php';
 
-                        echo "<h3>$name</h3>";
-                        echo "<img src='$img' alt='Image'>";
-                        echo "<h4>Rs $price</h4>";
-                        echo "<h3>$location</h3>";
-                        echo "<h4>$discription</h4>";
-                        echo "<form method='POST' action='../../../backend/user/call.php'>";
-                        echo "<input type='hidden' name='phone' value='$phone'>";
-                        echo "<button type='submit' name='call'>Call</button>";
-                        echo "</form>";
-                        
-                    }
-                    // Free result set
-                    mysqli_free_result($result);
-                }
-                ?>
+$sql = "SELECT * FROM $type WHERE id=$id;";
+$result = mysqli_query($connect, $sql);
+
+if (isset($result)) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $id = $row["id"];
+        $name = $row["name"];
+        $price = $row["price"];
+        $type = $row["type"];
+        $location = $row["location"];
+        $discription = $row["discription"];
+        $imagePathsStr = $row["img"];
+        $phone = $row["phone"];
+
+        $imagePaths = array();
+        $imagePaths = explode(",", $imagePathsStr);
+
+        echo "<h3>$name</h3><br>";
+        foreach ($imagePaths as $img) {
+            echo "<img src='$img' alt='Image'><br>";
+        }
+        echo "<h4>Rs $price</h4><br>";
+        echo "<h3>$location</h3><br>";
+        echo "<h4>$discription</h4><br>";
+        echo "<form method='POST' action='../../../backend/user/call.php'>";
+        echo "<input type='hidden' name='phone' value='$phone'>";
+        echo "<button type='submit' name='call'>Call</button>";
+        echo "</form>";
+    }
+    // Free result set
+    mysqli_free_result($result);
+}
+?>
+
             </div>
         </div>
     </div>
@@ -164,7 +169,7 @@ $id = $_POST['id'];
     <div class="footer">
         <div class="footer-1">
             <div class="logo">
-                <img src="../../images/luxeLogo.jpg" alt="logo">
+                <img src="../../../images/luxeLogo.jpg" alt="logo">
             </div>
             <div clss="social">
                 <ul>
@@ -216,7 +221,7 @@ $id = $_POST['id'];
             ALL RIGHTS RESERVED.<br>
            WEBSITE MAINTAINTENANCE BY R & Y  </P>
         </div>
-    <script src="../../frontend/user/app.js"></script>
+    <script src="../../../frontend/user/app.js"></script>
     
 </body>
 

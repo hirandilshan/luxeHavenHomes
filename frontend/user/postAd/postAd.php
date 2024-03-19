@@ -116,7 +116,7 @@ include_once '../../../backend/user/dbs.php';
 
     <div class="home">
         <div class="form">
-            <form method="POST" action="../../../backend/user/postAd.php" enctype="multipart/form-data">
+            <form method="POST" action="../../../backend/user/postAd/postAd.php" enctype="multipart/form-data">
 
                 <label for="image1">Image 1:</label><br>
                 <input type="file" id="image1" name="image[]"><br>
@@ -158,8 +158,8 @@ include_once '../../../backend/user/dbs.php';
                     <option value="supplements">Supplements</option>
                 </select><br>
 
-                <label for="description">Description:</label><br>
-                <input type="text" id="description" name="description"><br>
+                <label for="discription">Discription:</label><br>
+                <input type="text" id="discription" name="discription"><br>
 
                 <label for="phone">Phone Number:</label><br>
                 <input type="text" id="phone" name="phone"><br><br>
