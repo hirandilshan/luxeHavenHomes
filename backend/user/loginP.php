@@ -13,7 +13,6 @@ $sql = "SELECT password FROM users WHERE email='$email'AND password='$password';
 $result = mysqli_query($connect, $sql);
 $count =mysqli_num_rows($result);
 
-
 if($count>0){
     $_SESSION['isLogedIn'] = 'true';
     $_SESSION['userName']=$_POST['email'];
