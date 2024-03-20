@@ -21,33 +21,20 @@ include_once '../../../backend/user/dbs.php';
 </head>
 
 <body>
-    <header>
+<header>
         <div class="header">
             <div class="headerbar">
                 <div class="account">
                     <ul>
-
                         <?php
-                        if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                        if (isset($_SESSION['isLogedIn'])) {
                             echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                         } else {
-                            echo '<li><a href="../../../frontend/user/signup.php">Sign up</a></li>';
-                            echo '<li><a href="../../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                            echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
                         }
                         ?>
-                        <li><a href="../../../frontend/user/foodMenu.php">Order Now</a></li>
-                        <li><a href="../../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
-                            </a></li>
-
-
-                        <a href="#">
-                            <li>
-                                <i class="material-icons" id="search-icon1">&#xe8b6;</i>
-                            </li>
-                        </a>
 
                     </ul>
-
                 </div>
                 <div class="nav">
                     <ul>
@@ -58,12 +45,9 @@ include_once '../../../backend/user/dbs.php';
                         <a href="../../../frontend/user/about.php">
                             <li>About</li>
                         </a>
-
                     </ul>
                 </div>
-
             </div>
-
             <div class="logo">
                 <a href="../../../frontend/user/index.php"><img src="../../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
             </div>
@@ -101,11 +85,10 @@ include_once '../../../backend/user/dbs.php';
                 <ul>
 
                     <?php
-                    if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                    if (isset($_SESSION['isLogedIn'])) {
                         echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
-                        echo '<li><a href="../../../frontend/user/signup.php">Sign up</a></li>';
-                        echo '<li><a href="../../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                        echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
                     }
                     ?>
 

@@ -17,143 +17,72 @@ session_start();
 </head>
 
 <body>
-    <header>
-        <div class="header">
-            <div class="headerbar">
-                <div class="account">
-                    <ul>
+<header>
 
-                        <?php
-                        if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
-                            echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
-                        } else {
-                            echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                            echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
-                        }
-                        ?>
-                        <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
-                        <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
-                            </a></li>
+<div class="header">
+    <div class="headerbar">
+        <div class="account">
+            <ul>
 
-
-                        <a href="#">
-                            <li>
-                                <i class="material-icons" id="search-icon1">&#xe8b6;</i>
-                            </li>
-                        </a>
-                        <div class="search" id="searchinput1">
-                            <form method="POST" action="../../frontend/user/searchP.php">
-                                <input type="search" id="search-box" name="Search-box">
-
-                                <button class="search_btn" type="submit" id="searchBtn">Search</button>
-
-
-
-
-                            </form>
-                        </div>
-                    </ul>
-
-                </div>
-                <div class="nav">
-                    <ul>
-                        <a href="../../frontend/user/foodMenu.php">
-                            <li>Food Menu</li>
-                        </a>
-                        <a href="../../frontend/user/serviceTypes.php">
-                            <li>Service Types</li>
-                        </a>
-                        <a href="../../frontend/user/galary.php">
-                            <li>Galary</li>
-                        </a>
-                        <a href="../../frontend/user/facilities.php">
-                            <li>Facilities</li>
-                        </a>
-                        <a href="../../frontend/user/offers.php">
-                            <li>Offers</li>
-                        </a>
-                        <a href="../../frontend/user/about.php">
-                            <li>About</li>
-                        </a>
-                        <a href="../../frontend/user/reservation.php">
-                            <li>Reservation</li>
-                        </a>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="logo">
-                <a href="../../frontend/user/index.php"><img src="../../images/eatout logo.jpg" alt="" ,height="100" , width="50"></a>
-            </div>
-            <div class="nav">
-                <ul>
-                    <a href="../../frontend/user/foodMenu.php">
-                        <li>Food Menu</li>
-                    </a>
-                    <a href="../../frontend/user/serviceTypes.php">
-                        <li>Service Types</li>
-                    </a>
-                    <a href="../../frontend/user/galary.php">
-                        <li>Galary</li>
-                    </a>
-                    <a href="../../frontend/user/facilities.php">
-                        <li>Facilities</li>
-                    </a>
-                    <a href="../../frontend/user/offers.php">
-                        <li>Offers</li>
-                    </a>
-                    <a href="../../frontend/user/about.php">
-                        <li>About</li>
-                    </a>
-                    <a href="../../frontend/user/reservation.php">
-                        <li>Reservation</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="bar">
-                <ul>
-                    <a href="#">
-                        <li>
-                            <i class="material-icons" id="navbar-icon">&#xe5d2;</i>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <i class="material-icons" id="cancel">&#xe5c9;</i>
-                        </li>
-                    </a>
-                </ul>
-            </div>
-            <form method="POST" action="../../frontend/user/searchP.php">
-                <div class="search-input">
-
-                    <div>
-                        <input type="search" id="search-box" name="Search-box">
-
-
-                    </div>
-                    <button class="search_btn" type="submit" id="searchBtn">Search</button>
-                </div>
-            </form>
-            <div class="icon">
-                <ul>
-
-                    <?php
-                    if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
-                        echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
-                    } else {
-                        echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                        echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
-                    }
-                    ?>
-                    <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
-                    <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
-                        </a></li>
-
-                </ul>
-            </div>
+                
+               
+            </ul>
         </div>
-    </header>
+        <div class="nav">
+            <ul>
+                <a href="../../frontend/user/serviceTypes.php">
+                    <li>Contact</li>
+                </a>
+                
+                <a href="../../frontend/user/about.php">
+                    <li>About</li>
+                </a>                       
+            </ul>
+        </div>
+    </div>
+    <div class="logo">
+        <a href="../../frontend/user/index.php"><img src="../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
+    </div>
+    <div class="nav">
+        <ul>
+            <a href="../../frontend/user/contact.php">
+                <li>Contact</li>
+            </a>
+            <a href="../../frontend/user/about.php">
+                <li>About Us</li>
+            </a>
+
+
+        </ul>
+    </div>
+  
+    <div class="bar">
+        <ul>
+            <a href="#">
+                <li>
+                    <i class="material-icons" id="navbar-icon"style="color:white">&#xe5d2;</i>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <i class="material-icons" id="cancel"style="color:white">&#xe5c9;</i>
+                </li>
+            </a>
+
+
+        </ul>
+    </div>
+    
+
+    <div class="icon">
+        <ul>
+
+            
+
+        </ul>
+    </div>
+</div>
+</header>
     <div class="content">
         <div class="forms">
 

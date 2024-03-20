@@ -23,25 +23,14 @@ session_start();
             <div class="headerbar">
                 <div class="account">
                     <ul>
-
-                        <?php
-                        if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
-                            echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
-                        } else {
-                            echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                            echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
-                        }
-                        ?>
-                        <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
-                        <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
-                            </a></li>
-
-
-                        <a href="#">
-                            <li>
-                                <i class="material-icons" id="search-icon1">&#xe8b6;</i>
-                            </li>
-                        </a>                       
+                    <?php
+                    if (isset($_SESSION['isLogedIn'])) {
+                        echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                    } else {
+                        echo "<script>alert('please login!'); window.location.href = '../../frontend/user/logIn.php';</script>";
+                    }
+                    ?>
+                       
                     </ul>
                 </div>
                 <div class="nav">
@@ -66,9 +55,6 @@ session_start();
                     </a>
                     <a href="../../frontend/user/about.php">
                         <li>About Us</li>
-                    </a>
-                    <a href="../../frontend/user/about.php">
-                        <li>Logout</li>
                     </a>
 
                 </ul>
@@ -96,11 +82,10 @@ session_start();
                 <ul>
 
                     <?php
-                    if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                    if (isset($_SESSION['isLogedIn'])) {
                         echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
-                        echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                        echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                        echo "<script>alert('please login!'); window.location.href = '../../frontend/user/logIn.php';</script>";
                     }
                     ?>
 

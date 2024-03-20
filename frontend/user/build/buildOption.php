@@ -26,49 +26,33 @@ $buildOption = $_POST['buildOption'];
 </head>
 
 <body>
-    <header>
-    <div class="header">
+<header>
+        <div class="header">
             <div class="headerbar">
                 <div class="account">
                     <ul>
-
                         <?php
-                        if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                        if (isset($_SESSION['isLogedIn'])) {
                             echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                         } else {
-                            echo '<li><a href="../../../frontend/user/signup.php">Sign up</a></li>';
-                            echo '<li><a href="../../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                            echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
                         }
                         ?>
-                        <li><a href="../../../frontend/user/foodMenu.php">Order Now</a></li>
-                        <li><a href="../../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
-                            </a></li>
 
-
-                        <a href="#">
-                            <li>
-                                <i class="material-icons" id="search-icon1">&#xe8b6;</i>
-                            </li>
-                        </a>
-                        
                     </ul>
-
                 </div>
                 <div class="nav">
                     <ul>
                         <a href="../../../frontend/user/serviceTypes.php">
                             <li>Contact</li>
                         </a>
-                        
+
                         <a href="../../../frontend/user/about.php">
                             <li>About</li>
                         </a>
-                       
                     </ul>
                 </div>
-
             </div>
-
             <div class="logo">
                 <a href="../../../frontend/user/index.php"><img src="../../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
             </div>
@@ -83,34 +67,33 @@ $buildOption = $_POST['buildOption'];
 
                 </ul>
             </div>
-          
+
             <div class="bar">
                 <ul>
                     <a href="#">
                         <li>
-                            <i class="material-icons" id="navbar-icon"style="color:white">&#xe5d2;</i>
+                            <i class="material-icons" id="navbar-icon" style="color:white">&#xe5d2;</i>
                         </li>
                     </a>
                     <a href="">
                         <li>
-                            <i class="material-icons" id="cancel"style="color:white">&#xe5c9;</i>
+                            <i class="material-icons" id="cancel" style="color:white">&#xe5c9;</i>
                         </li>
                     </a>
 
 
                 </ul>
             </div>
-            
+
 
             <div class="icon">
                 <ul>
 
                     <?php
-                    if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                    if (isset($_SESSION['isLogedIn'])) {
                         echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
-                        echo '<li><a href="../../../frontend/user/signup.php">Sign up</a></li>';
-                        echo '<li><a href="../../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                        echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
                     }
                     ?>
 
