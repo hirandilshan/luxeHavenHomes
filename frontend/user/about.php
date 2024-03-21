@@ -7,7 +7,7 @@ session_start();
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/about.css">
-    <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
+    <link rel="shortcut icon" href="../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EAT OUT Restaurant</title>
@@ -16,123 +16,96 @@ session_start();
 </head>
 
 <body>
-    <header>
+<header>
 
-        <div class="header">
-            <div class="headerbar">
-                <div class="account">
-                    <ul>
+<div class="header">
+    <div class="headerbar">
+        <div class="account">
+            <ul>
 
-                        <?php
-                        if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
-                            echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
-                        } else {
-                            echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                            echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
-                        }
-                        ?>
-                        <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
-                        <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
-                            </a></li>
-
-
-                        <a href="#">
-                            <li>
-                                <i class="material-icons" id="search-icon1">&#xe8b6;</i>
-                            </li>
-                        </a>
-                        <div class="search" id="searchinput1">
-                            <form method="POST" action="../../frontend/user/searchP.php">
-                                <input type="search" id="search-box" name="Search-box">
-
-                                <button class="search_btn" type="submit" id="searchBtn">Search</button>
+                <?php
+                if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                    echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                } else {
+                    echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
+                    echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+                }
+                ?>
+                <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
+                <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
+                    </a></li>
 
 
-
-
-                            </form>
-                        </div>
-                    </ul>
-
-                </div>
-                <div class="nav">
-                    <ul>
-                    <a href="../../frontend/user/contact.php">
-                        <li>Contact</li>
-                    </a>
-                    <a href="../../frontend/user/about.php">
-                        <li>About Us</li>
-                    </a>
-                    <a href="../../frontend/user/about.php">
-                        <li>Logout</li>
-                    </a>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="logo">
-                <a href="../../frontend/user/index.php"><img src="../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
-            </div>
-            <div class="nav">
-                <ul>
-                <a href="../../frontend/user/contact.php">
-                        <li>Contact</li>
-                    </a>
-                    <a href="../../frontend/user/about.php">
-                        <li>About Us</li>
-                    </a>
-                    <a href="../../frontend/user/about.php">
-                        <li>Logout</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="bar">
-                <ul>
-                    <a href="#">
-                        <li>
-                            <i class="material-icons" id="navbar-icon">&#xe5d2;</i>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <i class="material-icons" id="cancel">&#xe5c9;</i>
-                        </li>
-                    </a>
-                </ul>
-            </div>
-            <form method="POST" action="../../frontend/user/searchP.php">
-                <div class="search-input">
-                    <div>
-                        <input type="search" id="search-box" name="Search-box">
-
-                        </a>
-                    </div>
-                    <button class="search_btn" type="submit" id="searchBtn">Search</button>
-                </div>
-            </form>
-            <div class="icon">
-                <ul>
-
-                    <?php
-                    if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
-                        echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
-                    } else {
-                        echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                        echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
-                    }
-                    ?>
-                    <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
-                    <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
-                        </a></li>
-
-                </ul>
-            </div>
+                <a href="#">
+                    <li>
+                        <i class="material-icons" id="search-icon1">&#xe8b6;</i>
+                    </li>
+                </a>                       
+            </ul>
         </div>
-    </header>
+        <div class="nav">
+            <ul>
+                <a href="../../frontend/user/serviceTypes.php">
+                    <li>Contact</li>
+                </a>
+                
+                <a href="../../frontend/user/about.php">
+                    <li>About</li>
+                </a>                       
+            </ul>
+        </div>
+    </div>
+    <div class="logo">
+        <a href="../../frontend/user/index.php"><img src="../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
+    </div>
+    <div class="nav">
+        <ul>
+            <a href="../../frontend/user/contact.php">
+                <li>Contact</li>
+            </a>
+            <a href="../../frontend/user/about.php">
+                <li>About Us</li>
+            </a>
+        </ul>
+    </div>
+  
+    <div class="bar">
+        <ul>
+            <a href="#">
+                <li>
+                    <i class="material-icons" id="navbar-icon"style="color:white">&#xe5d2;</i>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <i class="material-icons" id="cancel"style="color:white">&#xe5c9;</i>
+                </li>
+            </a>
+
+
+        </ul>
+    </div>
+    
+
+    <div class="icon">
+        <ul>
+
+            <?php
+            if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+            } else {
+                echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
+                echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
+            }
+            ?>
+
+        </ul>
+    </div>
+</div>
+</header>
     <div class="about">
         <div class="intro">
             <div class="intro-image">
-                <img src="../../img/background.jpeg" alt="aboutUs">
                 <h1>About Us</h1>
             </div>
             <div class="intro-text">
@@ -159,7 +132,7 @@ session_start();
             </div>
             <div class="content2">
                 <div class="first">
-                    <img src="../../img/hitry.jpg" alt="Resturent">
+                    <img src="../../images/mission1.png" alt="Mission">
                     <div>
                         <h2>Our Mission</h2>
                         <p>"Our mission at EAT OUT is to redefine Sri Lankan gastronomy by blending traditional flavors with modern innovation. We strive to offer a remarkable dining experience, showcasing the rich cultural heritage of Sri Lanka through our diverse and authentic culinary creations. With a focus on quality, sustainability, and community engagement, we aim to delight every palate while contributing to the enrichment of our local food industry and fostering a sense of culinary pride in our nation."</p>
@@ -174,7 +147,7 @@ session_start();
                         <p>"At EAT OUT, our vision is to become the epitome of Sri Lankan culinary excellence on a global stage. We aspire to be the preferred choice for those seeking an authentic taste of Sri Lanka, known for our unwavering commitment to quality, innovation, and sustainability. Through continuous growth and expansion, we envision creating a network of restaurants that serve as ambassadors of Sri Lankan culture and cuisine, delighting patrons with every bite and leaving an indelible mark on the world's gastronomic map. Our aim is to celebrate the diverse flavors of Sri Lanka while fostering a deep sense of pride and connection to our roots, both locally and internationally."</p>
 
                     </div>
-                    <img src="../../img/vision.jpg" alt="Resturent">
+                    <img src="../../images/vision1.jpg" alt="Vision">
                 </div>
             </div>
 
@@ -184,21 +157,58 @@ session_start();
     <div class="footer">
         <div class="footer-1">
             <div class="logo">
-                <img src="../../images/eatout logo.jpg" alt="">
+                <img src="../../images/luxeLogo.jpg" alt="logo">
             </div>
-            <div>
-                <address>
-                    <p>Email:hirannishshanka@gmail.com</p>
-                    <p>GitHub: <a href="https://github.com/hirandilshan">hirandilshan</a></p>
-                    <p>Mr.Hiran Nishshanka,<br>Kegalle,<br>SriLanka.</p>
-                </address>
+            <div clss="social">
+                <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
             </div>
         </div>
-        <div class="footer-2">
-            <img src="../../images/download.jpeg" alt="">
-            <h2>Powered by <em>HD Creations</em></h2>
+        <div class="footer-11">
+            <address>
+                <h1>Support</h1>
+                <p>Lands</p>
+                <p>Houses</p>
+                <p>Construction equipments</p>
+                <p>Workers</p>
+                <p>Buyer's Guide</p>
+                <p>Help Center</p>
+                <p>post Ads</p>
+                    
+            </address>
         </div>
+        <div class="footer-111">
+            <address>
+                <h1>Company</h1>
+                <p>About Us</p>
+                <p>Contact Us</p>
+                <p>Construction equipments</p>
+                <p>Privacy policy</p>
+                <p>Disclaimer</p>
+                    
+            </address>
+        </div>
+        <div class="footer-1111">
+            <address>
+                <h1>Contact Info</h1>
+                <p>Luxe Haven Homes(PVT)LTD</p>
+                <p>+94 712456894</p>
+                <p>+94 759825015</p>
+                <p>info@LuxeHavenHomes.LK</p>
+                
+                    
+            </address>
+        </div>
+        
     </div>
+    <div class="footer-2">
+           <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
+            ALL RIGHTS RESERVED.<br>
+           WEBSITE MAINTAINTENANCE BY R & Y  </P>
+        </div>
     <script src="app.js"></script>
     
 </body>

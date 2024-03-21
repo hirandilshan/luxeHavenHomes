@@ -11,8 +11,8 @@ include_once '../../../backend/user/dbs.php';
 <head>
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../../css/index.css">
-    <link rel="stylesheet" href="../../../css/food.css">
-    <link rel="shortcut icon" href="../../../images/eatout logo.jpg" type="images/x-icon">
+    <link rel="stylesheet" href="../../../css/item.css">
+    <link rel="shortcut icon" href="../../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EAT OUT Restaurant</title>
