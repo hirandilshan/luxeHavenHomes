@@ -1,19 +1,29 @@
 <?php
+
 session_start();
+include_once '../../../backend/user/dbs.php';
+
+$type = $_POST['type'];
+$id = $_POST['id'];
+
+
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/index.css">
-    <link rel="shortcut icon" href="../../images/luxeLogo.jpg" type="images/x-icon">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/index.css">
+    <link rel="stylesheet" href="../../../css/food.css">
+    <link rel="shortcut icon" href="../../../images/eatout logo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxe Haven Homes</title>
+    <title>EAT OUT Restaurant</title>
     <meta name="viewport" content="width=device-width,initial-scal=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 </head>
 
 <body>
@@ -73,47 +83,63 @@ session_start();
             </div>
         </div>
     </header>
-    <div class="home">
-        <div class="main_slide">
-            <div>
-                <h1>Set New Stndards<br>in <span>Modern Home</span><br>Constructions</h1>
 
-            </div>
-            <div>
-                <img src="../../images/h2.png" alt="house1s">
+    <div class="home">
+        <div class="choice">
+            <p></p>
+            <div class="foods">
+
+                <?php
+                include_once '../../../backend/user/dbs.php';
+
+                $sql = "SELECT * FROM requests WHERE id=$id;";
+                $result = mysqli_query($connect, $sql);
+
+                if (isset($result)) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $id = $row["id"];
+                        $name = $row["name"];
+                        $price = $row["price"];
+                        $type = $row["type"];
+                        $location = $row["location"];
+                        $discription = $row["discription"];
+                        $imagePathsStr = $row["img"];
+                        $phone = $row["phone"];
+
+                        $imagePaths = array();
+                        $imagePaths = explode(",", $imagePathsStr);
+
+                        echo "<h3>$name</h3><br>";
+                        foreach ($imagePaths as $img) {
+                            echo "<img src='$img' alt='Image'><br>";
+                        }
+                        echo "<h4>Rs $price</h4><br>";
+                        echo "<h3>$location</h3><br>";
+                        echo "<h4>$discription</h4><br>";
+                        echo "<form method='POST' action='../../../backend/user/call.php'>";
+                        echo "<input type='hidden' name='phone' value='$phone'>";
+                        echo "<button type='submit' name='call'>Call</button>";
+                        echo "</form>";
+                    }
+                    // Free result set
+                    mysqli_free_result($result);
+                }
+                ?>
+
             </div>
         </div>
     </div>
-    <div class="menu">
-
-        <div class="section">
-            <h2>View Advertestment Requests</h2>
-            <a href="manageAds/uploadAds.php">
-                <img src="../../images/landd.jpg" alt="Land">
-            </a>
-        </div><!--Section-->
-
-        <div class="section">
-            <h2>Remove Advertestment</h2>
-            <a href="manageAds/removeAds.php">
-                <img src="../../images/h8.jpg" alt="House">
-            </a>
-
-        </div><!--Section-->
-
-    </div>
-
 
     <div class="footer">
         <div class="footer-1">
             <div class="logo">
-                <img src="../../images/luxeLogo.jpg" alt="logo">
+                <img src="../../../images/luxeLogo.jpg" alt="logo">
             </div>
             <div clss="social">
                 <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li>
+
+                    </li>
                 </ul>
             </div>
         </div>
@@ -159,7 +185,7 @@ session_start();
             ALL RIGHTS RESERVED.<br>
             WEBSITE MAINTAINTENANCE BY R & Y </P>
     </div>
-    <script src="../../frontend/user/app.js"></script>
+    <script src="../../../frontend/user/app.js"></script>
 
 </body>
 

@@ -1,13 +1,26 @@
 <?php
 session_start();
+include_once '../../../backend/user/dbs.php';
+
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['search'])) {
+    // Sanitize and validate inputs (you should add proper validation)
+    $type = mysqli_real_escape_string($connect, $_POST['type']);
+    $sql = "SELECT * FROM $type;";
+
+    $result = mysqli_query($connect, $sql);
+}
+
+mysqli_close($connect);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/index.css">
-    <link rel="shortcut icon" href="../../images/luxeLogo.jpg" type="images/x-icon">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../css/index.css">
+    <link rel="stylesheet" href="../../../css/food.css">
+    <link rel="shortcut icon" href="../../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxe Haven Homes</title>
@@ -80,34 +93,73 @@ session_start();
 
             </div>
             <div>
-                <img src="../../images/h2.png" alt="house1s">
+                <img src="../../../images/h2.png" alt="house1s">
             </div>
         </div>
+        <div class="foods">
+            <div class="search">
+                <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                    <label for="type">Type:</label><br>
+                    <select id="type" name="type">
+                        <option value="houses">Houses</option>
+                        <option value="lands">Lands</option>
+                        <option value="furnitures">Furnitures</option>
+                        <option value="accessories">Accessories</option>
+                        <option value="tools">Tools</option>
+                        <option value="profesionals">Profesionals</option>
+                        <option value="supplements">Supplements</option>
+                    </select><br>
+                    <button type="submit" name="search">Search</button>
+                </form>
+            </div>
+
+            <?php
+            if (isset($result)) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $id = $row["id"];
+                    $name = $row["name"];
+                    $price = $row["price"];
+                    $type = $row["type"];
+                    $location = $row["location"];
+                    $discription = $row["discription"];
+                    $imagePathsStr = $row["img"];
+                    $phone = $row["phone"];
+
+                    $imagePaths = array();
+                    $imagePaths = explode(",", $imagePathsStr);
+
+
+                    echo '<div class="food-item">';
+                    echo "<img src='$imagePaths[0]' alt='Land Image'>";
+                    echo "<h3>$name</h3>";
+                    echo "<h4>Rs $price</h4>";
+                    echo "<form method='POST' action='../../../backend/admin/removeAd.php'>";
+                    if ($type == 'apartments' || $type == 'cProperties') {
+                        echo "<input type='hidden' name='type' value='houses'>";
+                    } else {
+                        echo "<input type='hidden' name='type' value='$type'>";
+                    }
+
+                    echo "<input type='hidden' name='id' value='$id'>";
+                    echo "<button type='submit' name='remove'>Remove Ad</button>";
+                    echo "</form>";
+                    echo '</div>';
+                }
+                // Free result set
+                mysqli_free_result($result);
+            }
+            ?>
+        </div>
+
     </div>
-    <div class="menu">
-
-        <div class="section">
-            <h2>View Advertestment Requests</h2>
-            <a href="manageAds/uploadAds.php">
-                <img src="../../images/landd.jpg" alt="Land">
-            </a>
-        </div><!--Section-->
-
-        <div class="section">
-            <h2>Remove Advertestment</h2>
-            <a href="manageAds/removeAds.php">
-                <img src="../../images/h8.jpg" alt="House">
-            </a>
-
-        </div><!--Section-->
-
     </div>
+
 
 
     <div class="footer">
         <div class="footer-1">
             <div class="logo">
-                <img src="../../images/luxeLogo.jpg" alt="logo">
+                <img src="../../../images/luxeLogo.jpg" alt="logo">
             </div>
             <div clss="social">
                 <ul>
@@ -159,7 +211,7 @@ session_start();
             ALL RIGHTS RESERVED.<br>
             WEBSITE MAINTAINTENANCE BY R & Y </P>
     </div>
-    <script src="../../frontend/user/app.js"></script>
+    <script src="../../../frontend/user/app.js"></script>
 
 </body>
 
