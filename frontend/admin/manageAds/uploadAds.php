@@ -30,7 +30,7 @@ mysqli_close($connect);
                 <div class="account">
                     <ul>
                         <?php
-                        if (isset($_SESSION['isLogedIn'])) {
+                        if (isset($_SESSION['isAdminLogedIn'])) {
                             echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                         } else {
                             echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
@@ -70,7 +70,7 @@ mysqli_close($connect);
             <div class="icon">
                 <ul>
                     <?php
-                    if (isset($_SESSION['isLogedIn'])) {
+                    if (isset($_SESSION['isAdminLogedIn'])) {
                         echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
                         echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";

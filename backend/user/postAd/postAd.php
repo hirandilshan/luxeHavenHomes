@@ -47,7 +47,7 @@ if(isset($_POST['submit'])) {
 
     // Insert data into database
     $insert_sql = "INSERT INTO requests (name, price, type, location, discription, img, phone,userName) 
-                   VALUES ('$name', '$price', '$type', '$location', '$discription', '$imagePathsStr', '$phone',$userName)";
+                   VALUES ('$name', '$price', '$type', '$location', '$discription', '$imagePathsStr', '$phone','$userName')";
     
     if ($connect->query($insert_sql) === TRUE) {
         echo "<script>alert('submition successful!');window.location.href = '../../../frontend/user/index.php';</script>";

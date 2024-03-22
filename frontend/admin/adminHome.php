@@ -23,10 +23,10 @@ session_start();
                 <div class="account">
                     <ul>
                         <?php
-                        if (isset($_SESSION['isLogedIn'])) {
-                            echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
+                        if (isset($_SESSION['isAdminLogedIn'])) {
+                            echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
                         } else {
-                            echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
+                            echo "<script>alert('please login!'); window.location.href = '../../frontend/user/logIn.php';</script>";
                         }
                         ?>
                     </ul>
@@ -38,7 +38,7 @@ session_start();
                 </div>
             </div>
             <div class="logo">
-                <a href="../../../frontend/admin/adminHome.php"><img src="../../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
+                <a href="../../frontend/admin/adminHome.php"><img src="../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
             </div>
             <div class="nav">
                 <ul>
@@ -63,10 +63,10 @@ session_start();
             <div class="icon">
                 <ul>
                     <?php
-                    if (isset($_SESSION['isLogedIn'])) {
-                        echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
+                    if (isset($_SESSION['isAdminLogedIn'])) {
+                        echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
-                        echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
+                        echo "<script>alert('please login!'); window.location.href = '../../frontend/user/logIn.php';</script>";
                     }
                     ?>
                 </ul>

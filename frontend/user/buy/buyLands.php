@@ -46,7 +46,7 @@ mysqli_close($connect);
                 <div class="account">
                     <ul>
                         <?php
-                        if (isset($_SESSION['isLogedIn'])) {
+                        if (isset($_SESSION['isUserLogedIn'])) {
                             echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                         } else {
                             echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
@@ -104,7 +104,7 @@ mysqli_close($connect);
                 <ul>
 
                     <?php
-                    if (isset($_SESSION['isLogedIn'])) {
+                    if (isset($_SESSION['isUserLogedIn'])) {
                         echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
                         echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
@@ -157,6 +157,7 @@ mysqli_close($connect);
                         $discription = $row["discription"];
                         $imagePathsStr = $row["img"];
                         $phone = $row["phone"];
+                        $userName=$row["userName"];
 
                         $imagePaths = array();
                         $imagePaths = explode(",", $imagePathsStr);

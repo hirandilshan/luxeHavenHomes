@@ -23,9 +23,9 @@ if (isset($result)) {
         $userName=$row["userName"];
 
         if ($type == 'apartments' || $type == 'cProperties') {
-            $sqlUpload = "INSERT INTO houses (name,price,type,location,discription,img,phone) VALUES ('$name','$price','$type','$location','$discription','$imagePathsStr','$phone');";
+            $sqlUpload = "INSERT INTO houses (name,price,type,location,discription,img,phone,userName) VALUES ('$name','$price','$type','$location','$discription','$imagePathsStr','$phone','$userName');";
         } else {
-            $sqlUpload = "INSERT INTO $type (name,price,type,location,discription,img,phone) VALUES ('$name','$price','$type','$location','$discription','$imagePathsStr','$phone');";
+            $sqlUpload = "INSERT INTO $type (name,price,type,location,discription,img,phone,userName) VALUES ('$name','$price','$type','$location','$discription','$imagePathsStr','$phone','$userName');";
         }
     
         if ($connect->query($sqlUpload) === TRUE) {
