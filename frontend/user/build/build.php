@@ -23,7 +23,7 @@ session_start();
                 <div class="account">
                     <ul>
                         <?php
-                        if (isset($_SESSION['isLogedIn'])) {
+                        if (isset($_SESSION['isUserLogedIn'])) {
                             echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                         } else {
                             echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
@@ -81,7 +81,7 @@ session_start();
                 <ul>
 
                     <?php
-                    if (isset($_SESSION['isLogedIn'])) {
+                    if (isset($_SESSION['isUserLogedIn'])) {
                         echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
                         echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";

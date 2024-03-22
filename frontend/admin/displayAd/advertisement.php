@@ -3,7 +3,13 @@
 session_start();
 include_once '../../../backend/user/dbs.php';
 
+$type = $_POST['type'];
+$id = $_POST['id'];
+
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,8 +17,8 @@ include_once '../../../backend/user/dbs.php';
 <head>
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../../css/index.css">
-    <link rel="stylesheet" href="../../../css/item.css">
-    <link rel="shortcut icon" href="../../../images/luxeLogo.jpg" type="images/x-icon">
+    <link rel="stylesheet" href="../../../css/food.css">
+    <link rel="shortcut icon" href="../../../images/eatout logo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EAT OUT Restaurant</title>
@@ -21,44 +27,31 @@ include_once '../../../backend/user/dbs.php';
 </head>
 
 <body>
-<header>
+    <header>
         <div class="header">
             <div class="headerbar">
                 <div class="account">
                     <ul>
                         <?php
-                        if (isset($_SESSION['isUserLogedIn'])) {
+                        if (isset($_SESSION['isAdminLogedIn'])) {
                             echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                         } else {
                             echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
                         }
                         ?>
-
                     </ul>
                 </div>
                 <div class="nav">
                     <ul>
-                        <a href="../../../frontend/user/serviceTypes.php">
-                            <li>Contact</li>
-                        </a>
 
-                        <a href="../../../frontend/user/about.php">
-                            <li>About</li>
-                        </a>
                     </ul>
                 </div>
             </div>
             <div class="logo">
-                <a href="../../../frontend/user/index.php"><img src="../../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
+                <a href="../../../frontend/admin/adminHome.php"><img src="../../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
             </div>
             <div class="nav">
                 <ul>
-                    <a href="../../../frontend/user/contact.php">
-                        <li>Contact</li>
-                    </a>
-                    <a href="../../../frontend/user/about.php">
-                        <li>About Us</li>
-                    </a>
 
                 </ul>
             </div>
@@ -75,87 +68,72 @@ include_once '../../../backend/user/dbs.php';
                             <i class="material-icons" id="cancel" style="color:white">&#xe5c9;</i>
                         </li>
                     </a>
-
-
                 </ul>
             </div>
-
-
             <div class="icon">
                 <ul>
-
                     <?php
-                    if (isset($_SESSION['isUserLogedIn'])) {
+                    if (isset($_SESSION['isAdminLogedIn'])) {
                         echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
                         echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
                     }
                     ?>
-
                 </ul>
             </div>
         </div>
     </header>
 
     <div class="home">
-        <div class="form">
-            <form method="POST" action="../../../backend/user/postAd/postAd.php" enctype="multipart/form-data">
+        <div class="choice">
+            <p></p>
+            <div class="foods">
 
-                <label for="image1">Image 1:</label><br>
-                <input type="file" id="image1" name="image[]"><br>
+                <?php
+                include_once '../../../backend/user/dbs.php';
 
-                <label for="image2">Image 2:</label><br>
-                <input type="file" id="image2" name="image[]"><br>
+                $sql = "SELECT * FROM requests WHERE id=$id;";
+                $result = mysqli_query($connect, $sql);
 
-                <label for="image3">Image 3:</label><br>
-                <input type="file" id="image3" name="image[]"><br>
+                if (isset($result)) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $id = $row["id"];
+                        $name = $row["name"];
+                        $price = $row["price"];
+                        $type = $row["type"];
+                        $location = $row["location"];
+                        $discription = $row["discription"];
+                        $imagePathsStr = $row["img"];
+                        $phone = $row["phone"];
 
-                <label for="image4">Image 4:</label><br>
-                <input type="file" id="image4" name="image[]"><br>
+                        $imagePaths = array();
+                        $imagePaths = explode(",", $imagePathsStr);
 
-                <label for="image5">Image 5:</label><br>
-                <input type="file" id="image5" name="image[]"><br>
+                        echo "<h3>$name</h3><br>";
+                        foreach ($imagePaths as $img) {
+                            echo "<img src='$img' alt='Image'><br>";
+                        }
+                        echo "<h4>Rs $price</h4><br>";
+                        echo "<h3>$location</h3><br>";
+                        echo "<h4>$discription</h4><br>";
+                        echo "<form method='POST' action='../../../backend/user/call.php'>";
+                        echo "<input type='hidden' name='phone' value='$phone'>";
+                        echo "<button type='submit' name='call'>Call</button>";
+                        echo "</form>";
+                    }
+                    // Free result set
+                    mysqli_free_result($result);
+                }
+                ?>
 
-                <label for="name">Ad name:</label><br>
-                <input type="text" id="name" name="name"><br>
-
-                <label for="price">Price:</label><br>
-                <input type="text" id="price" name="price"><br>
-
-                <label for="location">Location:</label><br>
-                <select id="location" name="location">
-                    <option value="colombo">Colombo</option>
-                    <option value="gampaha">Gampaha</option>
-                    <option value="kandy">Kandy</option>
-                    <option value="kegalle">Kegalle</option>
-                </select><br>
-
-                <label for="type">Type:</label><br>
-                <select id="type" name="type">
-                    <option value="houses">Houses</option>
-                    <option value="lands">Lands</option>
-                    <option value="furnitures">Furnitures</option>
-                    <option value="accessories">Accessories</option>
-                    <option value="tools">Tools</option>
-                    <option value="profesionals">Profesionals</option>
-                    <option value="supplements">Supplements</option>
-                </select><br>
-
-                <label for="discription">Discription:</label><br>
-                <input type="text" id="discription" name="discription"><br>
-
-                <label for="phone">Phone Number:</label><br>
-                <input type="text" id="phone" name="phone"><br><br>
-
-                <button type="submit" name="submit">Submit</button>
-            </form>
+            </div>
         </div>
     </div>
 
     <div class="footer">
         <div class="footer-1">
             <div class="logo">
-                <img src="../../images/luxeLogo.jpg" alt="logo">
+                <img src="../../../images/luxeLogo.jpg" alt="logo">
             </div>
             <div clss="social">
                 <ul>
@@ -207,7 +185,7 @@ include_once '../../../backend/user/dbs.php';
             ALL RIGHTS RESERVED.<br>
             WEBSITE MAINTAINTENANCE BY R & Y </P>
     </div>
-    <script src="../../frontend/user/app.js"></script>
+    <script src="../../../frontend/user/app.js"></script>
 
 </body>
 

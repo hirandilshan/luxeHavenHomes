@@ -32,7 +32,7 @@ $buildOption = $_POST['buildOption'];
                 <div class="account">
                     <ul>
                         <?php
-                        if (isset($_SESSION['isLogedIn'])) {
+                        if (isset($_SESSION['isUserLogedIn'])) {
                             echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                         } else {
                             echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
@@ -90,7 +90,7 @@ $buildOption = $_POST['buildOption'];
                 <ul>
 
                     <?php
-                    if (isset($_SESSION['isLogedIn'])) {
+                    if (isset($_SESSION['isUserLogedIn'])) {
                         echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
                         echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
@@ -121,6 +121,7 @@ $buildOption = $_POST['buildOption'];
                         $discription = $row["discription"];
                         $imagePathsStr = $row["img"];
                         $phone = $row["phone"];
+                        $userName=$row["userName"];
 
                         $imagePaths = array();
                         $imagePaths = explode(",", $imagePathsStr);

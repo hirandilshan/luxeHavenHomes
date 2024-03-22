@@ -25,7 +25,7 @@ session_start();
             <ul>
 
                 <?php
-                if (isset($_SESSION['isLogedIn']) && $_SESSION['isLogedIn']) {
+                if (isset($_SESSION['isUserLogedIn']) && $_SESSION['isUserLogedIn']) {
                     echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
                 } else {
                     echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
