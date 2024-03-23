@@ -25,11 +25,11 @@ body {
 
 .main_slide div:nth-child(2) {
     width: 400px;
-    height: 450px;
+    height: 420px;
     flex: 1;
     display: flex;
     padding-right: 50px;
-    padding-top: 15px;
+    padding-top: 45px;
     background-position: 0;
 }
 
@@ -75,12 +75,14 @@ body {
     align-items:center ;
     transform: translate(-50%, 50%);
     padding-top: 30px;
-    padding-left: 300px;
+    padding-left: 350px;
+    font-weight: bold;
+    font-size: 50px;
 }
 .section img{
     width: 50%;
     height: 300px;
-    border-radius: 5px;
+    border-radius: 20px;
     
 }
 
@@ -88,18 +90,38 @@ body {
     transform: translateY(-8px);
     transition: transform 0.3s ease;
 }
-.about{
-    padding-top: 50px;
+.extra{
+    padding-top: 40px;
     height: auto;
+    flex: 1;
 
 }
-.about h3{
-    text-align: center;
-    font-size: 40px;
+.extra img{
+    height: 400px;
+    align-items: center;
+    width: 100%;
+}
+.extra h2{
+    font-size: 50px;
+    color: black;
     font-weight: bold;
-    padding: 10px;
-    background-origin: padding-box;
-    background-color: black;
+    position: relative;
+    padding-top: 40px;
+text-align: center;
+    
+}
+.extra h2 span{
+    font-size: 55px;
+    color: rgb(83, 80, 80);
+    font-weight: bolder;
+    
+}
+.extra p{
+    padding: 40px 70px 20px 70px;
+    align-items: center;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+
 }
 .red_btn {
     cursor: pointer;
