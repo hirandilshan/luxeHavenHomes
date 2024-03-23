@@ -5,8 +5,8 @@ session_start();
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/about.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about.css">
     <link rel="shortcut icon" href="../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
