@@ -100,7 +100,7 @@ session_start();
     <div class="content">
         <div class="forms">
             <div class="form-details">
-                <h2>Welcome to Luxe Haven Homes</h2>
+                <h2>Welcome to <br>Luxe Haven Homes</h2>
                 <p>Please log in using your personal information to stay connected with us.</p>
             </div>
             <div class="form-content">
