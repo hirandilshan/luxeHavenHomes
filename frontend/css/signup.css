@@ -88,7 +88,8 @@
 }
 
 .form-content button:hover {
-  background-color: rgb(221, 209, 209);
+  background-color: rgb(78, 75, 75);
+  color: black;
 }
 
 .link {

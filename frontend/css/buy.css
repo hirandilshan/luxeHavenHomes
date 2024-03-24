@@ -1,0 +1,62 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  .home {
+    text-align: center;
+    padding: 20px;
+}
+
+.home p {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Styling for the search form */
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 150px;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.search label {
+    margin-right: 10px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.search select, .search button {
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search select {
+    margin-right: 10px;
+}
+
+.search button {
+    border-left: 50px;
+    background-color:gray;
+    color: black;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+    background-color: gray;
+    color: black;
+}
