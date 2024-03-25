@@ -32,7 +32,10 @@ mysqli_close($connect);
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
     <link rel="stylesheet" href="../../css/item.css">
+
+    <link rel="stylesheet" href="../../css/buy.css">
     <link rel="shortcut icon" href="../../../images/luxeLogo.jpg" type="images/x-icon">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxe Haven Homes</title>
@@ -120,7 +123,9 @@ mysqli_close($connect);
     <div class="home">
         <div class="choice">
             <p>Buy Houses</p>
+
             <div class="items">
+
                 <div class="search">
                     <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                         <label for="location">Location</label>

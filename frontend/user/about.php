@@ -109,25 +109,20 @@ session_start();
                 <h1>About Us</h1>
             </div>
             <div class="intro-text">
-                <h2>"Celebrating flavors, crafting experiences, and creating memories – welcome to our culinary journey, where passion meets the plate."</h2>
+                <h2>"Welcome to Luxe Haven Homes – Your Gateway to Exceptional Living"</h2>
             </div>
         </div>
         <div class="content">
             <div class="Content1">
                 <h2>Our Story</h2>
-                <p>1988 nestled amidst the bustling streets of Colombo, Sri Lanka, a culinary dream took shape. It was a dream fueled by a passion for authentic flavors, a desire to celebrate the rich tapestry of Sri Lankan cuisine, and a vision to create a dining haven where memories would be woven through the magic of food.<br>
-
-                    <br>Our story begins with a group of food enthusiasts, each with their own unique connection to the diverse culinary heritage of Sri Lanka. They were bound by a shared love for the aromatic spices, vibrant colors, and bold flavors that define this beautiful island nation's food culture.
-
-                    Drawing upon their collective experiences and a deep-rooted appreciation for traditional recipes handed down through generations, they envisioned a restaurant that would be a tribute to Sri Lanka's gastronomic legacy. Thus, EAT OUT was born.<br>
-
-                    <br>Every dish on our menu is a labor of love, crafted with precision and infused with the warmth of our cherished family recipes. We scoured the island, sourcing the finest, freshest ingredients from local farmers and markets, ensuring that every bite tells a story of Sri Lanka's diverse landscapes and culinary traditions.
-
-                    From the bustling streets of Colombo to the serene shores of the southern coast, from the lush hills of Kandy to the spicy aromas of Jaffna, our menu is a culinary expedition through the heart and soul of Sri Lanka. It's a journey that pays homage to the fishermen, farmers, and spice merchants who have shaped our culinary identity.<br>
-
-                    <br>At EAT OUT, we believe in more than just serving food; we believe in sharing experiences. Our aim is to transport you to the heart of Sri Lanka with every dish, where you can savor the essence of our culture and feel the warmth of our hospitality.
-
-                    Join us on this gastronomic adventure, where the flavors of Sri Lanka come to life, and every meal is a celebration of heritage and authenticity. Come, be a part of our story, and let us enchant your senses with the tastes of our beloved island.
+                <p>  Luxe Haven Homes stands as the forefront of Sri Lanka's real estate market, offering a cutting-edge online platform showcasing the latest properties and construction needful across the country. Our mission is to revolutionize the local real estate industry, providing all our services throughout the island. We actively encourage users to leverage our platform to advertise their properties, construction needful and homewares experiencing firsthand the innovative disruption we bring to Sri Lanka's online real estate scene. Whether you're looking to sell, rent, or buy, Luxe Haven Homes facilitates these process at no difficulties. With a loyal user base, we're expecting to be the premier destination for property, homeware listings and construction needful rentals in the country. Our ultimate goal is to assist everyone in finding their ideal home.<br>
+                Founded on a vision to revolutionize the real estate landscape, Luxe Haven Homes emerged as a beacon of innovation, integrity, and excellence. Our journey began with a simple yet profound aspiration – to create spaces that transcend the ordinary, where luxury, comfort, and sophistication converge seamlessly.<br>
+                Driven by a passion for crafting exceptional living experiences, Luxe Haven Homes was established with a commitment to elevate the standards of modern living. Guided by this ethos, we embarked on a quest to redefine the very essence of luxury real estate, setting new benchmarks in design, quality, and customer service.<br>
+                With unwavering dedication and a relentless pursuit of excellence, Luxe Haven Homes quickly earned a reputation as a trusted name in the industry. From our humble beginnings, we have grown exponentially, expanding our reach and portfolio to cater to the diverse needs and aspirations of our discerning clientele.<br>
+                At the heart of our success lies a team of dedicated professionals, united by a shared vision and a collective commitment to excellence. From our visionary leaders to our skilled architects, designers, and customer care specialists, each member of the Luxe Haven family plays a pivotal role in shaping our company's legacy of excellence.<br>
+                But our story is not just about buildings and properties – it's about people. It's about the families we've helped find their dream homes, the communities we've helped build, and the countless lives we've touched along the way. It's about the enduring relationships we've forged with our clients, built on trust, transparency, and mutual respect<br>
+                As we look to the future, we remain steadfast in our commitment to innovation, sustainability, and social responsibility. With each project we undertake, we strive to push the boundaries of architectural excellence, while also prioritizing environmental stewardship and community engagement.<br>
+                Join us as we continue to write the next chapter of our story – a story of innovation, inspiration, and enduring excellence. At Luxe Haven Homes, the journey towards extraordinary living has only just begun.
                 </p>
             </div>
             <div class="content2">
@@ -135,8 +130,8 @@ session_start();
                     <img src="../../images/mission1.png" alt="Mission">
                     <div>
                         <h2>Our Mission</h2>
-                        <p>"Our mission at EAT OUT is to redefine Sri Lankan gastronomy by blending traditional flavors with modern innovation. We strive to offer a remarkable dining experience, showcasing the rich cultural heritage of Sri Lanka through our diverse and authentic culinary creations. With a focus on quality, sustainability, and community engagement, we aim to delight every palate while contributing to the enrichment of our local food industry and fostering a sense of culinary pride in our nation."</p>
-
+                        <p>"At Luxe Haven Homes, our mission is simple: to redefine real estate with excellence.
+                             We're committed to crafting exceptional living spaces that inspire, enrich, and empower our residents and communities. Welcome to a world where luxury meets purpose, and every home is a testament to our unwavering dedication to quality and innovation."</p>
                     </div>
 
 
@@ -144,7 +139,7 @@ session_start();
                 <div class="secound">
                     <div>
                         <h2>Our Vision</h2>
-                        <p>"At EAT OUT, our vision is to become the epitome of Sri Lankan culinary excellence on a global stage. We aspire to be the preferred choice for those seeking an authentic taste of Sri Lanka, known for our unwavering commitment to quality, innovation, and sustainability. Through continuous growth and expansion, we envision creating a network of restaurants that serve as ambassadors of Sri Lankan culture and cuisine, delighting patrons with every bite and leaving an indelible mark on the world's gastronomic map. Our aim is to celebrate the diverse flavors of Sri Lanka while fostering a deep sense of pride and connection to our roots, both locally and internationally."</p>
+                        <p>"At Luxe Haven Homes, our vision is to be recognized as a premier developer of iconic landmarks that redefine the skyline and inspire generations to come. We aspire to set new standards of excellence in architectural design, sustainable development, and community engagement, shaping the future of real estate with innovation, integrity, and vision."</p>
 
                     </div>
                     <img src="../../images/vision1.jpg" alt="Vision">
