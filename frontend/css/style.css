@@ -13,7 +13,6 @@
     display: none;
     color: aliceblue;
 }
-
 .logo img {
     width: 220px;
     height: 110px;
@@ -37,17 +36,13 @@
     display: flex;
     padding-left: 0px;
     float: right;
-    
-
 }
 
 .header ul li:hover {
     color: white;
     text-shadow:0 10px 10px  white;
 }
-.header.nav{
-    
-}
+
 
 .nav ul{
     padding-left: 250px;
@@ -63,40 +58,35 @@
     
 }
 .header .icon {
-
     padding: 0;
-    font-weight: bold;
-    
+    font-weight: bold;   
 }
 
 .header .icon ul {
     margin: 0px;
     list-style: none;
-
 }
 
 .header .icon ul li {
     padding: 0 10px;
-    border-right: 1px solid white;
-    
-    
-   
+    border-right: 1px solid white; 
 }
 
 .header .icon ul li:last-child {
     border: none;
-
 }
 
 .header .icon ul li a {
     color: white;
-
 }
 
 .header .icon ul li a:hover {
     text-decoration: underline;
     color: white;
 }
+
+
+
 .footer {
     padding: 60px 0;
     border-top: 2px solid rgb(10, 10, 10);
@@ -107,25 +97,38 @@
     align-items: center;
 }
 
-.footer-1 .logo img {
+.footer-11 .logo img {
     width: 180px;
     height: 120PX;
-    
-    
 }
+
 .footer h1{
     color: white;
-
 }
 .footer p{
     color: white;
 }
-.footer-1 p {
+
+.footer-11 p {
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
     padding: 2px;
-    color: black;
+    color:white;
 }
+.footer-111 p {
+    cursor: pointer;
+    font-size: 12px;
+    padding: 2px;
+    color:white;
+}
+.footer-1111 p {
+    cursor: pointer;
+    font-size: 12px;
+    padding: 2px;
+    color:white;
+}
+
+
 .footer-2 {
     text-align: center;
     cursor: pointer;
@@ -135,22 +138,14 @@
     font-size: 15px;
     color: white;
 }
+
+
 @media only screen and (max-width: 1040px) {
 
     .header .nav,
-    .header .search-input,
     .header .icon,
     .header .headerbar {
         display: none;
-    }
-
-    .search {
-        display: none;
-        cursor: pointer;
-    }
-
-    .search {
-        width: 60vw;
     }
 
     .bar {
@@ -167,29 +162,8 @@
         width: 100%;
         right: -100%;
         bottom: 0;
-        background-color: rgb(219, 227, 253);
+        background-color: rgb(31, 30, 30);
 
-    }
-
-    .search_btn {
-        cursor: pointer;
-        margin-top: 5px;
-        width: 100px;
-        font-weight: bold;
-        line-height: 15px;
-        background-color: rgb(245, 101, 34);
-        border-radius: 5px;
-        border: 1px solid rgb(245, 101, 34);
-        box-shadow: rgb(245, 120, 69);
-        transition: all 0.2s;
-
-    }
-
-    .search_btn:hover {
-        background-color: white;
-        box-shadow: 0 2px 15px rgb(240, 120, 69);
-        border: 1px solid rgb(245, 101, 34);
-        color: rgb(245, 101, 34);
     }
 
     .intro .intro-image h1 {
@@ -202,6 +176,8 @@
         display: block;
         font-size: 18px;
     }
+
+    
 
     .bar {
         display: block;
@@ -222,18 +198,27 @@
         width: 96vw;
         margin: 10px 0;
         padding: 15px 30px;
-        box-shadow: 0 2px 15px rgb(123, 195, 243);
+        box-shadow: 0 2px 15px black;
     }
 
     .headerbar .account {
         line-height: 40px;
         margin-top: 60px;
-        background-color: rgb(123, 195, 243);
+        background-color: black;
         padding: 15px;
+    }
+
+    .headerbar .account li a{
+        color: white;
+
     }
 
     .headerbar .account ul {
         justify-content: space-between;
+    }
+
+    .headerbar .account .logo img {
+        float: left;
     }
 
 }

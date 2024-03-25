@@ -17,72 +17,52 @@ session_start();
 </head>
 
 <body>
-<header>
+    <header>
 
-<div class="header">
-    <div class="headerbar">
-        <div class="account">
-            <ul>
-                <a href="#">
-                    <li>
-                        <i class="material-icons" id="search-icon1">&#xe8b6;</i>
-                    </li>
-                </a>
-                
-            </ul>
+        <div class="header">
+            <div class="headerbar">
+                <div class="nav">
+                    <ul>
+                        <a href="../../frontend/user/contact.php">
+                            <li>Contact</li>
+                        </a>
+                        <a href="../../frontend/user/about.php">
+                            <li>About</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
 
+            <div class="logo">
+                <a href="../../frontend/user/index.php"><img src="../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <a href="../../frontend/user/contact.php">
+                        <li>Contact</li>
+                    </a>
+                    <a href="../../frontend/user/about.php">
+                        <li>About Us</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="bar">
+                <ul>
+                    <a href="#">
+                        <li>
+                            <i class="material-icons" id="navbar-icon" style="color:white">&#xe5d2;</i>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <i class="material-icons" id="cancel" style="color:white">&#xe5c9;</i>
+                        </li>
+                    </a>
+                </ul>
+            </div>
         </div>
-        <div class="nav">
-            <ul>
-                <a href="../../frontend/user/contact.php">
-                    <li>Contact</li>
-                </a>
-                
-                <a href="../../frontend/user/about.php">
-                    <li>About</li>
-                </a>
-               
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="logo">
-        <a href="../../frontend/user/index.php"><img src="../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
-    </div>
-    <div class="nav">
-        <ul>
-            <a href="../../frontend/user/contact.php">
-                <li>Contact</li>
-            </a>
-            <a href="../../frontend/user/about.php">
-                <li>About Us</li>
-            </a>
-
-        </ul>
-    </div>
-  
-    <div class="bar">
-        <ul>
-            <a href="#">
-                <li>
-                    <i class="material-icons" id="navbar-icon"style="color:white">&#xe5d2;</i>
-                </li>
-            </a>
-            <a href="">
-                <li>
-                    <i class="material-icons" id="cancel"style="color:white">&#xe5c9;</i>
-                </li>
-            </a>
-
-
-        </ul>
-    </div>
-    
-
-
-</div>
-</header>
+    </header>
     <div class="content">
         <div class="forms">
             <div class="form-details">
@@ -113,11 +93,11 @@ session_start();
 
     <div class="footer-2">
         <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
-         ALL RIGHTS RESERVED.<br>
-        WEBSITE MAINTAINTENANCE BY R & Y  </P>
+            ALL RIGHTS RESERVED.<br>
+            WEBSITE MAINTAINTENANCE BY R & Y </P>
     </div>
     <script src="../../frontend/user/app.js"></script>
-    
+
 </body>
 
 </html>

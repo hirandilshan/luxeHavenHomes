@@ -4,7 +4,6 @@ include_once '../../../backend/user/dbs.php';
 
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['search'])) {
-    // Sanitize and validate inputs (you should add proper validation)
     $location = mysqli_real_escape_string($connect, $_POST['location']);
     $propertyType = mysqli_real_escape_string($connect, $_POST['propertyType']);
     $minPrice = mysqli_real_escape_string($connect, $_POST['minPrice']);
@@ -56,15 +55,13 @@ mysqli_close($connect);
                             echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
                         }
                         ?>
-
                     </ul>
                 </div>
                 <div class="nav">
                     <ul>
-                        <a href="../../../frontend/user/serviceTypes.php">
+                        <a href="../../../frontend/user/contact.php">
                             <li>Contact</li>
                         </a>
-
                         <a href="../../../frontend/user/about.php">
                             <li>About</li>
                         </a>
@@ -82,7 +79,6 @@ mysqli_close($connect);
                     <a href="../../../frontend/user/about.php">
                         <li>About Us</li>
                     </a>
-
                 </ul>
             </div>
 
@@ -98,15 +94,11 @@ mysqli_close($connect);
                             <i class="material-icons" id="cancel" style="color:white">&#xe5c9;</i>
                         </li>
                     </a>
-
-
                 </ul>
             </div>
 
-
             <div class="icon">
                 <ul>
-
                     <?php
                     if (isset($_SESSION['isUserLogedIn'])) {
                         echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
@@ -114,11 +106,11 @@ mysqli_close($connect);
                         echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
                     }
                     ?>
-
                 </ul>
             </div>
         </div>
     </header>
+
 
     <div class="home">
         <div class="choice">
