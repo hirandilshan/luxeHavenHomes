@@ -19,7 +19,7 @@ mysqli_close($connect);
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
-    <link rel="stylesheet" href="../../css/food.css">
+    <link rel="stylesheet" href="../../css/item.css">
     <link rel="shortcut icon" href="../../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,7 +96,8 @@ mysqli_close($connect);
                 <img src="../../../images/h2.png" alt="house1s">
             </div>
         </div>
-        <div class="foods">
+        <div class="choice">
+        <div class="items">
             <div class="search">
                 <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                     <label for="type">Type:</label><br>
@@ -129,8 +130,8 @@ mysqli_close($connect);
                     $imagePaths = explode(",", $imagePathsStr);
 
 
-                    echo '<div class="food-item">';
-                    echo "<img src='$imagePaths[0]' alt='Land Image'>";
+                    echo '<div class="display-item">';
+                    echo "<img src='$imagePaths[0]' alt='image'>";
                     echo "<h3>$name</h3>";
                     echo "<h4>Rs $price</h4>";
                     echo "<form method='POST' action='../../../backend/admin/removeAd.php'>";
@@ -149,6 +150,7 @@ mysqli_close($connect);
                 mysqli_free_result($result);
             }
             ?>
+        </div>
         </div>
 
     </div>

@@ -110,7 +110,7 @@ session_start();
             <form action="../../../frontend/user/build/buildOption.php" method="post">
                 <h2>Workers</h2>
                 <input type='hidden' name='buildOption' value='workers'>
-                <button type='submit' name='buildOptionButton'><img src="../../../images/h8.jpg" alt="House"></button>
+                <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
             </form>
         </div><!--Section-->
 
@@ -119,7 +119,7 @@ session_start();
             <form action="../../../frontend/user/build/buildOption.php" method="post">
                 <h2>Profesionals</h2>
                 <input type='hidden' name='buildOption' value='profesionals'>
-                <button type='submit' name='buildOptionButton'><img src="../../../images/h8.jpg" alt="House"></button>
+                <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
             </form>
         </div><!--Section-->
 
@@ -127,7 +127,7 @@ session_start();
             <form action="../../../frontend/user/build/buildOption.php" method="post">
                 <h2>Tools</h2>
                 <input type='hidden' name='buildOption' value='tools'>
-                <button type='submit' name='buildOptionButton'><img src="../../../images/h8.jpg" alt="House"></button>
+                <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
             </form>
         </div><!--Section-->
 
@@ -135,7 +135,7 @@ session_start();
             <form action="../../../frontend/user/build/buildOption.php" method="post">
                 <h2>Supplements</h2>
                 <input type='hidden' name='buildOption' value='supplements'>
-                <button type='submit' name='buildOptionButton'><img src="../../../images/h8.jpg" alt="House"></button>
+                <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
             </form>
         </div><!--Section-->
 
@@ -143,7 +143,7 @@ session_start();
             <form action="../../../frontend/user/build/buildOption.php" method="post">
                 <h2>Accessories</h2>
                 <input type='hidden' name='buildOption' value='accessories'>
-                <button type='submit' name='buildOptionButton'><img src="../../../images/h8.jpg" alt="House"></button>
+                <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
             </form>
         </div><!--Section-->
 
@@ -151,7 +151,7 @@ session_start();
             <form action="../../../frontend/user/build/buildOption.php" method="post">
                 <h2>Furnitures</h2>
                 <input type='hidden' name='buildOption' value='furnitures'>
-                <button type='submit' name='buildOptionButton'><img src="../../../images/h8.jpg" alt="House"></button>
+                <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
             </form>
         </div><!--Section-->
 
