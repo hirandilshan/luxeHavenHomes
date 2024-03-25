@@ -135,7 +135,7 @@
     font-size: 15px;
     color: white;
 }
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1040px) {
 
     .header .nav,
     .header .search-input,

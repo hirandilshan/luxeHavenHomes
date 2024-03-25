@@ -1,3 +1,4 @@
+
 *{
   margin:0;
   padding:0;
@@ -11,11 +12,13 @@
   min-height: 100vh;
   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(../../images/h4.jpg);
   background-size: cover;
+
 }
 
 .forms {
   width: 600px;
   margin: 0 auto;
+
   padding: 50px 0 50px 0;
 
 }
@@ -26,12 +29,14 @@
 }
 
 .form-details h2 {
+
   font-size: 36px;
   text-align: center;
   padding-top: 20px;
   letter-spacing: 2px;
   font-weight: 100;
   color: white;
+
 
 }
 
@@ -46,6 +51,7 @@
 .form-content {
   background-color: #f9f9f9;
   padding: 20px;
+
   border-radius: 20px;
 }
 
@@ -59,6 +65,7 @@
   font-size: 16px;
   color: black;
   padding: 8px 45px 8px 20px;
+
 }
 
 .inputs input {
@@ -66,6 +73,7 @@
   width: 500px;
   padding: 10px;
   border: 1px solid black;
+
   border-radius: 5px;
 }
 

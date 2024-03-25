@@ -89,14 +89,14 @@ session_start();
         <div class="section">
             <h2>View Advertestment Requests</h2>
             <a href="manageAds/uploadAds.php">
-                <img src="../../images/landd.jpg" alt="Land">
+                <img src="../../images/land1.jpg" alt="Land">
             </a>
         </div><!--Section-->
 
         <div class="section">
             <h2>Remove Advertestment</h2>
             <a href="manageAds/removeAds.php">
-                <img src="../../images/h8.jpg" alt="House">
+                <img src="../../images/h4.jpg" alt="House">
             </a>
 
         </div><!--Section-->
