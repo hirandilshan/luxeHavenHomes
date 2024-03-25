@@ -17,7 +17,7 @@ session_start();
 </head>
 
 <body>
-    <header>
+<header>
         <div class="header">
             <div class="headerbar">
                 <div class="account">
@@ -29,15 +29,13 @@ session_start();
                             echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
                         }
                         ?>
-
                     </ul>
                 </div>
                 <div class="nav">
                     <ul>
-                        <a href="../../../frontend/user/serviceTypes.php">
+                        <a href="../../../frontend/user/contact.php">
                             <li>Contact</li>
                         </a>
-
                         <a href="../../../frontend/user/about.php">
                             <li>About</li>
                         </a>
@@ -55,7 +53,6 @@ session_start();
                     <a href="../../../frontend/user/about.php">
                         <li>About Us</li>
                     </a>
-
                 </ul>
             </div>
 
@@ -71,15 +68,11 @@ session_start();
                             <i class="material-icons" id="cancel" style="color:white">&#xe5c9;</i>
                         </li>
                     </a>
-
-
                 </ul>
             </div>
 
-
             <div class="icon">
                 <ul>
-
                     <?php
                     if (isset($_SESSION['isUserLogedIn'])) {
                         echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
@@ -87,11 +80,11 @@ session_start();
                         echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
                     }
                     ?>
-
                 </ul>
             </div>
         </div>
     </header>
+
     <div class="home">
         <div class="main_slide">
             <div>

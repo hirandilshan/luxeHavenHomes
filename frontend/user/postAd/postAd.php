@@ -21,7 +21,7 @@ include_once '../../../backend/user/dbs.php';
 </head>
 
 <body>
-<header>
+    <header>
         <div class="header">
             <div class="headerbar">
                 <div class="account">
@@ -33,15 +33,13 @@ include_once '../../../backend/user/dbs.php';
                             echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
                         }
                         ?>
-
                     </ul>
                 </div>
                 <div class="nav">
                     <ul>
-                        <a href="../../../frontend/user/serviceTypes.php">
+                        <a href="../../../frontend/user/contact.php">
                             <li>Contact</li>
                         </a>
-
                         <a href="../../../frontend/user/about.php">
                             <li>About</li>
                         </a>
@@ -59,7 +57,6 @@ include_once '../../../backend/user/dbs.php';
                     <a href="../../../frontend/user/about.php">
                         <li>About Us</li>
                     </a>
-
                 </ul>
             </div>
 
@@ -75,15 +72,11 @@ include_once '../../../backend/user/dbs.php';
                             <i class="material-icons" id="cancel" style="color:white">&#xe5c9;</i>
                         </li>
                     </a>
-
-
                 </ul>
             </div>
 
-
             <div class="icon">
                 <ul>
-
                     <?php
                     if (isset($_SESSION['isUserLogedIn'])) {
                         echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
@@ -91,7 +84,6 @@ include_once '../../../backend/user/dbs.php';
                         echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
                     }
                     ?>
-
                 </ul>
             </div>
         </div>

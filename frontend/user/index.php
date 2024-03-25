@@ -18,27 +18,27 @@ session_start();
 
 <body>
     <header>
-
         <div class="header">
             <div class="headerbar">
                 <div class="account">
                     <ul>
+                    <div class="logo">
+                <a href="../../frontend/user/index.php"><img src="../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
+            </div>
                     <?php
                     if (isset($_SESSION['isUserLogedIn'])) {
                         echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
                         echo "<script>alert('please login!'); window.location.href = '../../frontend/user/logIn.php';</script>";
                     }
-                    ?>
-                       
+                    ?> 
                     </ul>
                 </div>
                 <div class="nav">
                     <ul>
-                        <a href="../../frontend/user/serviceTypes.php">
+                        <a href="../../frontend/user/contact.php">
                             <li>Contact</li>
                         </a>
-                        
                         <a href="../../frontend/user/about.php">
                             <li>About</li>
                         </a>                       
@@ -71,15 +71,11 @@ session_start();
                             <i class="material-icons" id="cancel"style="color:white">&#xe5c9;</i>
                         </li>
                     </a>
-
-
                 </ul>
             </div>
             
-
             <div class="icon">
                 <ul>
-
                     <?php
                     if (isset($_SESSION['isUserLogedIn'])) {
                         echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
@@ -87,7 +83,6 @@ session_start();
                         echo "<script>alert('please login!'); window.location.href = '../../frontend/user/logIn.php';</script>";
                     }
                     ?>
-
                 </ul>
             </div>
         </div>
@@ -167,21 +162,21 @@ session_start();
         <div class="footer-11">
             <address>
                 <h1>Support</h1>
-                <p>Lands</p>
-                <p>Houses</p>
-                <p>Construction equipments</p>
-                <p>Workers</p>
-                <p>Buyer's Guide</p>
-                <p>Help Center</p>
-                <p>post Ads</p>
+                <a href="buy/buyLands.php"><p>Lands</p></a>
+                <a href="buy/buyHouses.php"><p>Houses</p></a>
+                <a href="build.php"><p>Construction equipments</p></a>
+                <a href="build.php"><p>Workers</p></a>
+                <a href="build.php"><p>Buyer's Guide</p></a>
+                <a href="contact.php"><p>Help Center</p></a>
+                <a href="postAd/postAd.php"><p>post Ads</p></a>
                     
             </address>
         </div>
         <div class="footer-111">
             <address>
                 <h1>Company</h1>
-                <p>About Us</p>
-                <p>Contact Us</p>
+                <a href="contact.php"><p>About Us</p></a>
+                <a href="contact.php"><p>Contact Us</p></a>
                 <p>Construction equipments</p>
                 <p>Privacy policy</p>
                 <p>Disclaimer</p>
@@ -194,9 +189,7 @@ session_start();
                 <p>Luxe Haven Homes(PVT)LTD</p>
                 <p>+94 712456894</p>
                 <p>+94 759825015</p>
-                <p>info@LuxeHavenHomes.LK</p>
-                
-                    
+                <p>info@LuxeHavenHomes.LK</p>        
             </address>
         </div>
         

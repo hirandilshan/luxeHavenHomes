@@ -40,7 +40,12 @@ mysqli_close($connect);
                 </div>
                 <div class="nav">
                     <ul>
-
+                    <a href="../manageAds/removeAds.php">
+                            <li>Remove Ads</li>
+                        </a>
+                        <a href="../manageAds/uploadAds.php">
+                            <li>Upload Ads</li>
+                        </a>   
                     </ul>
                 </div>
             </div>
@@ -49,7 +54,12 @@ mysqli_close($connect);
             </div>
             <div class="nav">
                 <ul>
-
+                <a href="../manageAds/removeAds.php">
+                            <li>Remove Ads</li>
+                        </a>
+                        <a href="../manageAds/uploadAds.php">
+                            <li>Upload Ads</li>
+                        </a>   
                 </ul>
             </div>
 
