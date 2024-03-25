@@ -8,10 +8,10 @@ session_start();
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/login.css">
-    <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
+    <link rel="shortcut icon" href="../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EAT OUT Restaurant</title>
+    <title>Luxe Haven Homes</title>
     <meta name="viewport" content="width=device-width,initial-scal=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -23,20 +23,6 @@ session_start();
     <div class="headerbar">
         <div class="account">
             <ul>
-
-                <?php
-                if (isset($_SESSION['isUserLogedIn']) && $_SESSION['isUserLogedIn']) {
-                    echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
-                } else {
-                    echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                    echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
-                }
-                ?>
-                <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
-                <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
-                    </a></li>
-
-
                 <a href="#">
                     <li>
                         <i class="material-icons" id="search-icon1">&#xe8b6;</i>

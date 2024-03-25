@@ -8,10 +8,10 @@ session_start();
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/signup.css">
-    <link rel="shortcut icon" href="../../images/eatout logo.jpg" type="images/x-icon">
+    <link rel="shortcut icon" href="../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EAT OUT Restaurant</title>
+    <title>Luxe Haven Homes</title>
     <meta name="viewport" content="width=device-width,initial-scal=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -120,10 +120,23 @@ session_start();
         </div>
     </div>
 
+
     <div class="footer-2">
         <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
          ALL RIGHTS RESERVED.<br>
         WEBSITE MAINTAINTENANCE BY R & Y  </P>
+  </div>
+
+
+
+    <div class="footer">
+        <div class="footer-1">
+            <div class="logo">
+                <img src="../../images/luxeLogo.jpg" alt="">
+            </div>
+        </div>
+
+
     </div>
     <script src="../../frontend/user/app.js"></script>
     
