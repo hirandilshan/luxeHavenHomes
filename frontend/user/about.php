@@ -136,34 +136,34 @@ session_start();
             </div>
             <div clss="social">
                 <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" class="fa fa-facebook"></a></li>
+                <li><a href="#" class="fa fa-instagram"></a></li>
+                <li><a href="#" class="fa fa-twitter"></a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-11">
             <address>
                 <h1>Support</h1>
-                <p>Lands</p>
-                <p>Houses</p>
-                <p>Construction equipments</p>
-                <p>Workers</p>
-                <p>Buyer's Guide</p>
-                <p>Help Center</p>
-                <p>post Ads</p>
-
+                <a href="buy/buyLands.php"><p>Lands</p></a>
+                <a href="buy/buyHouses.php"><p>Houses</p></a>
+                <a href="build.php"><p>Construction equipments</p></a>
+                <a href="build.php"><p>Workers</p></a>
+                <a href="build.php"><p>Buyer's Guide</p></a>
+                <a href="contact.php"><p>Help Center</p></a>
+                <a href="postAd/postAd.php"><p>post Ads</p></a>
+                    
             </address>
         </div>
         <div class="footer-111">
             <address>
                 <h1>Company</h1>
-                <p>About Us</p>
-                <p>Contact Us</p>
+                <a href="contact.php"><p>About Us</p></a>
+                <a href="contact.php"><p>Contact Us</p></a>
                 <p>Construction equipments</p>
                 <p>Privacy policy</p>
                 <p>Disclaimer</p>
-
+                    
             </address>
         </div>
         <div class="footer-1111">
@@ -172,19 +172,17 @@ session_start();
                 <p>Luxe Haven Homes(PVT)LTD</p>
                 <p>+94 712456894</p>
                 <p>+94 759825015</p>
-                <p>info@LuxeHavenHomes.LK</p>
-
-
+                <p>info@LuxeHavenHomes.LK</p>        
             </address>
         </div>
-
+        
     </div>
     <div class="footer-2">
-        <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
+           <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
             ALL RIGHTS RESERVED.<br>
-            WEBSITE MAINTAINTENANCE BY R & Y </P>
-    </div>
-    <script src="app.js"></script>
+           WEBSITE MAINTAINTENANCE BY R & Y  </P>
+        </div>
+    <script src="../../frontend/user/app.js"></script>
 
 </body>
 
