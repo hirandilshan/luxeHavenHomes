@@ -90,6 +90,13 @@ include_once '../../../backend/user/dbs.php';
     </header>
 
     <div class="home">
+    <div class="paymentButton">
+            <form method="POST" action="payment.php">
+            <button type="submit" name="submit">Pending Payments</button>
+            </form><br><br>
+        </div>
+
+
         <div class="form">
             <form method="POST" action="../../../backend/user/postAd/postAd.php" enctype="multipart/form-data">
 
@@ -137,7 +144,10 @@ include_once '../../../backend/user/dbs.php';
                 <input type="text" id="discription" name="discription"><br>
 
                 <label for="phone">Phone Number:</label><br>
-                <input type="text" id="phone" name="phone"><br><br>
+                <input type="text" id="phone" name="phone"><br>
+                
+                <label for="numOfDays">Number Of Days:</label><br>
+                <input type="text" id="numOfDays" name="numOfDays"><br><br>
 
                 <button type="submit" name="submit">Submit</button>
             </form>

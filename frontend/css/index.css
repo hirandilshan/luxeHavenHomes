@@ -71,13 +71,14 @@ body {
 }
 .section h2{
     margin-bottom: 5px;
-    position: absolute;
+    position:fixed;
     align-items:center ;
     transform: translate(-50%, 50%);
     padding-top: 30px;
-    padding-left: 350px;
     font-weight: bold;
     font-size: 50px;
+    cursor: pointer;
+    margin-left: 180px;
 }
 .section img{
     width: 50%;
