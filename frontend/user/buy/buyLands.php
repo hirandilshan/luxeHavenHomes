@@ -181,34 +181,34 @@ mysqli_close($connect);
     <div class="footer">
         <div class="footer-1">
             <div class="logo">
-                <img src="../../images/luxeLogo.jpg" alt="logo">
+                <img src="../../../images/luxeLogo.jpg" alt="logo">
             </div>
             <div clss="social">
                 <ul>
-                    <li>
-                        
-                    </li>
+                <li><a href="#" class="fa fa-facebook"></a></li>
+                <li><a href="#" class="fa fa-instagram"></a></li>
+                <li><a href="#" class="fa fa-twitter"></a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-11">
             <address>
                 <h1>Support</h1>
-                <p>Lands</p>
-                <p>Houses</p>
-                <p>Construction equipments</p>
-                <p>Workers</p>
-                <p>Buyer's Guide</p>
-                <p>Help Center</p>
-                <p>post Ads</p>
+                <a href="../buy/buyLands.php"><p>Lands</p></a>
+                <a href="../buy/buyHouses.php"><p>Houses</p></a>
+                <a href="../build.php"><p>Construction equipments</p></a>
+                <a href="../build.php"><p>Workers</p></a>
+                <a href="../build.php"><p>Buyer's Guide</p></a>
+                <a href="../contact.php"><p>Help Center</p></a>
+                <a href="../postAd/postAd.php"><p>post Ads</p></a>
                     
             </address>
         </div>
         <div class="footer-111">
             <address>
                 <h1>Company</h1>
-                <p>About Us</p>
-                <p>Contact Us</p>
+                <a href="../contact.php"><p>About Us</p></a>
+                <a href="../contact.php"><p>Contact Us</p></a>
                 <p>Construction equipments</p>
                 <p>Privacy policy</p>
                 <p>Disclaimer</p>
@@ -221,9 +221,7 @@ mysqli_close($connect);
                 <p>Luxe Haven Homes(PVT)LTD</p>
                 <p>+94 712456894</p>
                 <p>+94 759825015</p>
-                <p>info@LuxeHavenHomes.LK</p>
-                
-                    
+                <p>info@LuxeHavenHomes.LK</p>        
             </address>
         </div>
         
