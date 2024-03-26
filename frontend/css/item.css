@@ -4,7 +4,7 @@
     width: 80%;
     margin: 50px auto;
     padding: 10px;
-    padding-left: 250px;
+   
 }
 
 .choice p {
@@ -52,7 +52,7 @@
 
 .display-item button {
     padding: 5px 10px;
-    background-color: #300a0a;
+    background-color:black;
     color: white;
     border: none;
     cursor: pointer;

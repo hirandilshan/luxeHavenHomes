@@ -12,7 +12,9 @@ if(isset($_POST['submit'])) {
     $type = $_POST['type'] ?? '';
     $discription = $_POST['discription'] ?? '';
     $phone = $_POST['phone'] ?? '';
+    $numOfDays = $_POST['numOfDays'] ?? '';
     $userName=$_SESSION['userName'];
+
 
     // Array to store uploaded file paths
     $imagePaths = array();
@@ -46,11 +48,11 @@ if(isset($_POST['submit'])) {
     $imagePathsStr = implode(",", $imagePaths);
 
     // Insert data into database
-    $insert_sql = "INSERT INTO requests (name, price, type, location, discription, img, phone,userName) 
-                   VALUES ('$name', '$price', '$type', '$location', '$discription', '$imagePathsStr', '$phone','$userName')";
+    $insert_sql = "INSERT INTO requests (name, price, type, location, discription, img, phone,numOfDays,userName) 
+                   VALUES ('$name', '$price', '$type', '$location', '$discription', '$imagePathsStr', '$phone','$numOfDays','$userName')";
     
     if ($connect->query($insert_sql) === TRUE) {
-        echo "<script>alert('submition successful!');window.location.href = '../../../frontend/user/index.php';</script>";
+        echo "<script>alert('submition successful!');window.location.href = '../../../frontend/user/postAd/payment.php';</script>";
     } else {
         echo "<script>alert('submition not successful!'); window.location.href = '../../../frontend/user/postAd/postAd.php';</script>";
         echo "Error: " . $insert_sql . "<br>" . $connect->error;

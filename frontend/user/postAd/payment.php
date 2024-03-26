@@ -1,27 +1,8 @@
 <?php
+
 session_start();
 include_once '../../../backend/user/dbs.php';
 
-// Check if form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['search'])) {
-    $location = mysqli_real_escape_string($connect, $_POST['location']);
-    $propertyType = mysqli_real_escape_string($connect, $_POST['propertyType']);
-    $minPrice = mysqli_real_escape_string($connect, $_POST['minPrice']);
-    $maxPrice = mysqli_real_escape_string($connect, $_POST['maxPrice']);
-
-    if ($maxPrice == "unlimited") {
-        $sql = "SELECT * FROM houses WHERE location='$location'AND price> $minPrice AND Type= '$propertyType';";
-    } else {
-        $sql = "SELECT * FROM houses WHERE location='$location'AND price> $minPrice AND price <$maxPrice AND Type='$propertyType';";
-    }
-
-    $result = mysqli_query($connect, $sql);
-} else {
-    $sql = "SELECT * FROM houses;";
-    $result = mysqli_query($connect, $sql);
-}
-
-mysqli_close($connect);
 ?>
 
 <!DOCTYPE html>
@@ -30,11 +11,8 @@ mysqli_close($connect);
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
-    <link rel="stylesheet" href="../../css/item.css">
-
-    <link rel="stylesheet" href="../../css/buy.css">
+    <link rel="stylesheet" href="../../css/payment.css">
     <link rel="shortcut icon" href="../../../images/luxeLogo.jpg" type="images/x-icon">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxe Haven Homes</title>
@@ -43,7 +21,7 @@ mysqli_close($connect);
 </head>
 
 <body>
-<header>
+    <header>
         <div class="header">
             <div class="headerbar">
                 <div class="account">
@@ -110,84 +88,71 @@ mysqli_close($connect);
             </div>
         </div>
     </header>
+    <div class="content">
+        <div class="requests-container">
+            <?php
+            include_once '../../../backend/user/dbs.php';
+
+            $userName = $_SESSION['userName'];
+
+            $sql = "SELECT * FROM requests WHERE userName='$userName';";
+            $result = mysqli_query($connect, $sql);
+
+            echo '<table>';
+            echo '<tr><th>Request ID</th><th>Name</th><th>Price</th><th>(-)</th><th>Number of Days</th><th>(+)</th><th>Remove</th></tr>';
+
+            $total = 0;
+
+            while ($row = $result->fetch_assoc()) {
+                $id = $row["id"];
+                $name = $row["name"];
+                $price = $row["price"];
+                
+                $numOfDays = $row["numOfDays"];
+
+                $itemTotal = 200 * $numOfDays;
+                $total += $itemTotal;
+
+                echo '<tr>';
+                echo "<td>$id</td>";
+                echo "<td>$name</td>";
+                echo "<td>$price</td>";
+                echo "<td>";
+                echo "<form method='POST' action='../../../backend/user/postAd/reduceDays.php'>";
+                echo "<input type='hidden' name='id' value='$id'>";
+                echo "<button type='submit' name='minus'>(-)</button>";
+                echo "</form>";
+                echo "</td>";
+                echo "<td>$numOfDays</td>";
+                echo "<td>";
+                echo "<form method='POST' action='../../../backend/user/postAd/increseDays.php'>";
+                echo "<input type='hidden' name='id' value='$id'>";
+                echo "<button type='submit' name='plus'>(+)</button>";
+                echo "</form>";
+                echo "</td>";
+                echo "<td>";
+                echo "<form method='POST' action='../../../backend/user/postAd/removeRequest.php'>";
+                echo "<input type='hidden' name='id' value='$id'>";
+                echo "<button type='submit' name='remove'>Remove</button>";
+                echo "</form>";
+                echo "</td>";
+                echo '</tr>';
+            }
+
+            echo '</table>';
+            echo '<h2>Your Requests</h2>';
+            echo '<div class="request-items"></div>';
+            echo '<div class="total">';
+            echo '<h3>Total:</h3>';
+            echo "<p id='cart-total'>$total</p>";
+            echo '</div>';
+            echo '<button id="checkout-btn" disabled>Payment</button>';
+            ?>
 
 
-    <div class="home">
-        <div class="choice">
-            <p>Buy Houses</p>
-
-            <div class="items">
-
-                <div class="search">
-                    <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                        <label for="location">Location</label>
-                        <select id="location" name="location">
-                            <option value="colombo">Colombo</option>
-                            <option value="gampaha">Gampaha</option>
-                            <option value="kandy">Kandy</option>
-                            <option value="kegalle">Kegalle</option>
-                        </select>
-                        <label for="propertyType">Property Type</label>
-                        <select id="propertyType" name="propertyType">
-                            <option value="houses">Houses</option>
-                            <option value="apartments">Apartments</option>
-                            <option value="cProperties">commeritial property</option>
-
-                        </select>
-                        <label for="minPrice">Minimum Price</label>
-                        <select id="minPrice" name="minPrice">
-                            <option value="0">0</option>
-                            <option value="1000000">1000000</option>
-                            <option value="5000000">5000000</option>
-                            <option value="10000000">10000000</option>
-                        </select>
-                        <label for="maxPrice">Maximum Price</label>
-                        <select id="maxPrice" name="maxPrice">
-                            <option value="1000000">1000000</option>
-                            <option value="5000000">5000000</option>
-                            <option value="10000000">10000000</option>
-                            <option value="unlimited">unlimited</option>
-                        </select>
-                        <button type="submit" name="search">Search</button>
-                    </form>
-                </div>
-
-                <?php
-                if (isset($result)) {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        $id = $row["id"];
-                        $name = $row["name"];
-                        $price = $row["price"];
-                        $type = $row["type"];
-                        $location = $row["location"];
-                        $discription = $row["discription"];
-                        $imagePathsStr = $row["img"];
-                        $phone = $row["phone"];
-                        $userName=$row["userName"];
-
-                        $imagePaths = array();
-                        $imagePaths = explode(",", $imagePathsStr);
-                        
-
-                        echo '<div class="display-item">';
-                        echo "<img src='$imagePaths[0]' alt='image'>";
-                        echo "<h3>$name</h3>";
-                        echo "<h4>Rs $price</h4>";
-                        echo "<form method='POST' action='../displayAd/advertisement.php'>";
-                        echo "<input type='hidden' name='type' value='houses'>";
-                        echo "<input type='hidden' name='id' value='$id'>";
-                        echo "<button type='submit' name='seeMore'>See More</button>";
-                        echo "</form>";
-                        echo '</div>';
-                    }
-                    // Free result set
-                    mysqli_free_result($result);
-                }
-                ?>
-            </div>
         </div>
-    </div>
 
+    </div>
     <div class="footer">
         <div class="footer-1">
             <div class="logo">
@@ -243,7 +208,7 @@ mysqli_close($connect);
             ALL RIGHTS RESERVED.<br>
             WEBSITE MAINTAINTENANCE BY R & Y </P>
     </div>
-    <script src="../../../frontend/user/app.js"></script>
+    <script src="../../frontend/user/app.js"></script>
 
 </body>
 
