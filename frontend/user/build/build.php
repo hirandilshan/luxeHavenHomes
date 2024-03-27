@@ -87,10 +87,12 @@ session_start();
     </header>
 
     <div class= "home">
-        <div class="menu">
-            <h1>Options for your build</h1>
+        <div class="top">
+            <h1>BUILD WITH US?</h1>
+        </div>
+        <div class="menus">
 
-            <div class="section">
+            <div class="sections">
                 <form action="../../../frontend/user/build/buildOption.php" method="post">
                     <h2>Workers</h2>
                     <input type='hidden' name='buildOption' value='workers'>
@@ -99,7 +101,7 @@ session_start();
             </div><!--Section-->
 
 
-            <div class="section">
+            <div class="sections">
                 <form action="../../../frontend/user/build/buildOption.php" method="post">
                     <h2>Profesionals</h2>
                     <input type='hidden' name='buildOption' value='profesionals'>
@@ -107,7 +109,7 @@ session_start();
                 </form>
             </div><!--Section-->
 
-            <div class="section">
+            <div class="sections">
                 <form action="../../../frontend/user/build/buildOption.php" method="post">
                     <h2>Tools</h2>
                     <input type='hidden' name='buildOption' value='tools'>
@@ -115,27 +117,27 @@ session_start();
                 </form>
             </div><!--Section-->
 
-            <div class="section">
+            <div class="sections">
                 <form action="../../../frontend/user/build/buildOption.php" method="post">
                     <h2>Supplements</h2>
                     <input type='hidden' name='buildOption' value='supplements'>
-                    <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
+                    <button type='submit' name='buildOptionButton'><img src="../../../images/supply1.jpg" alt="House"></button>
                 </form>
             </div><!--Section-->
 
-            <div class="section">
+            <div class="sections">
                 <form action="../../../frontend/user/build/buildOption.php" method="post">
                     <h2>Accessories</h2>
                     <input type='hidden' name='buildOption' value='accessories'>
-                    <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
+                    <button type='submit' name='buildOptionButton'><img src="../../../images/accs1.jpg" alt="House"></button>
                 </form>
             </div><!--Section-->
 
-            <div class="section">
+            <div class="sections">
                 <form action="../../../frontend/user/build/buildOption.php" method="post">
                     <h2>Furnitures</h2>
                     <input type='hidden' name='buildOption' value='furnitures'>
-                    <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
+                    <button type='submit' name='buildOptionButton'><img src="../../../images/furnicher1.jpg" alt="House"></button>
                 </form>
             </div><!--Section-->
 
@@ -149,11 +151,11 @@ session_start();
                     <img src="../../../images/luxeLogo.jpg" alt="logo">
                 </div>
                 <div clss="social">
-                    <ul>
-                    <li><a href="#" class="fa fa-facebook"></a></li>
-                    <li><a href="#" class="fa fa-instagram"></a></li>
-                    <li><a href="#" class="fa fa-twitter"></a></li>
-                    </ul>
+                <ul>
+                <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+                <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
+                </ul>
                 </div>
             </div>
             <div class="footer-11">
@@ -192,7 +194,7 @@ session_start();
         
     </div>
     <div class="footer-2">
-           <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
+           <p>COPYRIGHT 2024 LUXE HAVEN HOMES HOLDING PVT LTD.<br>
             ALL RIGHTS RESERVED.<br>
            WEBSITE MAINTAINTENANCE BY R & Y  </P>
         </div>

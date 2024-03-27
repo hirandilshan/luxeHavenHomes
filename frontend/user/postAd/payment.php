@@ -159,10 +159,10 @@ include_once '../../../backend/user/dbs.php';
                 <img src="../../../images/luxeLogo.jpg" alt="logo">
             </div>
             <div clss="social">
-                <ul>
-                <li><a href="#" class="fa fa-facebook"></a></li>
-                <li><a href="#" class="fa fa-instagram"></a></li>
-                <li><a href="#" class="fa fa-twitter"></a></li>
+            <ul>
+                <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+                <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
                 </ul>
             </div>
         </div>
@@ -202,7 +202,7 @@ include_once '../../../backend/user/dbs.php';
         
     </div>
     <div class="footer-2">
-           <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
+           <p>COPYRIGHT 2024 LUXE HAVEN HOMES HOLDING PVT LTD.<br>
             ALL RIGHTS RESERVED.<br>
            WEBSITE MAINTAINTENANCE BY R & Y  </P>
         </div>
