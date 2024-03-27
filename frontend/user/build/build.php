@@ -7,6 +7,7 @@ session_start();
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/build.css">
     <link rel="shortcut icon" href="../../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,130 +86,117 @@ session_start();
         </div>
     </header>
 
-    <div class="home">
-        <div class="main_slide">
-            <div>
-                <h1>Set New Stndards<br>in <span>Modern Home</span><br>Constructions</h1>
+    <div class= "home">
+        <div class="menu">
+            <h1>Options for your build</h1>
 
-            </div>
-            <div>
-                <img src="../../../images/h2.png" alt="house1s">
-            </div>
+            <div class="section">
+                <form action="../../../frontend/user/build/buildOption.php" method="post">
+                    <h2>Workers</h2>
+                    <input type='hidden' name='buildOption' value='workers'>
+                    <button type='submit' name='buildOptionButton'><img src="../../../images/workers.jpg" alt="House"></button>
+                </form>
+            </div><!--Section-->
+
+
+            <div class="section">
+                <form action="../../../frontend/user/build/buildOption.php" method="post">
+                    <h2>Profesionals</h2>
+                    <input type='hidden' name='buildOption' value='profesionals'>
+                    <button type='submit' name='buildOptionButton'><img src="../../../images/concultant.png" alt="House"></button>
+                </form>
+            </div><!--Section-->
+
+            <div class="section">
+                <form action="../../../frontend/user/build/buildOption.php" method="post">
+                    <h2>Tools</h2>
+                    <input type='hidden' name='buildOption' value='tools'>
+                    <button type='submit' name='buildOptionButton'><img src="../../../images/buildd.jpg" alt="House"></button>
+                </form>
+            </div><!--Section-->
+
+            <div class="section">
+                <form action="../../../frontend/user/build/buildOption.php" method="post">
+                    <h2>Supplements</h2>
+                    <input type='hidden' name='buildOption' value='supplements'>
+                    <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
+                </form>
+            </div><!--Section-->
+
+            <div class="section">
+                <form action="../../../frontend/user/build/buildOption.php" method="post">
+                    <h2>Accessories</h2>
+                    <input type='hidden' name='buildOption' value='accessories'>
+                    <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
+                </form>
+            </div><!--Section-->
+
+            <div class="section">
+                <form action="../../../frontend/user/build/buildOption.php" method="post">
+                    <h2>Furnitures</h2>
+                    <input type='hidden' name='buildOption' value='furnitures'>
+                    <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
+                </form>
+            </div><!--Section-->
+
+
         </div>
-    </div>
-    <div class="menu">
-        <h1>What are you looking for?</h1>
-
-        <div class="section">
-            <form action="../../../frontend/user/build/buildOption.php" method="post">
-                <h2>Workers</h2>
-                <input type='hidden' name='buildOption' value='workers'>
-                <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
-            </form>
-        </div><!--Section-->
-
-
-        <div class="section">
-            <form action="../../../frontend/user/build/buildOption.php" method="post">
-                <h2>Profesionals</h2>
-                <input type='hidden' name='buildOption' value='profesionals'>
-                <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
-            </form>
-        </div><!--Section-->
-
-        <div class="section">
-            <form action="../../../frontend/user/build/buildOption.php" method="post">
-                <h2>Tools</h2>
-                <input type='hidden' name='buildOption' value='tools'>
-                <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
-            </form>
-        </div><!--Section-->
-
-        <div class="section">
-            <form action="../../../frontend/user/build/buildOption.php" method="post">
-                <h2>Supplements</h2>
-                <input type='hidden' name='buildOption' value='supplements'>
-                <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
-            </form>
-        </div><!--Section-->
-
-        <div class="section">
-            <form action="../../../frontend/user/build/buildOption.php" method="post">
-                <h2>Accessories</h2>
-                <input type='hidden' name='buildOption' value='accessories'>
-                <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
-            </form>
-        </div><!--Section-->
-
-        <div class="section">
-            <form action="../../../frontend/user/build/buildOption.php" method="post">
-                <h2>Furnitures</h2>
-                <input type='hidden' name='buildOption' value='furnitures'>
-                <button type='submit' name='buildOptionButton'><img src="../../../images/h4.jpg" alt="House"></button>
-            </form>
-        </div><!--Section-->
-
-
-    </div>
 
     </div>
     <div class="footer">
-        <div class="footer-1">
-            <div class="logo">
-                <img src="../../../images/luxeLogo.jpg" alt="logo">
+            <div class="footer-1">
+                <div class="logo">
+                    <img src="../../../images/luxeLogo.jpg" alt="logo">
+                </div>
+                <div clss="social">
+                    <ul>
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    </ul>
+                </div>
             </div>
-            <div clss="social">
-                <ul>
-                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-                </ul>
+            <div class="footer-11">
+                <address>
+                    <h1>Support</h1>
+                    <a href="../buy/buyLands.php"><p>Lands</p></a>
+                    <a href="../buy/buyHouses.php"><p>Houses</p></a>
+                    <a href="../build.php"><p>Construction equipments</p></a>
+                    <a href="../build.php"><p>Workers</p></a>
+                    <a href="../build.php"><p>Buyer's Guide</p></a>
+                    <a href="../contact.php"><p>Help Center</p></a>
+                    <a href="../postAd/postAd.php"><p>post Ads</p></a>
+                        
+                </address>
             </div>
-        </div>
-        <div class="footer-11">
-            <address>
-                <h1>Support</h1>
-                <p>Lands</p>
-                <p>Houses</p>
-                <p>Construction equipments</p>
-                <p>Workers</p>
-                <p>Buyer's Guide</p>
-                <p>Help Center</p>
-                <p>post Ads</p>
-
-            </address>
-        </div>
-        <div class="footer-111">
-            <address>
-                <h1>Company</h1>
-                <p>About Us</p>
-                <p>Contact Us</p>
-                <p>Construction equipments</p>
-                <p>Privacy policy</p>
-                <p>Disclaimer</p>
-
-            </address>
-        </div>
+            <div class="footer-111">
+                <address>
+                    <h1>Company</h1>
+                    <a href="../contact.php"><p>About Us</p></a>
+                    <a href="../contact.php"><p>Contact Us</p></a>
+                    <p>Construction equipments</p>
+                    <p>Privacy policy</p>
+                    <p>Disclaimer</p>
+                        
+                </address>
+            </div>
         <div class="footer-1111">
             <address>
                 <h1>Contact Info</h1>
                 <p>Luxe Haven Homes(PVT)LTD</p>
                 <p>+94 712456894</p>
                 <p>+94 759825015</p>
-                <p>info@LuxeHavenHomes.LK</p>
-
-
+                <p>info@LuxeHavenHomes.LK</p>        
             </address>
         </div>
-
+        
     </div>
     <div class="footer-2">
-        <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
+           <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
             ALL RIGHTS RESERVED.<br>
-            WEBSITE MAINTAINTENANCE BY R & Y </P>
-    </div>
+           WEBSITE MAINTAINTENANCE BY R & Y  </P>
+        </div>
     <script src="../../../frontend/user/app.js"></script>
-
 </body>
 
 </html>
