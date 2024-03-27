@@ -13,7 +13,7 @@ $id = $_POST['id'];
 <head>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../../css/ad.css">
     <link rel="shortcut icon" href="../../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -95,47 +95,45 @@ $id = $_POST['id'];
     <div class="home">
         
             
-            <div class="advertestment">
+        <div class="advertisement">
 
             <?php
-include_once '../../../backend/user/dbs.php';
+                include_once '../../../backend/user/dbs.php';
 
-$sql = "SELECT * FROM $type WHERE id=$id;";
-$result = mysqli_query($connect, $sql);
+                $sql = "SELECT * FROM $type WHERE id=$id;";
+                $result = mysqli_query($connect, $sql);
 
-if (isset($result)) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $id = $row["id"];
-        $name = $row["name"];
-        $price = $row["price"];
-        $type = $row["type"];
-        $location = $row["location"];
-        $discription = $row["discription"];
-        $imagePathsStr = $row["img"];
-        $phone = $row["phone"];
-        $userName=$row["userName"];
+                if (isset($result)) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $id = $row["id"];
+                        $name = $row["name"];
+                        $price = $row["price"];
+                        $type = $row["type"];
+                        $location = $row["location"];
+                        $discription = $row["discription"];
+                        $imagePathsStr = $row["img"];
+                        $phone = $row["phone"];
+                        $userName=$row["userName"];
 
-        $imagePaths = array();
-        $imagePaths = explode(",", $imagePathsStr);
+                        $imagePaths = array();
+                        $imagePaths = explode(",", $imagePathsStr);
 
-        echo "<h3>$name</h3><br>";
-        foreach ($imagePaths as $img) {
-            echo "<img src='$img' alt='Image'><br>";
-        }
-        echo "<h4>Rs $price</h4><br>";
-        echo "<h3>$location</h3><br>";
-        echo "<h4>$discription</h4><br>";
-        echo "<form method='POST' action='../../../backend/user/call.php'>";
-        echo "<input type='hidden' name='phone' value='$phone'>";
-        echo "<button type='submit' name='call'>Call</button>";
-        echo "</form>";
-    }
-    // Free result set
-    mysqli_free_result($result);
-}
-?>
-
-            </div>
+                        echo "<h3>$name</h3><br>";
+                        foreach ($imagePaths as $img) {
+                            echo "<img src='$img' alt='Image'><br>";
+                        }
+                        echo "<h4>Rs $price</h4><br>";
+                        echo "<h3>$location</h3><br>";
+                        echo "<h4>$discription</h4><br>";
+                        echo "<form method='POST' action='../../../backend/user/call.php'>";
+                        echo "<input type='hidden' name='phone' value='$phone'>";
+                        echo "<button type='submit' name='call'>Call</button>";
+                        echo "</form>";
+                    }
+                    // Free result set
+                    mysqli_free_result($result);
+                }
+            ?>
         </div>
     </div>
 
@@ -146,9 +144,15 @@ if (isset($result)) {
             </div>
             <div clss="social">
                 <ul>
+<<<<<<< HEAD
+                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+=======
                 <li><a href="#" class="fa fa-facebook"></a></li>
                 <li><a href="#" class="fa fa-instagram"></a></li>
                 <li><a href="#" class="fa fa-twitter"></a></li>
+>>>>>>> 3ef57c6039ac24429edcd404463fa25879297266
                 </ul>
             </div>
         </div>
