@@ -23,6 +23,8 @@ body {
     border-radius: 20px;
 }
 
+
+
 .main_slide div:nth-child(2) {
     width: 400px;
     height: 420px;
@@ -124,27 +126,7 @@ text-align: center;
     font-family: 'Times New Roman', Times, serif;
 
 }
-.red_btn {
-    cursor: pointer;
-    margin-top: 20px;
-    width: 160px;
-    font-weight: bold;
-    color: aliceblue;
-    line-height: 50px;
-    background-color: rgb(245, 101, 34);
-    border-radius: 5px;
-    border: 1px solid rgb(245, 101, 34);
-    box-shadow: rgb(245, 120, 69);
-    transition: all 0.2s;
 
-}
-
-.red_btn:hover {
-    background-color: white;
-    box-shadow: 0 2px 15px rgb(240, 120, 69);
-    border: 1px solid rgb(245, 101, 34);
-    color: rgb(245, 101, 34);
-}
 .main_slide2 {
     margin: 80px 0;
     display: flex;

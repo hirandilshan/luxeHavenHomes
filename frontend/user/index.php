@@ -103,31 +103,35 @@ session_start();
     <div class="menu">
         <h1>What are you looking for?</h1>
         <div class="section">
-            <h2>Buy<br>Land</h2>
+           
             <a href="buy/buyLands.php">
+                <h2>Buy<br>Land</h2>
                 <img src="../../images/land1.jpg" alt="Land">
             </a>
         </div><!--Section-->
 
         <div class="section">
-            <h2>Buy<br>House</h2>
+            
             <a href="buy/buyHouses.php">
+            <h2>Buy<br>House</h2>
                 <img src="../../images/house1.jpg" alt="House">
             </a>
 
         </div><!--Section-->
 
         <div class="section">
-            <h2>Build</h2>
+            
             <a href="build/build.php">
+            <h2>Build</h2>
                 <img src="../../images/tools11.jpg" alt="Build">
             </a>
         </div><!--Section-->
 
         <div class="section">
 
-            <h2>Post<br>Ad</h2>
+            
             <a href="postAd/postAd.php">
+            <h2>Post<br>Ad</h2>
 
                 <img src="../../images/ad1.jpg" alt="Ads">
             </a>

@@ -1,0 +1,62 @@
+.home {
+    
+    margin:0 auto; /* Centers the div horizontally */
+    width: 80%; /* Adjust as needed */
+    padding: 20px;
+    background-color: #f0f0f0; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+.paymentButton {
+    text-align: center; /* Centers the content */
+    margin-bottom: 20px; /* Adds some space at the bottom */
+}
+
+.paymentButton button {
+    background-color: #0f0f0f; /* Green background color */
+    color: #fff; /* White text color */
+    border: none; /* Removes default button border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 16px; /* Button text size */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.paymentButton button:hover {
+    background-color: #2e302f; /* Darker color on hover */
+}
+
+
+.form {
+
+    max-width: 500px; /* Limits the width of the form */
+    margin: 0 auto; /* Centers the form horizontally */
+}
+
+.form label {
+    margin-bottom: 5px; /* Adds space between labels */
+}
+
+.form input[type="text"],
+.form select,
+.form button {
+    width: 100%; /* Makes inputs and buttons full width */
+    padding: 10px; /* Adds padding */
+    margin-bottom: 10px; /* Adds space between inputs */
+    box-sizing: border-box; /* Includes padding and border in the width */
+}
+
+.form button {
+    background-color: black; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Removes default button border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.form button:hover {
+    background-color: #2e302f; /* Darker color on hover */
+}

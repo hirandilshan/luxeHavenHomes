@@ -10,7 +10,7 @@ include_once '../../../backend/user/dbs.php';
 
 <head>
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/postAd.css">
     <link rel="stylesheet" href="../../css/item.css">
     <link rel="shortcut icon" href="../../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">

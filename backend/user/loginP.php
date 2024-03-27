@@ -17,10 +17,10 @@ if($count>0){
     
     
     if(strcasecmp($email,'admin@luxehavenhomes')==0 && strcasecmp($password,'12345@admin')==0){
-        echo "<script>alert('Admin Login successful!'); window.location.href = '../../frontend/admin/adminHome.php';</script>";
+        echo "<script> window.location.href = '../../frontend/admin/adminHome.php';</script>";
         $_SESSION['isAdminLogedIn'] = 'true';
     }else{
-        echo "<script>alert('Login successful!'); window.location.href = '../../frontend/user/index.php';</script>";
+        echo "<script> window.location.href = '../../frontend/user/index.php';</script>";
         $_SESSION['isUserLogedIn'] = 'true';
     }
     $_SESSION['userName']=$_POST['email'];
