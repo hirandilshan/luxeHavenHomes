@@ -24,36 +24,7 @@ div.requests-container div.request-items {
     text-align: left;
 }
 
-div.requests-container .cart-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-}
 
-div.requests-container .cart-item img {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-div.requests-container .cart-item .item-details {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-div.requests-container .cart-item .item-details h3 {
-    margin: 0;
-    font-size: 18px;
-}
-
-div.requests-container .cart-item .item-details p {
-    margin: 0;
-    font-size: 14px;
-    color: #555;
-}
 
 .requests-container .total {
     display: flex;
