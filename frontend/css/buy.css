@@ -3,6 +3,7 @@
     padding:0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+
   }
   .home {
     text-align: center;
@@ -23,18 +24,20 @@
     align-items: center;
     margin-bottom: 20px;
     height: 150px;
+    width: 100%;
     background-color: black;
     border-radius: 30px;
 }
 
 .search label {
     margin-right: 10px;
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
     color: white;
 }
 
 .search select, .search button {
+   
     padding: 10px;
     font-size: 16px;
     font-family: 'Times New Roman', Times, serif;
@@ -48,6 +51,7 @@
 
 .search button {
     border-left: 50px;
+    
     background-color:gray;
     color: black;
     font-weight: bold;

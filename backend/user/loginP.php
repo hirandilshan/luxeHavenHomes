@@ -16,7 +16,7 @@ $count =mysqli_num_rows($result);
 if($count>0){
     
     
-    if(strcasecmp($email,'admin@Signaturecuisine')==0 && strcasecmp($password,'12345@admin')==0){
+    if(strcasecmp($email,'admin@luxehavenhomes')==0 && strcasecmp($password,'12345@admin')==0){
         echo "<script>alert('Admin Login successful!'); window.location.href = '../../frontend/admin/adminHome.php';</script>";
         $_SESSION['isAdminLogedIn'] = 'true';
     }else{

@@ -16,93 +16,73 @@ session_start();
 </head>
 
 <body>
-<header>
+    <header>
+        <div class="header">
+            <div class="headerbar">
+                <div class="account">
+                    <ul>
+                        <?php
+                        if (isset($_SESSION['isUserLogedIn'])) {
+                            echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                        } else {
+                            echo "<script>alert('please login!'); window.location.href = '../../frontend/user/logIn.php';</script>";
+                        }
+                        ?>
+                    </ul>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <a href="../../frontend/user/contact.php">
+                            <li>Contact</li>
+                        </a>
+                        <a href="../../frontend/user/about.php">
+                            <li>About</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo">
+                <a href="../../frontend/user/index.php"><img src="../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <a href="../../frontend/user/contact.php">
+                        <li>Contact</li>
+                    </a>
+                    <a href="../../frontend/user/about.php">
+                        <li>About Us</li>
+                    </a>
+                </ul>
+            </div>
 
-<div class="header">
-    <div class="headerbar">
-        <div class="account">
-            <ul>
+            <div class="bar">
+                <ul>
+                    <a href="#">
+                        <li>
+                            <i class="material-icons" id="navbar-icon" style="color:white">&#xe5d2;</i>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <i class="material-icons" id="cancel" style="color:white">&#xe5c9;</i>
+                        </li>
+                    </a>
+                </ul>
+            </div>
 
-                <?php
-                if (isset($_SESSION['isUserLogedIn']) && $_SESSION['isUserLogedIn']) {
-                    echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
-                } else {
-                    echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                    echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
-                }
-                ?>
-                <li><a href="../../frontend/user/foodMenu.php">Order Now</a></li>
-                <li><a href="../../backend/user/goToCart.php"><i class="material-icons">&#xe8cc;</i>
-                    </a></li>
-
-
-                <a href="#">
-                    <li>
-                        <i class="material-icons" id="search-icon1">&#xe8b6;</i>
-                    </li>
-                </a>                       
-            </ul>
+            <div class="icon">
+                <ul>
+                    <?php
+                    if (isset($_SESSION['isUserLogedIn'])) {
+                        echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                    } else {
+                        echo "<script>alert('please login!'); window.location.href = '../../frontend/user/logIn.php';</script>";
+                    }
+                    ?>
+                </ul>
+            </div>
         </div>
-        <div class="nav">
-            <ul>
-                <a href="../../frontend/user/serviceTypes.php">
-                    <li>Contact</li>
-                </a>
-                
-                <a href="../../frontend/user/about.php">
-                    <li>About</li>
-                </a>                       
-            </ul>
-        </div>
-    </div>
-    <div class="logo">
-        <a href="../../frontend/user/index.php"><img src="../../images/luxeLogo.jpg" alt="" ,height="100" , width="50"></a>
-    </div>
-    <div class="nav">
-        <ul>
-            <a href="../../frontend/user/contact.php">
-                <li>Contact</li>
-            </a>
-            <a href="../../frontend/user/about.php">
-                <li>About Us</li>
-            </a>
-        </ul>
-    </div>
-  
-    <div class="bar">
-        <ul>
-            <a href="#">
-                <li>
-                    <i class="material-icons" id="navbar-icon"style="color:white">&#xe5d2;</i>
-                </li>
-            </a>
-            <a href="">
-                <li>
-                    <i class="material-icons" id="cancel"style="color:white">&#xe5c9;</i>
-                </li>
-            </a>
-
-
-        </ul>
-    </div>
-    
-
-    <div class="icon">
-        <ul>
-
-            <?php
-            if (isset($_SESSION['isUserLogedIn']) && $_SESSION['isUserLogedIn']) {
-                echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
-            } else {
-                echo '<li><a href="../../frontend/user/signup.php">Sign up</a></li>';
-                echo '<li><a href="../../frontend/user/login.php" id="loginLink" onclick="toggleLogin()">Login</a></li>';
-            }
-            ?>
-
-        </ul>
-    </div>
-</div>
-</header>
+    </header>
     <div class="about">
         <div class="intro">
             <div class="intro-image">
@@ -115,14 +95,14 @@ session_start();
         <div class="content">
             <div class="Content1">
                 <h2>Our Story</h2>
-                <p>  Luxe Haven Homes stands as the forefront of Sri Lanka's real estate market, offering a cutting-edge online platform showcasing the latest properties and construction needful across the country. Our mission is to revolutionize the local real estate industry, providing all our services throughout the island. We actively encourage users to leverage our platform to advertise their properties, construction needful and homewares experiencing firsthand the innovative disruption we bring to Sri Lanka's online real estate scene. Whether you're looking to sell, rent, or buy, Luxe Haven Homes facilitates these process at no difficulties. With a loyal user base, we're expecting to be the premier destination for property, homeware listings and construction needful rentals in the country. Our ultimate goal is to assist everyone in finding their ideal home.<br>
-                Founded on a vision to revolutionize the real estate landscape, Luxe Haven Homes emerged as a beacon of innovation, integrity, and excellence. Our journey began with a simple yet profound aspiration – to create spaces that transcend the ordinary, where luxury, comfort, and sophistication converge seamlessly.<br>
-                Driven by a passion for crafting exceptional living experiences, Luxe Haven Homes was established with a commitment to elevate the standards of modern living. Guided by this ethos, we embarked on a quest to redefine the very essence of luxury real estate, setting new benchmarks in design, quality, and customer service.<br>
-                With unwavering dedication and a relentless pursuit of excellence, Luxe Haven Homes quickly earned a reputation as a trusted name in the industry. From our humble beginnings, we have grown exponentially, expanding our reach and portfolio to cater to the diverse needs and aspirations of our discerning clientele.<br>
-                At the heart of our success lies a team of dedicated professionals, united by a shared vision and a collective commitment to excellence. From our visionary leaders to our skilled architects, designers, and customer care specialists, each member of the Luxe Haven family plays a pivotal role in shaping our company's legacy of excellence.<br>
-                But our story is not just about buildings and properties – it's about people. It's about the families we've helped find their dream homes, the communities we've helped build, and the countless lives we've touched along the way. It's about the enduring relationships we've forged with our clients, built on trust, transparency, and mutual respect<br>
-                As we look to the future, we remain steadfast in our commitment to innovation, sustainability, and social responsibility. With each project we undertake, we strive to push the boundaries of architectural excellence, while also prioritizing environmental stewardship and community engagement.<br>
-                Join us as we continue to write the next chapter of our story – a story of innovation, inspiration, and enduring excellence. At Luxe Haven Homes, the journey towards extraordinary living has only just begun.
+                <p> Luxe Haven Homes stands as the forefront of Sri Lanka's real estate market, offering a cutting-edge online platform showcasing the latest properties and construction needful across the country. Our mission is to revolutionize the local real estate industry, providing all our services throughout the island. We actively encourage users to leverage our platform to advertise their properties, construction needful and homewares experiencing firsthand the innovative disruption we bring to Sri Lanka's online real estate scene. Whether you're looking to sell, rent, or buy, Luxe Haven Homes facilitates these process at no difficulties. With a loyal user base, we're expecting to be the premier destination for property, homeware listings and construction needful rentals in the country. Our ultimate goal is to assist everyone in finding their ideal home.<br>
+                    Founded on a vision to revolutionize the real estate landscape, Luxe Haven Homes emerged as a beacon of innovation, integrity, and excellence. Our journey began with a simple yet profound aspiration – to create spaces that transcend the ordinary, where luxury, comfort, and sophistication converge seamlessly.<br>
+                    Driven by a passion for crafting exceptional living experiences, Luxe Haven Homes was established with a commitment to elevate the standards of modern living. Guided by this ethos, we embarked on a quest to redefine the very essence of luxury real estate, setting new benchmarks in design, quality, and customer service.<br>
+                    With unwavering dedication and a relentless pursuit of excellence, Luxe Haven Homes quickly earned a reputation as a trusted name in the industry. From our humble beginnings, we have grown exponentially, expanding our reach and portfolio to cater to the diverse needs and aspirations of our discerning clientele.<br>
+                    At the heart of our success lies a team of dedicated professionals, united by a shared vision and a collective commitment to excellence. From our visionary leaders to our skilled architects, designers, and customer care specialists, each member of the Luxe Haven family plays a pivotal role in shaping our company's legacy of excellence.<br>
+                    But our story is not just about buildings and properties – it's about people. It's about the families we've helped find their dream homes, the communities we've helped build, and the countless lives we've touched along the way. It's about the enduring relationships we've forged with our clients, built on trust, transparency, and mutual respect<br>
+                    As we look to the future, we remain steadfast in our commitment to innovation, sustainability, and social responsibility. With each project we undertake, we strive to push the boundaries of architectural excellence, while also prioritizing environmental stewardship and community engagement.<br>
+                    Join us as we continue to write the next chapter of our story – a story of innovation, inspiration, and enduring excellence. At Luxe Haven Homes, the journey towards extraordinary living has only just begun.
                 </p>
             </div>
             <div class="content2">
@@ -131,7 +111,7 @@ session_start();
                     <div>
                         <h2>Our Mission</h2>
                         <p>"At Luxe Haven Homes, our mission is simple: to redefine real estate with excellence.
-                             We're committed to crafting exceptional living spaces that inspire, enrich, and empower our residents and communities. Welcome to a world where luxury meets purpose, and every home is a testament to our unwavering dedication to quality and innovation."</p>
+                            We're committed to crafting exceptional living spaces that inspire, enrich, and empower our residents and communities. Welcome to a world where luxury meets purpose, and every home is a testament to our unwavering dedication to quality and innovation."</p>
                     </div>
 
 
@@ -172,7 +152,7 @@ session_start();
                 <p>Buyer's Guide</p>
                 <p>Help Center</p>
                 <p>post Ads</p>
-                    
+
             </address>
         </div>
         <div class="footer-111">
@@ -183,7 +163,7 @@ session_start();
                 <p>Construction equipments</p>
                 <p>Privacy policy</p>
                 <p>Disclaimer</p>
-                    
+
             </address>
         </div>
         <div class="footer-1111">
@@ -193,19 +173,19 @@ session_start();
                 <p>+94 712456894</p>
                 <p>+94 759825015</p>
                 <p>info@LuxeHavenHomes.LK</p>
-                
-                    
+
+
             </address>
         </div>
-        
+
     </div>
     <div class="footer-2">
-           <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
+        <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
             ALL RIGHTS RESERVED.<br>
-           WEBSITE MAINTAINTENANCE BY R & Y  </P>
-        </div>
+            WEBSITE MAINTAINTENANCE BY R & Y </P>
+    </div>
     <script src="app.js"></script>
-    
+
 </body>
 
 </html>
