@@ -7,6 +7,7 @@ session_start();
 <head>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/contact.css">
     <link rel="shortcut icon" href="../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -84,6 +85,52 @@ session_start();
             </div>
         </div>
     </header>
+    <div class="container">
+        <div class="congt">
+            <div class="left">
+                <h1>Contact Us</h1>
+                <p>We are here to meet any real estate needs and promote your properties online!</p>
+                <div class="info">
+                    <div class="info-item">
+                        <img src="../../images/call1.png" alt="call">
+                        <h2>Phone:</h2>
+                        <p>+(94)115582006, +(94)115580087</p>
+                    </div>
+                    <div class="info-item">
+                    <img src="../../images/address.png" alt="location">
+                        <h2>Location:</h2>
+                        <p>34 Street,Colombo Road, Kandy.</p>
+                    </div>
+                    <div class="info-item">
+                    <img src="../../images/email.png" alt="Email">
+                        <h2>E-mail:</h2>
+                        <p>luxehavenhomeskd@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <img src="../../images/ex1.jpg" alt="Image">
+            </div>
+        </div>
+        <div class="block">
+            <div class="box">
+                <h2>Hours</h2>
+                <p>Mon-Fri: 8.30am-8pm</p>
+                <p>Sat-Sun: 9am-7pm</p>
+            </div>
+            <div class="box">
+                <h2>Call Us</h2>
+                <p>+(94)119800890</p>
+                <p>+(94)110008989</p>
+            </div>
+            <div class="box">
+                <h2>Address</h2>
+                <p>34 Street,Colombo road</p>
+                <p>Kandy</p>
+                
+            </div>
+        </div>
+    </div>
     <div class="footer">
         <div class="footer-1">
             <div class="logo">
