@@ -184,16 +184,10 @@ mysqli_close($connect);
                 <img src="../../../images/luxeLogo.jpg" alt="logo">
             </div>
             <div clss="social">
-                <ul>
-<<<<<<< HEAD
-                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-=======
-                <li><a href="#" class="fa fa-facebook"></a></li>
-                <li><a href="#" class="fa fa-instagram"></a></li>
-                <li><a href="#" class="fa fa-twitter"></a></li>
->>>>>>> 3ef57c6039ac24429edcd404463fa25879297266
+            <ul>
+                <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+                <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
                 </ul>
             </div>
         </div>
@@ -233,7 +227,7 @@ mysqli_close($connect);
         
     </div>
     <div class="footer-2">
-           <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
+           <p>COPYRIGHT 2024 LUXE HAVEN HOMES HOLDING PVT LTD.<br>
             ALL RIGHTS RESERVED.<br>
            WEBSITE MAINTAINTENANCE BY R & Y  </P>
         </div>
