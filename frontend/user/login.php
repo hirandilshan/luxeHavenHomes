@@ -5,9 +5,10 @@ session_start();
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/login.css">
+
     <link rel="shortcut icon" href="../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,36 +67,41 @@ session_start();
     <div class="content">
         <div class="forms">
             <div class="form-details">
-                <h2>Welcome to <br>Luxe Haven Homes</h2>
-                <p>Please log in using your personal information to stay connected with us.</p>
+                <p class="sin" >SIGN IN</p>
+                <p class="luxe" >LUXE HAVEN HOMES</p>
             </div>
             <div class="form-content">
 
                 <form method="POST" action="../../backend/user/loginP.php">
                     <div class="inputs">
                         <input type="email" name="email" placeholder="E-mail" required>
-                        <label>Email</label>
+                       
                     </div>
                     <div class="inputs">
-                        <input type="password" required name="password" placeholder="password" required>
-                        <label>Password</label>
+                        <input type="password" required name="password" placeholder="Password" required>
+                       
                     </div>
                     <a href="#" class="forgot-pass">Forgot password?</a>
-                    <button type="submit">Log In</button>
+                    <button type="submit">SIGN IN</button>
                 </form>
                 <div class="link">
                     Don't have an account?
-                    <a href="../../frontend/user/signup.php" id="signup-link">Signup</a>
+                    <a href="../../frontend/user/signup.php" id="signup-link">SIGNUP</a>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="footer-2">
-        <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
+        <p>COPYRIGHT 2024 LUXE HAVEN HOMES HOLDING PVT LTD.<br>
             ALL RIGHTS RESERVED.<br>
             WEBSITE MAINTAINTENANCE BY R & Y </P>
     </div>
+    <script src="../../frontend/user/app.js"></script>
+
+</body>
+
+</html>
     <script src="../../frontend/user/app.js"></script>
 
 </body>

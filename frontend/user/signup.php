@@ -5,9 +5,11 @@ session_start();
 <html lang="en">
 
 <head>
+
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/signup.css">
+    
     <link rel="shortcut icon" href="../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,34 +68,34 @@ session_start();
         <div class="forms">
 
             <div class="form-details">
-                <h2>Create Account</h2>
-                <p>please sign up using your personal information.</p>
+                <p class="sin" >SIGN UP</p>
+                <p class="luxe" >LUXE HAVEN HOMES</p>
             </div>
             <div class="form-content">
 
                 <form method="POST" action="../../backend/user/signupP.php">
                     <div class="inputs">
                         <input type="text" name="firstName" placeholder="First Name" required>
-                        <label>First Name</label>
+                    
                     </div>
                     <div class="inputs">
                         <input type="text" name="lastName" placeholder="Last Name" required>
-                        <label>Last Name</label>
+                    
                     </div>
                     <div class="inputs">
                         <input type="email" name="email" placeholder="E-mail" required>
-                        <label>Enter your email</label>
+              
                     </div>
                     <div class="inputs">
-                        <input type="password" required name="password" placeholder="password" required>
-                        <label>Create password</label>
+                        <input type="password" required name="password" placeholder="Password" required>
+                
                     </div>
 
-                    <button type="submit" name="submit">Sign Up</button>
+                    <button type="submit" name="submit">SIGN UP</button>
                 </form>
                 <div class="link">
                     Already have an account?
-                    <a href="../../frontend/user/login.php" id="login-link">Login</a>
+                    <a href="../../frontend/user/login.php" id="login-link">SIGNIN</a>
                 </div>
             </div>
         </div>
@@ -101,7 +103,7 @@ session_start();
 
 
     <div class="footer-2">
-        <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
+        <p>COPYRIGHT 2024 LUXE HAVEN HOMES HOLDING PVT LTD.<br>
          ALL RIGHTS RESERVED.<br>
         WEBSITE MAINTAINTENANCE BY R & Y  </P>
   </div>
