@@ -1,0 +1,39 @@
+.main_slide .adm img{
+    padding-top: 90px;
+    display: flex;
+    text-align: right;
+    width: auto;
+    height: 350px;
+    padding-left: 300px;
+
+}
+.menu1 {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.section1 {
+    text-align: center;
+
+}
+
+.section1 h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
+.section1 img {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 400px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.section1 img:hover {
+    transform: scale(1.1);
+}

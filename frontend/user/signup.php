@@ -100,25 +100,11 @@ session_start();
             </div>
         </div>
     </div>
-
-
     <div class="footer-2">
         <p>COPYRIGHT 2024 LUXE HAVEN HOMES HOLDING PVT LTD.<br>
          ALL RIGHTS RESERVED.<br>
         WEBSITE MAINTAINTENANCE BY R & Y  </P>
   </div>
-
-
-
-    <div class="footer">
-        <div class="footer-1">
-            <div class="logo">
-                <img src="../../images/luxeLogo.jpg" alt="">
-            </div>
-        </div>
-
-
-    </div>
     <script src="../../frontend/user/app.js"></script>
     
 </body>

@@ -7,6 +7,7 @@ session_start();
 <head>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/adminH.css">
     <link rel="shortcut icon" href="../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,27 +87,27 @@ session_start();
     <div class="home">
         <div class="main_slide">
             <div>
-                <h1>Set New Stndards<br>in <span>Modern Home</span><br>Constructions</h1>
+                <h1>Welcom to<br><span>Luxe Haven Homes</span><br>Administration</h1>
 
             </div>
-            <div>
-                <img src="../../images/h2.png" alt="house1s">
+            <div class="adm">
+                <img src="../../images/adm.png" alt="admin">
             </div>
         </div>
     </div>
-    <div class="menu">
+    <div class="menu1">
 
-        <div class="section">
+        <div class="section1">
             <h2>View Advertestment Requests</h2>
             <a href="manageAds/uploadAds.php">
-                <img src="../../images/land1.jpg" alt="Land">
+                <img src="../../images/reqst.jpg" alt="Land">
             </a>
         </div><!--Section-->
 
-        <div class="section">
+        <div class="section1">
             <h2>Remove Advertestment</h2>
             <a href="manageAds/removeAds.php">
-                <img src="../../images/h4.jpg" alt="House">
+                <img src="../../images/remove.png" alt="House">
             </a>
 
         </div><!--Section-->
@@ -120,10 +121,10 @@ session_start();
                 <img src="../../images/luxeLogo.jpg" alt="logo">
             </div>
             <div clss="social">
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <ul>
+                <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+                <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
                 </ul>
             </div>
         </div>

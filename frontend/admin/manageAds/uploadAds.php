@@ -14,6 +14,7 @@ mysqli_close($connect);
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
     <link rel="stylesheet" href="../../css/item.css">
+    <link rel="stylesheet" href="../../css/adminH.css">
     <link rel="shortcut icon" href="../../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,11 +94,11 @@ mysqli_close($connect);
     <div class="home">
         <div class="main_slide">
             <div>
-                <h1>Set New Stndards<br>in <span>Modern Home</span><br>Constructions</h1>
+                <h1>Check request List <br>&<br>Upload advertisements</h1>
 
             </div>
-            <div>
-                <img src="../../../images/h2.png" alt="house1s">
+            <div class="adm">
+                <img src="../../../images/reqst.jpg" alt="house1s">
             </div>
         </div>
         <div class="choice">
@@ -163,10 +164,10 @@ mysqli_close($connect);
                 <img src="../../../images/luxeLogo.jpg" alt="logo">
             </div>
             <div clss="social">
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <ul>
+                <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+                <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
                 </ul>
             </div>
         </div>
