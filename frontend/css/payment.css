@@ -1,40 +1,50 @@
 
 .content {
-    background-color: white;
-    padding: 0 7vw;
+    margin: 20px;
 }
 
-
-div.requests-container {
-    background-color: #8b8989;
-    padding: 40px 20px 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: fit-content;
-    text-align: center;
-    margin: 50px auto;
-    text-align: left;
-}
-
-div.requests-container h2 {
-    margin-bottom: 20px;
-}
-
-div.requests-container div.request-items {
-    text-align: left;
-}
-
-
-
-.requests-container .total {
-    display: flex;
-    justify-content: space-between;
+.requests-container {
     margin-top: 20px;
-    font-weight: bold;
 }
 
-.requests-container button {
-    padding: 15px 30px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+button {
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.total {
+    margin-top: 20px;
+}
+
+#cart-total {
+    font-weight: bold;
     font-size: 18px;
-    color: #968f8f;
+}
+
+#checkout-btn {
+    margin-top: 10px;
 }
