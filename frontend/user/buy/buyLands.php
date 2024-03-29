@@ -228,7 +228,7 @@ mysqli_close($connect);
         <div class="footer-111">
             <address>
                 <h1>Company</h1>
-                <a href="../contact.php"><p>About Us</p></a>
+                <a href="../about.php"><p>About Us</p></a>
                 <a href="../contact.php"><p>Contact Us</p></a>
                 <p>Construction equipments</p>
                 <p>Privacy policy</p>

@@ -220,7 +220,7 @@ include_once '../../../backend/user/dbs.php';
         <div class="footer-111">
             <address>
                 <h1>Company</h1>
-                <a href="../contact.php">
+                <a href="../about.php">
                     <p>About Us</p>
                 </a>
                 <a href="../contact.php">
