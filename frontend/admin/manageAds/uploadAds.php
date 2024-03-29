@@ -125,7 +125,7 @@ mysqli_close($connect);
                     echo "<h3>$name</h3>";
                     echo "<h4>Rs $price</h4>";
                     echo "<form method='POST' action='../../../backend/admin/uploadAd.php'>";
-                    if ($type == 'apartments' || $type == 'cProperties') {
+                    if ($type == 'apartments' || $type == 'banglo') {
                         echo "<input type='hidden' name='type' value='houses'>";
                     } else {
                         echo "<input type='hidden' name='type' value='$type'>";
@@ -135,7 +135,7 @@ mysqli_close($connect);
                     echo "<button type='submit' name='upload'>Upload Ad</button>";
                     echo "</form><br>";
                     echo "<form method='POST' action='../../../frontend/admin/displayAd/advertisement.php'>";
-                    if ($type == 'apartments' || $type == 'cProperties') {
+                    if ($type == 'apartments' || $type == 'banglo') {
                         echo "<input type='hidden' name='type' value='houses'>";
                     } else {
                         echo "<input type='hidden' name='type' value='$type'>";

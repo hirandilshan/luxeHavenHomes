@@ -22,7 +22,7 @@ if (isset($result)) {
         $phone = $row["phone"];
         $userName=$row["userName"];
 
-        if ($type == 'apartments' || $type == 'cProperties') {
+        if ($type == 'apartments' || $type == 'banglo') {
             $sqlUpload = "INSERT INTO houses (name,price,type,location,discription,img,phone,userName) VALUES ('$name','$price','$type','$location','$discription','$imagePathsStr','$phone','$userName');";
         } else {
             $sqlUpload = "INSERT INTO $type (name,price,type,location,discription,img,phone,userName) VALUES ('$name','$price','$type','$location','$discription','$imagePathsStr','$phone','$userName');";
