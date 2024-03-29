@@ -1,0 +1,43 @@
+.advertisement {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.advertisement h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.advertisement h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.advertisement .image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.advertisement .image-container img {
+    max-width: 48%; /* Adjust this value based on your preference */
+    height: auto;
+}
+
+.advertisement form {
+    margin-top: 20px;
+}
+
+.advertisement button {
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.advertisement button:hover {
+    background-color: gray;
+    color: black;
+}

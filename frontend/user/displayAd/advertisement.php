@@ -14,6 +14,7 @@ $id = $_POST['id'];
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/index.css">
     <link rel="stylesheet" href="../../css/ad.css">
+    <link rel="stylesheet" href="../../css/advertisement.css">
     <link rel="shortcut icon" href="../../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -127,7 +128,7 @@ $id = $_POST['id'];
                         echo "<h4>$discription</h4><br>";
                         echo "<form method='POST' action='../../../backend/user/call.php'>";
                         echo "<input type='hidden' name='phone' value='$phone'>";
-                        echo "<button type='submit' name='call'>Call</button>";
+                        echo "<button type='submit' name='call'>$phone</button>";
                         echo "</form>";
                     }
                     // Free result set
