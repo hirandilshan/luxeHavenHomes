@@ -30,7 +30,7 @@ include_once '../../../backend/user/dbs.php';
                         if (isset($_SESSION['isUserLogedIn'])) {
                             echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                         } else {
-                            echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
+                            echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/login.php';</script>";
                         }
                         ?>
                     </ul>
@@ -81,7 +81,7 @@ include_once '../../../backend/user/dbs.php';
                     if (isset($_SESSION['isUserLogedIn'])) {
                         echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
-                        echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
+                        echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/login.php';</script>";
                     }
                     ?>
                 </ul>
@@ -149,7 +149,7 @@ include_once '../../../backend/user/dbs.php';
                 <input type="text" id="phone" name="phone"><br>
 
                 <label for="numOfDays">Number Of Days:</label><br>
-                <input type="text" id="numOfDays" name="numOfDays"><br><br>
+                <input type="number" id="numOfDays" name="numOfDays"><br><br>
 
                 <button type="submit" name="submit">Submit</button>
             </form>
