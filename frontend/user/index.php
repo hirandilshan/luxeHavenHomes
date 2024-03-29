@@ -31,7 +31,7 @@ session_start();
                     if (isset($_SESSION['isUserLogedIn'])) {
                         echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
-                        echo "<script>alert('please login!'); window.location.href = '../../frontend/user/logIn.php';</script>";
+                        echo "<script>alert('please login!'); window.location.href = '../../frontend/user/login.php';</script>";
                     }
                     ?> 
                     </ul>
@@ -82,7 +82,7 @@ session_start();
                     if (isset($_SESSION['isUserLogedIn'])) {
                         echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
-                        echo "<script>alert('please login!'); window.location.href = '../../frontend/user/logIn.php';</script>";
+                        echo "<script>alert('please login!'); window.location.href = '../../frontend/user/login.php';</script>";
                     }
                     ?>
                 </ul>

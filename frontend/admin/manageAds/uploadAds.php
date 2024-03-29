@@ -33,7 +33,7 @@ mysqli_close($connect);
                         if (isset($_SESSION['isAdminLogedIn'])) {
                             echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                         } else {
-                            echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
+                            echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/login.php';</script>";
                         }
                         ?>
                     </ul>
@@ -83,7 +83,7 @@ mysqli_close($connect);
                     if (isset($_SESSION['isAdminLogedIn'])) {
                         echo '<li><a href="../../../backend/user/logoutP.php">Log Out</a></li>';
                     } else {
-                        echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/logIn.php';</script>";
+                        echo "<script>alert('please login!'); window.location.href = '../../../frontend/user/login.php';</script>";
                     }
                     ?>
                 </ul>
