@@ -27,7 +27,7 @@ if($count>0){
     
 }
 else {
-    echo "<script>alert('login failed. Please try again.'); window.location.href = '../../frontend/user/login.php';</script>";
+    echo "<script>alert('Incorrect username or password'); window.location.href = '../../frontend/user/login.php';</script>";
 }
 
 $connect->close();

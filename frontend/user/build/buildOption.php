@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include_once '../../../backend/user/dbs.php'; 
+include_once '../../../backend/user/dbs.php';
 
 $buildOption = $_POST['buildOption'];
 
@@ -26,7 +26,7 @@ $buildOption = $_POST['buildOption'];
 </head>
 
 <body>
-<header>
+    <header>
         <div class="header">
             <div class="headerbar">
                 <div class="account">
@@ -114,11 +114,11 @@ $buildOption = $_POST['buildOption'];
                         $discription = $row["discription"];
                         $imagePathsStr = $row["img"];
                         $phone = $row["phone"];
-                        $userName=$row["userName"];
+                        $userName = $row["userName"];
 
                         $imagePaths = array();
                         $imagePaths = explode(",", $imagePathsStr);
-                        
+
 
                         echo '<div class="display-item">';
                         echo "<img src='$imagePaths[0]' alt='image'>";
@@ -155,25 +155,43 @@ $buildOption = $_POST['buildOption'];
         <div class="footer-11">
             <address>
                 <h1>Support</h1>
-                <a href="../buy/buyLands.php"><p>Lands</p></a>
-                <a href="../buy/buyHouses.php"><p>Houses</p></a>
-                <a href="../build.php"><p>Construction equipments</p></a>
-                <a href="../build.php"><p>Workers</p></a>
-                <a href="../build.php"><p>Buyer's Guide</p></a>
-                <a href="../contact.php"><p>Help Center</p></a>
-                <a href="../postAd/postAd.php"><p>post Ads</p></a>
-                    
+                <a href="../buy/buyLands.php">
+                    <p>Lands</p>
+                </a>
+                <a href="../buy/buyHouses.php">
+                    <p>Houses</p>
+                </a>
+                <a href="../build.php">
+                    <p>Construction equipments</p>
+                </a>
+                <a href="../build.php">
+                    <p>Workers</p>
+                </a>
+                <a href="../build.php">
+                    <p>Buyer's Guide</p>
+                </a>
+                <a href="../contact.php">
+                    <p>Help Center</p>
+                </a>
+                <a href="../postAd/postAd.php">
+                    <p>post Ads</p>
+                </a>
+
             </address>
         </div>
         <div class="footer-111">
             <address>
                 <h1>Company</h1>
-                <a href="../contact.php"><p>About Us</p></a>
-                <a href="../contact.php"><p>Contact Us</p></a>
+                <a href="../contact.php">
+                    <p>About Us</p>
+                </a>
+                <a href="../contact.php">
+                    <p>Contact Us</p>
+                </a>
                 <p>Construction equipments</p>
                 <p>Privacy policy</p>
                 <p>Disclaimer</p>
-                    
+
             </address>
         </div>
         <div class="footer-1111">
@@ -182,18 +200,18 @@ $buildOption = $_POST['buildOption'];
                 <p>Luxe Haven Homes(PVT)LTD</p>
                 <p>+94 712456894</p>
                 <p>+94 759825015</p>
-                <p>info@LuxeHavenHomes.LK</p>        
+                <p>info@LuxeHavenHomes.LK</p>
             </address>
         </div>
-        
+
     </div>
     <div class="footer-2">
-           <p>COPYRIGHT 2024 LUXE HAVEN HOMES HOLDING PVT LTD.<br>
+        <p>COPYRIGHT 2024 LUXE HAVEN HOMES HOLDING PVT LTD.<br>
             ALL RIGHTS RESERVED.<br>
-           WEBSITE MAINTAINTENANCE BY R & Y  </P>
-        </div>
+            WEBSITE MAINTAINTENANCE BY R & Y </P>
+    </div>
     <script src="../../../frontend/user/app.js"></script>
-    
+
 </body>
 
 </html>

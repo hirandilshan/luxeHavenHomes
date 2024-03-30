@@ -136,34 +136,52 @@ session_start();
             </div>
             <div clss="social">
                 <ul>
-                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-11">
             <address>
                 <h1>Support</h1>
-                <a href="buy/buyLands.php"><p>Lands</p></a>
-                <a href="buy/buyHouses.php"><p>Houses</p></a>
-                <a href="build.php"><p>Construction equipments</p></a>
-                <a href="build.php"><p>Workers</p></a>
-                <a href="build.php"><p>Buyer's Guide</p></a>
-                <a href="contact.php"><p>Help Center</p></a>
-                <a href="postAd/postAd.php"><p>post Ads</p></a>
-                    
+                <a href="buy/buyLands.php">
+                    <p>Lands</p>
+                </a>
+                <a href="buy/buyHouses.php">
+                    <p>Houses</p>
+                </a>
+                <a href="build.php">
+                    <p>Construction equipments</p>
+                </a>
+                <a href="build.php">
+                    <p>Workers</p>
+                </a>
+                <a href="build.php">
+                    <p>Buyer's Guide</p>
+                </a>
+                <a href="contact.php">
+                    <p>Help Center</p>
+                </a>
+                <a href="postAd/postAd.php">
+                    <p>post Ads</p>
+                </a>
+
             </address>
         </div>
         <div class="footer-111">
             <address>
                 <h1>Company</h1>
-                <a href="about.php"><p>About Us</p></a>
-                <a href="contact.php"><p>Contact Us</p></a>
+                <a href="about.php">
+                    <p>About Us</p>
+                </a>
+                <a href="contact.php">
+                    <p>Contact Us</p>
+                </a>
                 <p>Construction equipments</p>
                 <p>Privacy policy</p>
                 <p>Disclaimer</p>
-                    
+
             </address>
         </div>
         <div class="footer-1111">
@@ -172,16 +190,16 @@ session_start();
                 <p>Luxe Haven Homes(PVT)LTD</p>
                 <p>+94 712456894</p>
                 <p>+94 759825015</p>
-                <p>info@LuxeHavenHomes.LK</p>        
+                <p>info@LuxeHavenHomes.LK</p>
             </address>
         </div>
-        
+
     </div>
     <div class="footer-2">
-           <p>COPYRIGHT 2024 LUXE HAVEN HOMES HOLDING PVT LTD.<br>
+        <p>COPYRIGHT 2024 LUXE HAVEN HOMES HOLDING PVT LTD.<br>
             ALL RIGHTS RESERVED.<br>
-           WEBSITE MAINTAINTENANCE BY R & Y  </P>
-        </div>
+            WEBSITE MAINTAINTENANCE BY R & Y </P>
+    </div>
     <script src="../../frontend/user/app.js"></script>
 
 </body>

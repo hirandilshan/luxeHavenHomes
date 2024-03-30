@@ -5,7 +5,7 @@ session_start();
 <html lang="en">
 
 <head>
-<link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/login.css">
 
@@ -67,19 +67,19 @@ session_start();
     <div class="content">
         <div class="forms">
             <div class="form-details">
-                <p class="sin" >SIGN IN</p>
-                <p class="luxe" >LUXE HAVEN HOMES</p>
+                <p class="sin">SIGN IN</p>
+                <p class="luxe">LUXE HAVEN HOMES</p>
             </div>
             <div class="form-content">
 
                 <form method="POST" action="../../backend/user/loginP.php">
                     <div class="inputs">
                         <input type="email" name="email" placeholder="E-mail" required>
-                       
+
                     </div>
                     <div class="inputs">
                         <input type="password" required name="password" placeholder="Password" required>
-                       
+
                     </div>
                     <a href="#" class="forgot-pass">Forgot password?</a>
                     <button type="submit">SIGN IN</button>
@@ -102,7 +102,7 @@ session_start();
 </body>
 
 </html>
-    <script src="../../frontend/user/app.js"></script>
+<script src="../../frontend/user/app.js"></script>
 
 </body>
 

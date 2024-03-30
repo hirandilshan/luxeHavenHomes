@@ -14,7 +14,7 @@ session_start();
     <title>Luxe Haven Homes</title>
     <meta name="viewport" content="width=device-width,initial-scal=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+
 </head>
 
 <body>
@@ -23,13 +23,13 @@ session_start();
             <div class="headerbar">
                 <div class="account">
                     <ul>
-                    <?php
-                    if (isset($_SESSION['isUserLogedIn'])) {
-                        echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
-                    } else {
-                        echo "<script>alert('please login!'); window.location.href = '../../frontend/user/login.php';</script>";
-                    }
-                    ?> 
+                        <?php
+                        if (isset($_SESSION['isUserLogedIn'])) {
+                            echo '<li><a href="../../backend/user/logoutP.php">Log Out</a></li>';
+                        } else {
+                            echo "<script>alert('please login!'); window.location.href = '../../frontend/user/login.php';</script>";
+                        }
+                        ?>
                     </ul>
                 </div>
                 <div class="nav">
@@ -39,7 +39,7 @@ session_start();
                         </a>
                         <a href="../../frontend/user/about.php">
                             <li>About</li>
-                        </a>                       
+                        </a>
                     </ul>
                 </div>
             </div>
@@ -56,22 +56,22 @@ session_start();
                     </a>
                 </ul>
             </div>
-          
+
             <div class="bar">
                 <ul>
                     <a href="#">
                         <li>
-                            <i class="material-icons" id="navbar-icon"style="color:white">&#xe5d2;</i>
+                            <i class="material-icons" id="navbar-icon" style="color:white">&#xe5d2;</i>
                         </li>
                     </a>
                     <a href="">
                         <li>
-                            <i class="material-icons" id="cancel"style="color:white">&#xe5c9;</i>
+                            <i class="material-icons" id="cancel" style="color:white">&#xe5c9;</i>
                         </li>
                     </a>
                 </ul>
             </div>
-            
+
             <div class="icon">
                 <ul>
                     <?php
@@ -97,12 +97,12 @@ session_start();
                         <p>+(94)115582006, +(94)115580087</p>
                     </div>
                     <div class="info-item">
-                    <img src="../../images/address.png" alt="location">
+                        <img src="../../images/address.png" alt="location">
                         <h2>Location:</h2>
                         <p>34 Street,Colombo Road, Kandy.</p>
                     </div>
                     <div class="info-item">
-                    <img src="../../images/email.png" alt="Email">
+                        <img src="../../images/email.png" alt="Email">
                         <h2>E-mail:</h2>
                         <p>luxehavenhomeskd@gmail.com</p>
                     </div>
@@ -127,7 +127,7 @@ session_start();
                 <h2>Address</h2>
                 <p>34 Street,Colombo road</p>
                 <p>Kandy</p>
-                
+
             </div>
         </div>
     </div>
@@ -137,35 +137,53 @@ session_start();
                 <img src="../../images/luxeLogo.jpg" alt="logo">
             </div>
             <div clss="social">
-            <ul>
-                <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
-                <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
-                <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
+                <ul>
+                    <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                    <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+                    <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-11">
             <address>
                 <h1>Support</h1>
-                <a href="buy/buyLands.php"><p>Lands</p></a>
-                <a href="buy/buyHouses.php"><p>Houses</p></a>
-                <a href="build.php"><p>Construction equipments</p></a>
-                <a href="build.php"><p>Workers</p></a>
-                <a href="build.php"><p>Buyer's Guide</p></a>
-                <a href="contact.php"><p>Help Center</p></a>
-                <a href="postAd/postAd.php"><p>post Ads</p></a>
-                    
+                <a href="buy/buyLands.php">
+                    <p>Lands</p>
+                </a>
+                <a href="buy/buyHouses.php">
+                    <p>Houses</p>
+                </a>
+                <a href="build.php">
+                    <p>Construction equipments</p>
+                </a>
+                <a href="build.php">
+                    <p>Workers</p>
+                </a>
+                <a href="build.php">
+                    <p>Buyer's Guide</p>
+                </a>
+                <a href="contact.php">
+                    <p>Help Center</p>
+                </a>
+                <a href="postAd/postAd.php">
+                    <p>post Ads</p>
+                </a>
+
             </address>
         </div>
         <div class="footer-111">
             <address>
                 <h1>Company</h1>
-                <a href="about.php"><p>About Us</p></a>
-                <a href="contact.php"><p>Contact Us</p></a>
+                <a href="about.php">
+                    <p>About Us</p>
+                </a>
+                <a href="contact.php">
+                    <p>Contact Us</p>
+                </a>
                 <p>Construction equipments</p>
                 <p>Privacy policy</p>
                 <p>Disclaimer</p>
-                    
+
             </address>
         </div>
         <div class="footer-1111">
@@ -174,18 +192,18 @@ session_start();
                 <p>Luxe Haven Homes(PVT)LTD</p>
                 <p>+94 712456894</p>
                 <p>+94 759825015</p>
-                <p>info@LuxeHavenHomes.LK</p>        
+                <p>info@LuxeHavenHomes.LK</p>
             </address>
         </div>
-        
+
     </div>
     <div class="footer-2">
-           <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
+        <p>COPYRIGHT 2024 Luxe HAVEN HOMES HOLDING PVT LTD.<br>
             ALL RIGHTS RESERVED.<br>
-           WEBSITE MAINTAINTENANCE BY R & Y  </P>
-        </div>
+            WEBSITE MAINTAINTENANCE BY R & Y </P>
+    </div>
     <script src="../../frontend/user/app.js"></script>
-    
+
 </body>
 
 </html>

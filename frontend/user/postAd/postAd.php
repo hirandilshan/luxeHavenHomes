@@ -155,6 +155,8 @@ include_once '../../../backend/user/dbs.php';
                 <label for="type">Type:</label><br>
                 <select id="type" name="type">
                     <option value="houses">Houses</option>
+                    <option value="apartments">Apartments</option>
+                    <option value="banglow">Banglow</option>
                     <option value="lands">Lands</option>
                     <option value="furnitures">Furnitures</option>
                     <option value="accessories">Accessories</option>

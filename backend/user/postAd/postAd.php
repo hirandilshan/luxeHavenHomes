@@ -1,9 +1,9 @@
 <?php
 
 session_start();
-include_once '../../../backend/user/dbs.php'; 
+include_once '../../../backend/user/dbs.php';
 
-if(isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
 
     // Retrieve form data
     $name = $_POST['name'] ?? '';
@@ -13,7 +13,7 @@ if(isset($_POST['submit'])) {
     $discription = $_POST['discription'] ?? '';
     $phone = $_POST['phone'] ?? '';
     $numOfDays = $_POST['numOfDays'] ?? '';
-    $userName=$_SESSION['userName'];
+    $userName = $_SESSION['userName'];
 
 
     // Array to store uploaded file paths
@@ -23,24 +23,24 @@ if(isset($_POST['submit'])) {
     $targetDirectory = "../../../images/";
 
     // Loop through each uploaded file
-    foreach($_FILES['image']['tmp_name'] as $key => $tmp_name) {
+    foreach ($_FILES['image']['tmp_name'] as $key => $tmp_name) {
 
         // Check if file is uploaded successfully
-        if(isset($_FILES['image']['name'][$key]) && $_FILES['image']['error'][$key] === UPLOAD_ERR_OK) {
+        if (isset($_FILES['image']['name'][$key]) && $_FILES['image']['error'][$key] === UPLOAD_ERR_OK) {
 
             // Generate a unique file name
             $targetFile = $targetDirectory . uniqid() . '_' . basename($_FILES['image']['name'][$key]);
 
             // Move uploaded file to destination directory
-            if(move_uploaded_file($_FILES['image']['tmp_name'][$key], $targetFile)) {
+            if (move_uploaded_file($_FILES['image']['tmp_name'][$key], $targetFile)) {
                 $imagePaths[] = $targetFile; // Store file path if upload is successful
             } else {
-                echo "File upload failed for ".$_FILES['image']['name'][$key]."<br>";
-                echo "Error code: ".$_FILES['image']['error'][$key]."<br>";
+                echo "File upload failed for " . $_FILES['image']['name'][$key] . "<br>";
+                echo "Error code: " . $_FILES['image']['error'][$key] . "<br>";
             }
         } else {
-            echo "File upload failed for ".$_FILES['image']['name'][$key]."<br>";
-            echo "Error code: ".$_FILES['image']['error'][$key]."<br>";
+            echo "File upload failed for " . $_FILES['image']['name'][$key] . "<br>";
+            echo "Error code: " . $_FILES['image']['error'][$key] . "<br>";
         }
     }
 
@@ -48,16 +48,20 @@ if(isset($_POST['submit'])) {
     $imagePathsStr = implode(",", $imagePaths);
 
     // Insert data into database
-    $insert_sql = "INSERT INTO requests (name, price, type, location, discription, img, phone,numOfDays,userName) 
+    if ($type == 'apartments' || $type == 'banglow') {
+        $insert_sql = "INSERT INTO requests (name, price, type, location, discription, img, phone,numOfDays,userName) 
+                   VALUES ('$name', '$price', 'houses', '$location', '$discription', '$imagePathsStr', '$phone','$numOfDays','$userName')";
+    } else {
+        $insert_sql = "INSERT INTO requests (name, price, type, location, discription, img, phone,numOfDays,userName) 
                    VALUES ('$name', '$price', '$type', '$location', '$discription', '$imagePathsStr', '$phone','$numOfDays','$userName')";
-    
+    }
+
     if ($connect->query($insert_sql) === TRUE) {
         echo "<script>alert('submition successful!');window.location.href = '../../../frontend/user/postAd/payment.php';</script>";
     } else {
         echo "<script>alert('submition not successful!'); window.location.href = '../../../frontend/user/postAd/postAd.php';</script>";
         echo "Error: " . $insert_sql . "<br>" . $connect->error;
     }
-
 } else {
     // Form not submitted
     echo "<script>alert('Form not submitted!'); window.location.href = '../../../frontend/user/postAd/postAd.php';</script>";
@@ -65,5 +69,3 @@ if(isset($_POST['submit'])) {
 
 // Close database connection
 $connect->close();
-
-?>

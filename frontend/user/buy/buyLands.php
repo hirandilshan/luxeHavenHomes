@@ -7,15 +7,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['search'])) {
     $location = mysqli_real_escape_string($connect, $_POST['location']);
     $minPrice = mysqli_real_escape_string($connect, $_POST['minPrice']);
     $maxPrice = mysqli_real_escape_string($connect, $_POST['maxPrice']);
-    
-    if($maxPrice=="unlimited"){
-        $sql = "SELECT * FROM lands WHERE location='$location'AND price> $minPrice;";
-    }else{
-        $sql = "SELECT * FROM lands WHERE location='$location'AND price> $minPrice AND price <$maxPrice;";
+
+    if ($maxPrice == "unlimited") {
+        if ($location == "any") {
+            $sql = "SELECT * FROM lands WHERE price> $minPrice;";
+        } else {
+            $sql = "SELECT * FROM lands WHERE location='$location'AND price> $minPrice;";
+        }
+    } else {
+        if ($location == "any") {
+            $sql = "SELECT * FROM lands WHERE price> $minPrice AND price <$maxPrice;";
+        } else {
+            $sql = "SELECT * FROM lands WHERE location='$location'AND price> $minPrice AND price <$maxPrice;";
+        }
     }
-    
+
     $result = mysqli_query($connect, $sql);
-}else{
+} else {
     $sql = "SELECT * FROM lands;";
     $result = mysqli_query($connect, $sql);
 }
@@ -43,7 +51,7 @@ mysqli_close($connect);
 </head>
 
 <body>
-<header>
+    <header>
         <div class="header">
             <div class="headerbar">
                 <div class="account">
@@ -119,6 +127,7 @@ mysqli_close($connect);
                     <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                         <label for="location">Location</label>
                         <select id="location" name="location">
+                            <option value="any">...</option>
                             <option value="colombo">Colombo</option>
                             <option value="gampaha">Gampaha</option>
                             <option value="kandy">Kandy</option>
@@ -154,10 +163,11 @@ mysqli_close($connect);
                         </select>
                         <label for="maxPrice">Maximum Price</label>
                         <select id="maxPrice" name="maxPrice">
+                            <option value="unlimited">...</option>
+                            <option value="1000000">500000</option>
                             <option value="1000000">1000000</option>
                             <option value="5000000">5000000</option>
                             <option value="10000000">10000000</option>
-                            <option value="unlimited">unlimited</option>
                         </select>
                         <button type="submit" name="search">Search</button>
                     </form>
@@ -174,11 +184,11 @@ mysqli_close($connect);
                         $discription = $row["discription"];
                         $imagePathsStr = $row["img"];
                         $phone = $row["phone"];
-                        $userName=$row["userName"];
+                        $userName = $row["userName"];
 
                         $imagePaths = array();
                         $imagePaths = explode(",", $imagePathsStr);
-                        
+
 
                         echo '<div class="display-item">';
                         echo "<img src='$imagePaths[0]' alt='image'>";
@@ -205,35 +215,53 @@ mysqli_close($connect);
                 <img src="../../../images/luxeLogo.jpg" alt="logo">
             </div>
             <div clss="social">
-            <ul>
-                <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
-                <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
-                <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
+                <ul>
+                    <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                    <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+                    <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-11">
             <address>
                 <h1>Support</h1>
-                <a href="../buy/buyLands.php"><p>Lands</p></a>
-                <a href="../buy/buyHouses.php"><p>Houses</p></a>
-                <a href="../build.php"><p>Construction equipments</p></a>
-                <a href="../build.php"><p>Workers</p></a>
-                <a href="../build.php"><p>Buyer's Guide</p></a>
-                <a href="../contact.php"><p>Help Center</p></a>
-                <a href="../postAd/postAd.php"><p>post Ads</p></a>
-                    
+                <a href="../buy/buyLands.php">
+                    <p>Lands</p>
+                </a>
+                <a href="../buy/buyHouses.php">
+                    <p>Houses</p>
+                </a>
+                <a href="../build.php">
+                    <p>Construction equipments</p>
+                </a>
+                <a href="../build.php">
+                    <p>Workers</p>
+                </a>
+                <a href="../build.php">
+                    <p>Buyer's Guide</p>
+                </a>
+                <a href="../contact.php">
+                    <p>Help Center</p>
+                </a>
+                <a href="../postAd/postAd.php">
+                    <p>post Ads</p>
+                </a>
+
             </address>
         </div>
         <div class="footer-111">
             <address>
                 <h1>Company</h1>
-                <a href="../about.php"><p>About Us</p></a>
-                <a href="../contact.php"><p>Contact Us</p></a>
+                <a href="../about.php">
+                    <p>About Us</p>
+                </a>
+                <a href="../contact.php">
+                    <p>Contact Us</p>
+                </a>
                 <p>Construction equipments</p>
                 <p>Privacy policy</p>
                 <p>Disclaimer</p>
-                    
+
             </address>
         </div>
         <div class="footer-1111">
@@ -242,18 +270,18 @@ mysqli_close($connect);
                 <p>Luxe Haven Homes(PVT)LTD</p>
                 <p>+94 712456894</p>
                 <p>+94 759825015</p>
-                <p>info@LuxeHavenHomes.LK</p>        
+                <p>info@LuxeHavenHomes.LK</p>
             </address>
         </div>
-        
+
     </div>
     <div class="footer-2">
-           <p>COPYRIGHT 2024 LUXE HAVEN HOMES HOLDING PVT LTD.<br>
+        <p>COPYRIGHT 2024 LUXE HAVEN HOMES HOLDING PVT LTD.<br>
             ALL RIGHTS RESERVED.<br>
-           WEBSITE MAINTAINTENANCE BY R & Y  </P>
-        </div>
+            WEBSITE MAINTAINTENANCE BY R & Y </P>
+    </div>
     <script src="../../../frontend/user/app.js"></script>
-    
+
 </body>
 
 </html>

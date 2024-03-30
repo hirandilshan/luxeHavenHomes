@@ -9,7 +9,7 @@ session_start();
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/signup.css">
-    
+
     <link rel="shortcut icon" href="../../images/luxeLogo.jpg" type="images/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,7 @@ session_start();
 </head>
 
 <body>
-<header>
+    <header>
         <div class="header">
             <div class="headerbar">
                 <div class="nav">
@@ -68,27 +68,27 @@ session_start();
         <div class="forms">
 
             <div class="form-details">
-                <p class="sin" >SIGN UP</p>
-                <p class="luxe" >LUXE HAVEN HOMES</p>
+                <p class="sin">SIGN UP</p>
+                <p class="luxe">LUXE HAVEN HOMES</p>
             </div>
             <div class="form-content">
 
                 <form method="POST" action="../../backend/user/signupP.php">
                     <div class="inputs">
                         <input type="text" name="firstName" placeholder="First Name" required>
-                    
+
                     </div>
                     <div class="inputs">
                         <input type="text" name="lastName" placeholder="Last Name" required>
-                    
+
                     </div>
                     <div class="inputs">
                         <input type="email" name="email" placeholder="E-mail" required>
-              
+
                     </div>
                     <div class="inputs">
                         <input type="password" required name="password" placeholder="Password" required>
-                
+
                     </div>
 
                     <button type="submit" name="submit">SIGN UP</button>
@@ -102,11 +102,11 @@ session_start();
     </div>
     <div class="footer-2">
         <p>COPYRIGHT 2024 LUXE HAVEN HOMES HOLDING PVT LTD.<br>
-         ALL RIGHTS RESERVED.<br>
-        WEBSITE MAINTAINTENANCE BY R & Y  </P>
-  </div>
+            ALL RIGHTS RESERVED.<br>
+            WEBSITE MAINTAINTENANCE BY R & Y </P>
+    </div>
     <script src="../../frontend/user/app.js"></script>
-    
+
 </body>
 
 </html>
