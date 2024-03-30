@@ -34,12 +34,12 @@ session_start();
                 </div>
                 <div class="nav">
                     <ul>
-                    <a href="manageAds/removeAds.php">
+                        <a href="manageAds/removeAds.php">
                             <li>Remove Ads</li>
                         </a>
                         <a href="manageAds/uploadAds.php">
                             <li>Upload Ads</li>
-                        </a>   
+                        </a>
                     </ul>
                 </div>
             </div>
@@ -48,12 +48,12 @@ session_start();
             </div>
             <div class="nav">
                 <ul>
-                <a href="manageAds/removeAds.php">
-                            <li>Remove Ads</li>
-                        </a>
-                        <a href="manageAds/uploadAds.php">
-                            <li>Upload Ads</li>
-                        </a>   
+                    <a href="manageAds/removeAds.php">
+                        <li>Remove Ads</li>
+                    </a>
+                    <a href="manageAds/uploadAds.php">
+                        <li>Upload Ads</li>
+                    </a>
                 </ul>
             </div>
 
@@ -121,10 +121,10 @@ session_start();
                 <img src="../../images/luxeLogo.jpg" alt="logo">
             </div>
             <div clss="social">
-            <ul>
-                <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
-                <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
-                <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
+                <ul>
+                    <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                    <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+                    <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
                 </ul>
             </div>
         </div>

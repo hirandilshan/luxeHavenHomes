@@ -41,12 +41,12 @@ mysqli_close($connect);
                 </div>
                 <div class="nav">
                     <ul>
-                    <a href="../manageAds/removeAds.php">
+                        <a href="../manageAds/removeAds.php">
                             <li>Remove Ads</li>
                         </a>
                         <a href="../manageAds/uploadAds.php">
                             <li>Upload Ads</li>
-                        </a>   
+                        </a>
                     </ul>
                 </div>
             </div>
@@ -55,12 +55,12 @@ mysqli_close($connect);
             </div>
             <div class="nav">
                 <ul>
-                <a href="../manageAds/removeAds.php">
-                            <li>Remove Ads</li>
-                        </a>
-                        <a href="../manageAds/uploadAds.php">
-                            <li>Upload Ads</li>
-                        </a>   
+                    <a href="../manageAds/removeAds.php">
+                        <li>Remove Ads</li>
+                    </a>
+                    <a href="../manageAds/uploadAds.php">
+                        <li>Upload Ads</li>
+                    </a>
                 </ul>
             </div>
 
@@ -102,55 +102,55 @@ mysqli_close($connect);
             </div>
         </div>
         <div class="choice">
-        <div class="items">
+            <div class="items">
 
-            <?php
-            if (isset($result)) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $id = $row["id"];
-                    $name = $row["name"];
-                    $price = $row["price"];
-                    $type = $row["type"];
-                    $location = $row["location"];
-                    $discription = $row["discription"];
-                    $imagePathsStr = $row["img"];
-                    $phone = $row["phone"];
+                <?php
+                if (isset($result)) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $id = $row["id"];
+                        $name = $row["name"];
+                        $price = $row["price"];
+                        $type = $row["type"];
+                        $location = $row["location"];
+                        $discription = $row["discription"];
+                        $imagePathsStr = $row["img"];
+                        $phone = $row["phone"];
 
-                    $imagePaths = array();
-                    $imagePaths = explode(",", $imagePathsStr);
+                        $imagePaths = array();
+                        $imagePaths = explode(",", $imagePathsStr);
 
 
-                    echo '<div class="display-item">';
-                    echo "<img src='$imagePaths[0]' alt='image'>";
-                    echo "<h3>$name</h3>";
-                    echo "<h4>Rs $price</h4>";
-                    echo "<form method='POST' action='../../../backend/admin/uploadAd.php'>";
-                    if ($type == 'apartments' || $type == 'banglo') {
-                        echo "<input type='hidden' name='type' value='houses'>";
-                    } else {
-                        echo "<input type='hidden' name='type' value='$type'>";
+                        echo '<div class="display-item">';
+                        echo "<img src='$imagePaths[0]' alt='image'>";
+                        echo "<h3>$name</h3>";
+                        echo "<h4>Rs $price</h4>";
+                        echo "<form method='POST' action='../../../backend/admin/uploadAd.php'>";
+                        if ($type == 'apartments' || $type == 'banglow') {
+                            echo "<input type='hidden' name='type' value='houses'>";
+                        } else {
+                            echo "<input type='hidden' name='type' value='$type'>";
+                        }
+
+                        echo "<input type='hidden' name='id' value='$id'>";
+                        echo "<button type='submit' name='upload'>Upload Ad</button>";
+                        echo "</form><br>";
+                        echo "<form method='POST' action='../../../frontend/admin/displayAd/advertisement.php'>";
+                        if ($type == 'apartments' || $type == 'banglow') {
+                            echo "<input type='hidden' name='type' value='houses'>";
+                        } else {
+                            echo "<input type='hidden' name='type' value='$type'>";
+                        }
+
+                        echo "<input type='hidden' name='id' value='$id'>";
+                        echo "<button type='submit' name='seeMore'>See more</button>";
+                        echo "</form>";
+                        echo '</div>';
                     }
-
-                    echo "<input type='hidden' name='id' value='$id'>";
-                    echo "<button type='submit' name='upload'>Upload Ad</button>";
-                    echo "</form><br>";
-                    echo "<form method='POST' action='../../../frontend/admin/displayAd/advertisement.php'>";
-                    if ($type == 'apartments' || $type == 'banglo') {
-                        echo "<input type='hidden' name='type' value='houses'>";
-                    } else {
-                        echo "<input type='hidden' name='type' value='$type'>";
-                    }
-
-                    echo "<input type='hidden' name='id' value='$id'>";
-                    echo "<button type='submit' name='seeMore'>See more</button>";
-                    echo "</form>";
-                    echo '</div>';
+                    // Free result set
+                    mysqli_free_result($result);
                 }
-                // Free result set
-                mysqli_free_result($result);
-            }
-            ?>
-        </div>
+                ?>
+            </div>
         </div>
 
     </div>
@@ -164,10 +164,10 @@ mysqli_close($connect);
                 <img src="../../../images/luxeLogo.jpg" alt="logo">
             </div>
             <div clss="social">
-            <ul>
-                <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
-                <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
-                <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
+                <ul>
+                    <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                    <li><a href="https://www.instagram.com/" class="fa fa-instagram"></a></li>
+                    <li><a href="https://twitter.com/" class="fa fa-twitter"></a></li>
                 </ul>
             </div>
         </div>
